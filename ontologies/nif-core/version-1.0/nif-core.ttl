@@ -1,0 +1,101 @@
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+nif:
+    a owl:Ontology ;
+    rdfs:comment "Actually, this is a draft of version 1.0, it will still change for some weeks, while we move to another server and from Google Code to GitHub" ;
+    dcterms:license <http://creativecommons.org/licenses/by/2.0/> ;
+    rdfs:label "NIF Core Ontology version 1.0"@en .
+
+nif:Context
+    a owl:Class ;
+    rdfs:comment "TODO" ;
+    rdfs:subClassOf nif:String .
+    
+nif:String
+    a owl:Class ;
+    rdfs:comment "TODO" .
+
+nif:referenceContext
+    a owl:ObjectProperty ;
+    rdfs:comment "The context a string occurs in" ;
+    rdfs:domain nif:String ;
+    rdfs:range nif:Context .
+
+nif:isString
+   a owl:DatatypeProperty ;
+    rdfs:comment "The string, which the uri is representing as an RDF Literal. This property is mandatory for every String." ;
+	rdfs:subPropertyOf nif:anchorOf ;
+    rdfs:domain nif:Context .
+
+nif:anchorOf
+    a owl:DatatypeProperty ;
+    rdfs:comment "The string, which the uri is representing as an RDF Literal. This property is mandatory for every String." ;
+    rdfs:domain nif:String .
+
+nif:occursIn
+    a rdf:Property ;
+    rdfs:domain nif:Context ;
+    rdfs:comment "Underspecified property to link the Context with the place the text is from. " .
+
+nif:RFC5147String
+    a owl:Class ;
+    rdfs:comment "TODO" ;
+    rdfs:subClassOf nif:String .
+
+nif:ContextHashBasedString
+    a owl:Class ;
+    rdfs:comment "TODO" ;
+    rdfs:subClassOf nif:String .
+
+nif:OffsetBasedString
+    a owl:Class ;
+    rdfs:comment "TODO" ;
+    rdfs:subClassOf nif:String .
+
+nif:beginIndex
+    a owl:DatatypeProperty ;
+    rdfs:comment "TODO" ;
+    rdfs:domain nif:String .
+
+nif:endIndex
+    a owl:DatatypeProperty ;
+    rdfs:comment "TODO" ;
+    rdfs:domain nif:String .
+
+nif:leftContext
+    a owl:DatatypeProperty ;
+   rdfs:comment "TODO" ;
+    rdfs:domain nif:String .
+
+nif:rightContext
+    a owl:DatatypeProperty ;
+   rdfs:comment "TODO" ;
+    rdfs:domain nif:String .
+
+
+
+nif:subString
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf nif:subStringTrans .
+
+nif:subStringTrans
+    a owl:TransitiveProperty ;
+    rdfs:domain nif:String ;
+    rdfs:range nif:String .
+
+nif:superString
+    a owl:ObjectProperty ;
+    rdfs:domain nif:String ;
+    rdfs:range nif:String ;
+    rdfs:subPropertyOf nif:superStringTrans .
+
+nif:superStringTrans
+    a owl:ObjectProperty ;
+    rdfs:domain nif:String ;
+    rdfs:range nif:String .
+
