@@ -15,12 +15,11 @@ RewriteRule \.(owl|rdf|html|ttl|nt|txt|md)$ - [L]
 # Rewrite rule to serve RDF/XML content if requested
 ##################
 RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
-RewriteRule ^nif-core$ nif-core/version-1.0/nif-core.owl [R=303,L] 
+RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.owl [R=303,L]
 
 #################
 # Default
 #################
-RewriteRule ^nif-core$ /ontologies/nif-core/version-1.0/nif-core.ttl [R=303,L] 
-
+RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl [R=303,L]
 
 
