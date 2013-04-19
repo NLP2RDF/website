@@ -11,6 +11,11 @@ nif:
     dcterms:license <http://creativecommons.org/licenses/by/2.0/> ;
     rdfs:label "NIF Core Ontology version 1.0"@en .
 
+
+###################
+# Base Classes
+###################
+
 nif:Context
     a owl:Class ;
     rdfs:comment "TODO" ;
@@ -19,6 +24,10 @@ nif:Context
 nif:String
     a owl:Class ;
     rdfs:comment "TODO" .
+    
+###################
+# Basic Properties
+###################    
 
 nif:referenceContext
     a owl:ObjectProperty ;
@@ -42,6 +51,20 @@ nif:occursIn
     rdfs:domain nif:Context ;
     rdfs:comment "Underspecified property to link the Context with the place the text is from. " .
 
+nif:beginIndex
+    a owl:DatatypeProperty ;
+    rdfs:comment "TODO" ;
+    rdfs:domain nif:String .
+
+nif:endIndex
+    a owl:DatatypeProperty ;
+    rdfs:comment "TODO" ;
+    rdfs:domain nif:String .
+
+###################
+# URI Schemes
+###################
+
 nif:RFC5147String
     a owl:Class ;
     rdfs:comment "TODO" ;
@@ -56,16 +79,34 @@ nif:OffsetBasedString
     a owl:Class ;
     rdfs:comment "TODO" ;
     rdfs:subClassOf nif:String .
+    
+###################
+# Structure
+###################
 
-nif:beginIndex
-    a owl:DatatypeProperty ;
-    rdfs:comment "TODO" ;
-    rdfs:domain nif:String .
+nif:Structure
+    a owl:Class ;
+    rdfs:comment """A structure is a more or less arbitrary label for a partitioning of a string. We don not follow a strict approach for what a word, phrase, sentence, paragraph is. """ ;
+    rdfs:subClassOf nif:String .
 
-nif:endIndex
-    a owl:DatatypeProperty ;
+nif:Word
+    a owl:Class ;
     rdfs:comment "TODO" ;
-    rdfs:domain nif:String .
+    rdfs:subClassOf nif:Structure .
+
+nif:Phrase
+    a owl:Class ;
+    rdfs:comment "TODO" ;
+    rdfs:subClassOf nif:Structure .
+
+nif:Sentence
+    a owl:Class ;
+    rdfs:comment "TODO" ;
+    rdfs:subClassOf nif:Structure .
+    
+###################
+# Additional properties
+###################
 
 nif:leftContext
     a owl:DatatypeProperty ;
