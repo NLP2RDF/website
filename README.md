@@ -31,4 +31,5 @@ When you publish ontologies without data, you can use '#' . However, if you want
 	RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.owl [R=303,L]
 	
 	RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl [R=303,L]
+
 7. last step add yourself to http://prefix.cc, see e.g. http://prefix.cc/nif
