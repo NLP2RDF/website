@@ -17,7 +17,7 @@ When you publish ontologies without data, you can use '#' . However, if you want
 3. I am versioning the ontologies in a folder with the version number, e.g. version-1.0
    If somebody wants to find old ontologies, she can find them in the GitHub repository, which is linked from the ontology.
    I assume this is not often required, but it is nice to keep old versions.
-   The old versions should be linked to in the comment of the ontology.
+   The old versions should be linked to in the comment of the ontology, see the header of nif-core.ttl
 4. Then I use git push to push the changes to our server
 5. (not yet) I use a simple OWL2HTML generator, e.g. https://github.com/specgen/specgen
 6. add yourself to http://prefix.cc, see e.g. http://prefix.cc/nif
