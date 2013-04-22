@@ -4,7 +4,18 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#">
-    <rdfs:comment>Actually, this is a draft of version 1.0, it will still change for some weeks, while we move to another server and from Google Code to GitHub</rdfs:comment>
+    <rdfs:comment>
+    Actually, this is a draft of version 1.0, it will still change for some weeks, while we move to another server and from Google Code (http://code.google.com/p/nlp2rdf/) to GitHub
+    Older versions can be found at GitHub: https://github.com/NLP2RDF/persistence.uni-leipzig.org
+    Licence is cc-by 
+    TODO: labels and comments for all classes
+    </rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#">
+    <owl:versionInfo>see GitHub for all version https://github.com/NLP2RDF/persistence.uni-leipzig.org </owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#">
+    <owl:versionIRI rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#">
     <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>

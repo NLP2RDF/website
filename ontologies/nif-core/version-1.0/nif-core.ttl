@@ -7,7 +7,14 @@
 
 nif:
     a owl:Ontology ;
-    rdfs:comment "Actually, this is a draft of version 1.0, it will still change for some weeks, while we move to another server and from Google Code to GitHub" ;
+    rdfs:comment """
+    Actually, this is a draft of version 1.0, it will still change for some weeks, while we move to another server and from Google Code (http://code.google.com/p/nlp2rdf/) to GitHub
+    Older versions can be found at GitHub: https://github.com/NLP2RDF/persistence.uni-leipzig.org
+    Licence is cc-by 
+    TODO: labels and comments for all classes
+    """ ;
+    owl:versionInfo "see GitHub for all version https://github.com/NLP2RDF/persistence.uni-leipzig.org " ;
+    owl:versionIRI <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl> ;
     dcterms:license <http://creativecommons.org/licenses/by/2.0/> ;
     rdfs:label "NIF Core Ontology version 1.0"@en .
 
