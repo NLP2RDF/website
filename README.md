@@ -20,7 +20,9 @@ When you publish ontologies without data, you can use '#' . However, if you want
    The old versions should be linked to in the comment of the ontology.
 4. Then I use git push to push the changes to our server
 5. (not yet) I use a simple OWL2HTML generator, e.g. https://github.com/specgen/specgen
-6. The versions are switched and published by these .htaccess rules, e.g. 
+6. add yourself to http://prefix.cc, see e.g. http://prefix.cc/nif
+7. The versions are switched and published by these .htaccess rules, e.g. 
+
 
 	RewriteRule \.(owl|rdf|html|ttl|nt|txt|md)$ - [L]
 	
@@ -32,4 +34,4 @@ When you publish ontologies without data, you can use '#' . However, if you want
 	
 	RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl [R=303,L]
 
-7. last step add yourself to http://prefix.cc, see e.g. http://prefix.cc/nif
+
