@@ -5,6 +5,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#">
     <rdfs:comment>
+    This ontology is part of the NLP2RDF project: http://nlp2rdf.org
     Actually, this is a draft of version 1.0, it will still change for some weeks, while we move to another server and from Google Code (http://code.google.com/p/nlp2rdf/) to GitHub
     Older versions can be found at GitHub: https://github.com/NLP2RDF/persistence.uni-leipzig.org
     Licence is cc-by 
