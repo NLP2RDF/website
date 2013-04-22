@@ -21,17 +21,11 @@ When you publish ontologies without data, you can use '#' . However, if you want
 4. Then I use git push to push the changes to our server
 5. (not yet) I use a simple OWL2HTML generator, e.g. https://github.com/specgen/specgen
 6. add yourself to http://prefix.cc, see e.g. http://prefix.cc/nif
-7. The versions are switched and published by these .htaccess rules, e.g. 
-
-
-	RewriteRule \.(owl|rdf|html|ttl|nt|txt|md)$ - [L]
-	
-	\# (in progress) RewriteCond %{HTTP_ACCEPT} text/html
-	\# (in progress) RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.html [R=303,L]
-	
-	RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
-	RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.owl [R=303,L]
-	
-	RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl [R=303,L]
-
+7. The versions are switched and published by these .htaccess rules, e.g. <br>
+<code>RewriteRule \.(owl|rdf|html|ttl|nt|txt|md)$ - [L]<br>	
+	\# (in progress) RewriteCond %{HTTP_ACCEPT} text/html<br>
+	\# (in progress) RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.html [R=303,L]<br>	
+	RewriteCond %{HTTP_ACCEPT} application/rdf\+xml<br>
+	RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.owl [R=303,L]<br>	
+	RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl [R=303,L]<br></code>
 
