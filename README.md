@@ -6,11 +6,13 @@ All ontologies used in NIF (nif-core + vocabulary modules )
 
 ## Note the workflow for these ontologies
 I decided to put this here, as I find it quite practical. 
-### \# vs /
 
-When you publish ontologies without data, you can use '#' . However, if you want to query instances via Linked Data in a database, you have to use '/' as DBpedia does for classes: http://dbpedia.org/ontology/PopulatedPlace
- 
-### Workflow
+### '\#' vs. '/' URIs
+There has been an ongoing debate about '\#' vs. '/' . We focus on ontologies with '\#' here with URIs like:
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core\#String 
+Note that ontologies with '/' URIs need to published differently (description not included here). 
+
+### Workflow for '\#' ontologies
 1. I edit the ontologies in turtle syntax with the Geany text editor (or a Turtle editor http://blog.aksw.org/2013/xturtle-turtle-editing-the-eclipse-way ),
    This allows me to make developers comments using "#" directly in the source, see e.g. nlp2rdf/ontologies/nif-core.ttl
 2. When I am finished I use rapper (http://librdf.org/raptor/rapper.html) to convert it to rdfxml ( nlp2rdf/ontologies/nif-core.owl )
