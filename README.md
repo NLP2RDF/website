@@ -24,8 +24,8 @@ When you publish ontologies without data, you can use '#' . However, if you want
 
 	RewriteRule \.(owl|rdf|html|ttl|nt|txt|md)$ - [L]
 	
-	# (in progress) RewriteCond %{HTTP_ACCEPT} text/html
-	# (in progress) RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.html [R=303,L]
+	\# (in progress) RewriteCond %{HTTP_ACCEPT} text/html
+	\# (in progress) RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.html [R=303,L]
 	
 	RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
 	RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.owl [R=303,L]
