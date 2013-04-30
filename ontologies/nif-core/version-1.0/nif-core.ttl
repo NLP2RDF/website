@@ -5,20 +5,32 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
-nif:
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> 
     a owl:Ontology ;
+    rdfs:label "NIF 2.0 Core Ontology, version 1.0"@en
     rdfs:comment """
-    This ontology is part of the NLP2RDF project: http://nlp2rdf.org
-    Actually, this is a draft of version 1.0, it will still change for some weeks, while we move to another server and from Google Code (http://code.google.com/p/nlp2rdf/) to GitHub
-    Older versions can be found at GitHub: https://github.com/NLP2RDF/persistence.uni-leipzig.org
-    Licence is cc-by 
-    TODO: labels and comments for all classes
-    """ ;
+# Disclaimer: 
+This is a draft of version 1.0, it will still change for some weeks, while we move to another server and from Google Code (http://code.google.com/p/nlp2rdf/) to GitHub.
+
+# Actual comment:
+This ontology is part of the NLP2RDF project: http://nlp2rdf.org and provided as part of the NLP Interchange Format Version 2.0 Standard und the CC-BY license. 
+
+# Important notice
+This ontology is split in three parts:
+* a terminological model (containing rdfs:comment, rdfs:label, rdfs:subClassOf, rdfs:subPropertyOf, rdfs:range and rdfs:domain statements)
+* an inference model (containing owl:TransitiveProperty, owl:hasKey)
+* a validation model (containing owl:FunctionalProperty, owl:DisjointWith)
+This is also the reason for the three rdfs:isDefinedBy properties.
+
+Older versions can be found at GitHub: https://github.com/NLP2RDF/persistence.uni-leipzig.org
+    """@en ;
+    
+    rdfs:isDefinedBy <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl> ;
+    rdfs:isDefinedBy <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core-inf.ttl> ;
+    rdfs:isDefinedBy <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core-val.ttl> ;
     owl:versionInfo "see GitHub for all version https://github.com/NLP2RDF/persistence.uni-leipzig.org " ;
     owl:versionIRI <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl> ;
     dcterms:license <http://creativecommons.org/licenses/by/2.0/> ;
-    rdfs:label "NIF Core Ontology version 1.0"@en .
-
 
 ###################
 # Base Classes
@@ -26,12 +38,20 @@ nif:
 
 nif:Context
     a owl:Class ;
-    rdfs:comment "TODO" ;
+    rdfs:label "Context"@en ;
+    rdfs:comment """TODO""" ;
     rdfs:subClassOf nif:String .
     
 nif:String
     a owl:Class ;
-    rdfs:comment "TODO" .
+    rdfs:label "String"@en ;
+    rdfs:comment """TODO""" .
+    
+nif:HTMLString
+    a owl:Class ;
+    rdfs:label "HTML String"@en ;
+    rdfs:comment """A subspecialisation of String. 
+    """ .
     
 ###################
 # Basic Properties
@@ -39,34 +59,44 @@ nif:String
 
 nif:referenceContext
     a owl:ObjectProperty ;
-    rdfs:comment "The context a string occurs in" ;
+    rdfs:label "reference context"@en ;
+    rdfs:comment """The context a string occurs in. 
+# Validation model
+This property is functional. Each String instance should only have one reference context." ;
     rdfs:domain nif:String ;
     rdfs:range nif:Context .
 
 nif:isString
-   a owl:DatatypeProperty ;
-    rdfs:comment "The string, which the uri is representing as an RDF Literal. This property is mandatory for every String." ;
+    a owl:DatatypeProperty ;
+    rdfs:label "is string"@en ; 
+    rdfs:comment """The string, which the uri is representing as an RDF Literal. This property is mandatory for the Context. Note: The isString property is *the* place to keep the string itself in RDF, all other Strings and URI Scheme relate to it and can be calculated and reproduced."""@en ;
 	rdfs:subPropertyOf nif:anchorOf ;
     rdfs:domain nif:Context .
 
 nif:anchorOf
     a owl:DatatypeProperty ;
-    rdfs:comment "The string, which the uri is representing as an RDF Literal. This property is mandatory for every String." ;
+    rdfs:label "anchor of"@en ;
+    rdfs:comment "The string, which the uri is representing as an RDF Literal. This property is nice to have, but can be re-created from the context." ;
     rdfs:domain nif:String .
 
 nif:occursIn
     a rdf:Property ;
-    rdfs:domain nif:Context ;
-    rdfs:comment "Underspecified property to link the Context with the place the text is from. " .
+    rdfs:label "occurs in"@en ;	
+    rdfs:comment "Underspecified property to link String URIs and the Context with the place the text is from. " ;
+    rdfs:domain nif:String .
 
 nif:beginIndex
     a owl:DatatypeProperty ;
-    rdfs:comment "TODO" ;
+    rdfs:label "begin index"@en ;
+    rdfs:comment "The begin index of the string relative to the content of isString in the reference context, defined by RFC 5147. " ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#int> ;
     rdfs:domain nif:String .
 
 nif:endIndex
     a owl:DatatypeProperty ;
-    rdfs:comment "TODO" ;
+    rdfs:label "reference context"@en ;
+	rdfs:comment "The end index of the string relative to the content of isString in the reference context, defined by RFC 5147. " ;
+	rdfs:range <http://www.w3.org/2001/XMLSchema#int> ;
     rdfs:domain nif:String .
 
 ###################
@@ -75,16 +105,19 @@ nif:endIndex
 
 nif:RFC5147String
     a owl:Class ;
+    rdfs:label "RFC 5147 string"@en ;
     rdfs:comment "TODO" ;
     rdfs:subClassOf nif:String .
 
 nif:ContextHashBasedString
     a owl:Class ;
+    rdfs:label "Context hash based string"@en ;
     rdfs:comment "TODO" ;
     rdfs:subClassOf nif:String .
 
 nif:OffsetBasedString
     a owl:Class ;
+    rdfs:label "Offset based string"@en ;
     rdfs:comment "TODO" ;
     rdfs:subClassOf nif:String .
     
@@ -94,21 +127,25 @@ nif:OffsetBasedString
 
 nif:Structure
     a owl:Class ;
+    rdfs:label "Structure"@en ;
     rdfs:comment """A structure is a more or less arbitrary label for a partitioning of a string. We don not follow a strict approach for what a word, phrase, sentence, paragraph is. """ ;
     rdfs:subClassOf nif:String .
 
 nif:Word
     a owl:Class ;
+    rdfs:label ""@en ;
     rdfs:comment "TODO" ;
     rdfs:subClassOf nif:Structure .
 
 nif:Phrase
     a owl:Class ;
+    rdfs:label ""@en ;
     rdfs:comment "TODO" ;
     rdfs:subClassOf nif:Structure .
 
 nif:Sentence
     a owl:Class ;
+    rdfs:label ""@en ;
     rdfs:comment "TODO" ;
     rdfs:subClassOf nif:Structure .
     
@@ -118,33 +155,39 @@ nif:Sentence
 
 nif:leftContext
     a owl:DatatypeProperty ;
-   rdfs:comment "TODO" ;
+    rdfs:label ""@en ;
+    rdfs:comment "TODO" ;
     rdfs:domain nif:String .
 
 nif:rightContext
     a owl:DatatypeProperty ;
-   rdfs:comment "TODO" ;
+    rdfs:label ""@en ;
+    rdfs:comment "TODO" ;
     rdfs:domain nif:String .
 
 
 
 nif:subString
     a owl:ObjectProperty ;
+    rdfs:label ""@en ;
     rdfs:subPropertyOf nif:subStringTrans .
 
 nif:subStringTrans
     a owl:TransitiveProperty ;
+    rdfs:label ""@en ;
     rdfs:domain nif:String ;
     rdfs:range nif:String .
 
 nif:superString
     a owl:ObjectProperty ;
+    rdfs:label ""@en ;
     rdfs:domain nif:String ;
     rdfs:range nif:String ;
     rdfs:subPropertyOf nif:superStringTrans .
 
 nif:superStringTrans
     a owl:ObjectProperty ;
+    rdfs:label ""@en ;
     rdfs:domain nif:String ;
     rdfs:range nif:String .
 
