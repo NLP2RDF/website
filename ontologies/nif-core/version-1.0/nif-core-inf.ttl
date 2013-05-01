@@ -1,0 +1,60 @@
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+
+###################
+# Imports
+###################  
+
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>  owl:imports <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl> .
+
+
+###################
+# hasKey Definitions 
+###################    
+
+# <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext> a owl:FunctionalProperty .
+# nif:HTMLString
+
+###################
+# Transitivity
+###################
+	
+nif:subStringTrans	
+	a owl:TransitiveProperty .
+	
+nif:superStringTrans
+    a owl:TransitiveProperty .
+
+nif:previousSentenceTrans
+    a owl:TransitiveProperty .
+
+nif:nextSentenceTrans
+    a owl:TransitiveProperty .
+    
+nif:nextWordTrans
+    a owl:TransitiveProperty .
+
+nif:previousWordTrans
+    a owl:TransitiveProperty.
+
+nif:previousWordTrans
+    a owl:TransitiveProperty .
+	
+###################
+# Inverse Of
+###################
+
+
+nif:subString
+    owl:inverseOf nif:superString .
+
+nif:nextSentence
+    owl:inverseOf nif:previousSentence .
+
+nif:nextWord 
+   owl:inverseOf nif:previousWord .

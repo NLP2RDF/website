@@ -1,0 +1,35 @@
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+
+###################
+# Imports
+###################  
+
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>  owl:imports <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>  owl:imports <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core-inf.ttl> .
+
+
+###################
+# Functional Properties
+###################    
+
+nif:referenceContext a owl:FunctionalProperty .
+nif:anchorOf a owl:FunctionalProperty .
+nif:isString a owl:FunctionalProperty .
+
+nif:nextWord a owl:FunctionalProperty .
+nif:previousWord a owl:FunctionalProperty .
+nif:nextSentence a owl:FunctionalProperty .
+nif:previousSentence a owl:FunctionalProperty .
+
+###################
+# Disjointness
+###################
+[] a owl:AllDisjointClasses ; 
+	owl:members <RFC5147String>, <ContextHashBasedString> , <OffsetBasedString> .
+	
