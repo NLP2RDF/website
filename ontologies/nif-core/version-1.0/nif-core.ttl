@@ -1,15 +1,10 @@
-# common vocabs
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-
-# nif
 @prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
-
-# used for examples
 @prefix nerd: <http://nerd.eurecom.fr/ontology#> .
 @prefix itsrdf: <http://www.w3.org/2005/11/its/rdf#> .
 
