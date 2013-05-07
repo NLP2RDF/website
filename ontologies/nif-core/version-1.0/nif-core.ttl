@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 # nif
 @prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
@@ -92,12 +93,20 @@ nif:anchorOf
     rdfs:comment "The string, which the uri is representing as an RDF Literal. This property is nice to have, but can be re-created from the context." ;
     rdfs:domain nif:String .
 
-nif:occursIn
-    a rdf:Property ;
-    rdfs:label "occurs in"@en ;	
-    rdfs:comment "Underspecified property to link String URIs and the Context with the place the text is from. " ;
-    rdfs:domain nif:String .
+nif:sourceUrl
+    a rdf:ObjectProperty ;
+    rdfs:label "source URL"@en ;	
+    rdfs:comment "The URL the context was extracted from, e.g. the blog or news article url. Doesn't matter whether it is HTML or XML or plain text. rdfs:range is foaf:Document, if the string comes form another NIF String, please use nif:convertedFrom"@en ;
+    rdfs:domain nif:Context ;
+    rdfs:range foaf:Document .
 
+nif:convertedFrom
+    a rdf:ObjectProperty ;
+    rdfs:label "converted from"@en ;	
+    rdfs:comment "The URL this string was converted from"@en ;
+    rdfs:domain nif:String ;
+    rdfs:range nif:String .
+    
 nif:beginIndex
     a owl:DatatypeProperty ;
     rdfs:label "begin index"@en ;
@@ -357,6 +366,7 @@ nif:oliaCategory
 <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,> 
 	a nif:RFC5147String , nif:String , nif:Context ;
 	nif:referenceContext <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,>  ;
+	nif:sourceUrl <http://nlp2rdf.lod2.eu/usecases/plaintext.txt>  ;
 	nif:isString """Mexico expects the U.S. to accelerate the disbursement of aid to strengthen its fight against drug gangs and put back on track a $1.4 billion program that has been hamstrung by delays in recent years, Foreign Affairs Minister Patricia Espinosa said.
 Espinosa, in an interview yesterday, said both U.S. President Barack Obama and Secretary of State Hillary Clinton promised to disburse $500 million this year in equipment and aid for police training as part of the bilateral Merida Initiative. Mexico expects to receive complete financing of the multi-year program by next year, she said.
 "We got off to a slow start in part because this is a completely new cooperation plan," Espinosa, 52, said at Bloomberg's offices in Mexico City. "We now see that it's advancing more quickly."
