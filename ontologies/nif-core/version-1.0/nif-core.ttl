@@ -69,9 +69,7 @@ nif:HTMLString
 nif:referenceContext
     a owl:ObjectProperty ;
     rdfs:label "reference context"@en ;
-    rdfs:comment """The context a string occurs in. 
-# Validation model
-This property is functional. Each String instance should only have one reference context."""@en ;
+    rdfs:comment """The context a string occurs in. This property is functional in the validation model (nif-core-val.ttl). Each String instance should only have one reference context."""@en ;
     rdfs:domain nif:String ;
     rdfs:range nif:Context .
 
@@ -147,13 +145,13 @@ nif:ContextHashBasedString
 nif:OffsetBasedString
     a owl:Class ;
     rdfs:label "Offset based string"@en ;
-    rdfs:comment "TODO" ;
+#    rdfs:comment "TODO" ;
     rdfs:subClassOf nif:String .
     
 nif:XPathString 
     a owl:Class ;
     rdfs:label "XPath string"@en ;
-    rdfs:comment """TODO""" ;
+#    rdfs:comment """""" ;
     rdfs:subClassOf nif:HTMLString , nif:String .
     
 ###################
@@ -241,14 +239,42 @@ nif:nextSentence
 
 nif:nextSentenceTrans
     a owl:ObjectProperty ;
-    rdfs:comment "see nif:nextSentence " ;
+    rdfs:comment "see nif:nextSentence"@en ;
     rdfs:domain nif:Sentence ;
     rdfs:range nif:Sentence  .
+    
+nif:word
+    a owl:ObjectProperty ;
+    rdfs:label "has word"@en ;
+    rdfs:comment "This property links sentences to their words."@en ;
+    rdfs:domain nif:Sentence ;
+    rdfs:range nif:Word .
+
+nif:firstWord
+    a owl:ObjectProperty ;
+    rdfs:label "has first word"@en ;
+    rdfs:comment "This property links sentences to their first word. Itsi"@en ;
+    rdfs:domain nif:Sentence ;
+    rdfs:range nif:Word ;
+    rdfs:subPropertyOf nif:word .
+
+nif:lastWord
+    a owl:ObjectProperty ;
+    rdfs:label "has first word"@en ;
+    rdfs:comment "This property links sentences to their last word."@en ;
+    rdfs:domain nif:Sentence ;
+    rdfs:range nif:Word ;
+    rdfs:subPropertyOf nif:word .
     
 ###############
 # Word level
 ###############
 
+nif:sentence
+    a owl:ObjectProperty ;
+    rdfs:comment "This property links words to their sentence." ;
+    rdfs:domain nif:Word ;
+    rdfs:range nif:Sentence .
 
 nif:nextWord
     a owl:ObjectProperty ;

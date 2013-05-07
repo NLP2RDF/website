@@ -58,3 +58,6 @@ nif:nextSentence
 
 nif:nextWord 
    owl:inverseOf nif:previousWord .
+   
+nif:sentence 
+   owl:inverseOf nif:word .
