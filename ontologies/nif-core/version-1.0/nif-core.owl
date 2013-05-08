@@ -302,7 +302,10 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#subString">
-    <rdfs:label xml:lang="en"></rdfs:label>
+    <rdfs:label xml:lang="en">sub string</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#subString">
+    <rdfs:comment xml:lang="en">This property together with nif:subString, nif:superString, and their transitive extension can be used to express that one string is contained in another one. Examples: "a" nif:subString "apple" , "apple" nif:subString "apple".  The transitivity axioms are included in nif-core-inf.ttl and need to be included separately to keep a low reasoning profile. They are modeled after skos:broader and skos:broaderTransitive</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#subString">
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
@@ -317,7 +320,10 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#subStringTrans">
-    <rdfs:label xml:lang="en"></rdfs:label>
+    <rdfs:label xml:lang="en">transitive version of subString</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#subStringTrans">
+    <rdfs:comment xml:lang="en">see nif:subString</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#subStringTrans">
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
@@ -329,7 +335,10 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#superString">
-    <rdfs:label xml:lang="en"></rdfs:label>
+    <rdfs:label xml:lang="en">super String</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#superString">
+    <rdfs:comment xml:lang="en">see nif:subString</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#superString">
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
@@ -344,7 +353,10 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#superStringTrans">
-    <rdfs:label xml:lang="en"></rdfs:label>
+    <rdfs:label xml:lang="en">transitive version of superString</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#superStringTrans">
+    <rdfs:comment xml:lang="en">see nif:subString</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#superStringTrans">
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
@@ -352,38 +364,11 @@ NLP2RDF works together with several other projects, that make very good ontologi
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#superStringTrans">
     <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence">
-    <rdfs:comment>see nif:nextSentence </rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence">
-    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence">
-    <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence">
-    <rdfs:subPropertyOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentenceTrans"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentenceTrans">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentenceTrans">
-    <rdfs:comment>see nif:nextSentence </rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentenceTrans">
-    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentenceTrans">
-    <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence">
-    <rdfs:comment>This property (and the others) can be used to traverse nif:Sentences, it can not be assumed that no gaps or whitespaces between Sentences exist, i.e. string adjacency is not mandatory. </rdfs:comment>
+    <rdfs:comment xml:lang="en">This property (and nif:previousSentence, nif:nextWord, nif:previousWord and their transitive extension) can be used to make resources of nif:Sentence and nif:Word traversable, it can not be assumed that no gaps or whitespaces between sentences or words exist, i.e. string adjacency is not mandatory. The transitivity axioms are included in nif-core-inf.ttl and need to be included separately to keep a low reasoning profile. They are modeled after skos:broader and skos:broaderTransitive</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence">
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
@@ -404,6 +389,33 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentenceTrans">
+    <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence">
+    <rdfs:comment xml:lang="en">see nif:nextSentence</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence">
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence">
+    <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence">
+    <rdfs:subPropertyOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentenceTrans"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentenceTrans">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentenceTrans">
+    <rdfs:comment xml:lang="en">see nif:nextSentence</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentenceTrans">
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentenceTrans">
     <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word">
@@ -428,7 +440,7 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdfs:label xml:lang="en">has first word</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord">
-    <rdfs:comment xml:lang="en">This property links sentences to their first word. Itsi</rdfs:comment>
+    <rdfs:comment xml:lang="en">This property links sentences to their first word.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord">
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
@@ -473,7 +485,7 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextWord">
-    <rdfs:comment>This property (and the others) can be used to traverse words, it can not be assumed that no gaps between words exist, i.e. string adjacency is not mandatory. </rdfs:comment>
+    <rdfs:comment xml:lang="en">see nif:nextSentence</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextWord">
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word"/>
@@ -488,7 +500,7 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextWordTrans">
-    <rdfs:comment>see nif:nextWord </rdfs:comment>
+    <rdfs:comment xml:lang="en">see nif:nextSentence</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextWordTrans">
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word"/>
@@ -500,7 +512,7 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousWord">
-    <rdfs:comment>see nif:nextWord </rdfs:comment>
+    <rdfs:comment xml:lang="en">see nif:nextSentence</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousWord">
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word"/>
@@ -515,7 +527,7 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousWordTrans">
-    <rdfs:comment>see nif:nextWord </rdfs:comment>
+    <rdfs:comment xml:lang="en">see nif:nextSentence</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousWordTrans">
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word"/>
