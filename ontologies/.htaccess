@@ -1,7 +1,7 @@
 # From http://www.w3.org/TR/swbp-vocab-pub/#recipe4 
 Options -MultiViews
 AddType application/rdf+xml .rdf .owl
-AddType text/n3 .ttl
+AddType text/plain .ttl
 RewriteEngine On
 AddCharset utf-8 .txt .log .ttl
 
