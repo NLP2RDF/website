@@ -13,6 +13,12 @@
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>  owl:imports <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl> .
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>  owl:imports <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core-inf.ttl> .
 
+nif:String 
+	owl:equivalentClass [
+		a owl:Restriction ;
+		owl:onProperty dcterms:created ;
+		owl:allValuesFrom xsd:datetime 
+	] . 
 
 ###################
 # Functional Properties

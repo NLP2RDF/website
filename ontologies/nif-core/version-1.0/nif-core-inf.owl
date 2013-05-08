@@ -33,4 +33,7 @@
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextWord">
     <owl:inverseOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousWord"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence">
+    <owl:inverseOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word"/>
+  </rdf:Description>
 </rdf:RDF>

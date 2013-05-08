@@ -6,6 +6,18 @@
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#">
     <owl:imports rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core-inf.ttl"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <owl:onProperty rdf:resource="http://purl.org/dc/terms/created"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#datetime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String">
+    <owl:equivalentClass rdf:nodeID="genid1"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   </rdf:Description>
@@ -27,16 +39,22 @@
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="genid1">
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousWord">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="genid1">
+  <rdf:Description rdf:nodeID="genid2">
     <owl:members rdf:resource="file:///home/sebastian/svn/NLP2RDF/persistence.uni-leipzig.org/ontologies/nif-core/version-1.0/RFC5147String"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="genid1">
+  <rdf:Description rdf:nodeID="genid2">
     <owl:members rdf:resource="file:///home/sebastian/svn/NLP2RDF/persistence.uni-leipzig.org/ontologies/nif-core/version-1.0/ContextHashBasedString"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="genid1">
+  <rdf:Description rdf:nodeID="genid2">
     <owl:members rdf:resource="file:///home/sebastian/svn/NLP2RDF/persistence.uni-leipzig.org/ontologies/nif-core/version-1.0/OffsetBasedString"/>
   </rdf:Description>
 </rdf:RDF>

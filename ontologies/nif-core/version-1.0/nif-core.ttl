@@ -87,14 +87,14 @@ nif:anchorOf
     rdfs:domain nif:String .
 
 nif:sourceUrl
-    a rdf:ObjectProperty ;
+    a owl:ObjectProperty ;
     rdfs:label "source URL"@en ;	
     rdfs:comment "The URL the context was extracted from, e.g. the blog or news article url. Doesn't matter whether it is HTML or XML or plain text. rdfs:range is foaf:Document, if the string comes form another NIF String, please use nif:convertedFrom"@en ;
     rdfs:domain nif:Context ;
     rdfs:range foaf:Document .
 
 nif:convertedFrom
-    a rdf:ObjectProperty ;
+    a owl:ObjectProperty ;
     rdfs:label "converted from"@en ;	
     rdfs:comment "The URL this string was converted from"@en ;
     rdfs:domain nif:String ;
@@ -386,6 +386,7 @@ nif:oliaCategory
 ## Context
 <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,> 
 	a nif:RFC5147String , nif:String , nif:Context ;
+	dcterms:created "2013-05-08T17:00:00Z"^^xsd:datetime ;
 	nif:referenceContext <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,>  ;
 	nif:sourceUrl <http://nlp2rdf.lod2.eu/usecases/plaintext.txt>  ;
 	nif:isString """Mexico expects the U.S. to accelerate the disbursement of aid to strengthen its fight against drug gangs and put back on track a $1.4 billion program that has been hamstrung by delays in recent years, Foreign Affairs Minister Patricia Espinosa said.

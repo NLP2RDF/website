@@ -86,9 +86,7 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdfs:label xml:lang="en">reference context</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext">
-    <rdfs:comment xml:lang="en">The context a string occurs in. 
-# Validation model
-This property is functional. Each String instance should only have one reference context.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The context a string occurs in. This property is functional in the validation model (nif-core-val.ttl). Each String instance should only have one reference context.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext">
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
@@ -124,7 +122,7 @@ This property is functional. Each String instance should only have one reference
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl">
     <rdfs:label xml:lang="en">source URL</rdfs:label>
@@ -139,7 +137,7 @@ This property is functional. Each String instance should only have one reference
     <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#convertedFrom">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#convertedFrom">
     <rdfs:label xml:lang="en">converted from</rdfs:label>
@@ -238,9 +236,6 @@ This property is functional. Each String instance should only have one reference
     <rdfs:label xml:lang="en">Offset based string</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString">
-    <rdfs:comment>TODO</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString">
     <rdfs:subClassOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#XPathString">
@@ -248,9 +243,6 @@ This property is functional. Each String instance should only have one reference
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#XPathString">
     <rdfs:label xml:lang="en">XPath string</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#XPathString">
-    <rdfs:comment>TODO</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#XPathString">
     <rdfs:subClassOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#HTMLString"/>
@@ -406,12 +398,75 @@ This property is functional. Each String instance should only have one reference
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentenceTrans">
-    <rdfs:comment>see nif:nextSentence </rdfs:comment>
+    <rdfs:comment xml:lang="en">see nif:nextSentence</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentenceTrans">
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentenceTrans">
+    <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word">
+    <rdfs:label xml:lang="en">has word</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word">
+    <rdfs:comment xml:lang="en">This property links sentences to their words.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word">
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word">
+    <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord">
+    <rdfs:label xml:lang="en">has first word</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord">
+    <rdfs:comment xml:lang="en">This property links sentences to their first word. Itsi</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord">
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord">
+    <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord">
+    <rdfs:subPropertyOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lastWord">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lastWord">
+    <rdfs:label xml:lang="en">has first word</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lastWord">
+    <rdfs:comment xml:lang="en">This property links sentences to their last word.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lastWord">
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lastWord">
+    <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lastWord">
+    <rdfs:subPropertyOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence">
+    <rdfs:comment>This property links words to their sentence.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence">
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence">
     <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextWord">
@@ -587,6 +642,9 @@ This property is functional. Each String instance should only have one reference
   </rdf:Description>
   <rdf:Description rdf:about="http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,">
     <rdf:type rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#datetime">2013-05-08T17:00:00Z</dcterms:created>
   </rdf:Description>
   <rdf:Description rdf:about="http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,">
     <nif:referenceContext rdf:resource="http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,"/>
