@@ -42,5 +42,7 @@ nif:previousWord a owl:FunctionalProperty .
 # Disjointness
 ###################
 [] a owl:AllDisjointClasses ; 
-	owl:members <RFC5147String>, <ContextHashBasedString> , <OffsetBasedString> .
-	
+	owl:members nif:RFC5147String, nif:ContextHashBasedString , nif:OffsetBasedString ,  nif:OccuringWord .
+
+[] a owl:AllDisjointClasses ; 
+	owl:members nif:String, nif:LabelString .

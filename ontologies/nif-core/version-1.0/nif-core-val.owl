@@ -49,12 +49,24 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="genid2">
-    <owl:members rdf:resource="file:///home/sebastian/svn/NLP2RDF/persistence.uni-leipzig.org/ontologies/nif-core/version-1.0/RFC5147String"/>
+    <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="genid2">
-    <owl:members rdf:resource="file:///home/sebastian/svn/NLP2RDF/persistence.uni-leipzig.org/ontologies/nif-core/version-1.0/ContextHashBasedString"/>
+    <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#ContextHashBasedString"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="genid2">
-    <owl:members rdf:resource="file:///home/sebastian/svn/NLP2RDF/persistence.uni-leipzig.org/ontologies/nif-core/version-1.0/OffsetBasedString"/>
+    <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OccuringWord"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#LabelString"/>
   </rdf:Description>
 </rdf:RDF>
