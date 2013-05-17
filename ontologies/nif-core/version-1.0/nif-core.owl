@@ -243,6 +243,15 @@ NLP2RDF works together with several other projects, that make very good ontologi
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#ContextHashBasedString">
     <rdfs:subClassOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString">
+    <rdfs:label xml:lang="en">Offset based string</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString">
+    <rdfs:subClassOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OccuringWord">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
@@ -267,15 +276,6 @@ NLP2RDF works together with several other projects, that make very good ontologi
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#LabelString">
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString">
-    <rdfs:label xml:lang="en">Offset based string</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString">
-    <rdfs:subClassOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#XPathString">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
@@ -295,7 +295,7 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdfs:label xml:lang="en">Structure</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure">
-    <rdfs:comment>A structure is a more or less arbitrary label for a partitioning of a string. We don not follow a strict approach for what a word, phrase, sentence, paragraph is. </rdfs:comment>
+    <rdfs:comment>A structure is a more or less arbitrary label for a partitioning of a string. We do not follow a strict approach for what a word, phrase, sentence, paragraph is. </rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure">
     <rdfs:subClassOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
@@ -304,10 +304,10 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word">
-    <rdfs:label xml:lang="en"></rdfs:label>
+    <rdfs:label xml:lang="en">word</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word">
-    <rdfs:comment>TODO</rdfs:comment>
+    <rdfs:comment>A string that can be considered a word or a punctuation mark, the sentence 'He enters the room.' for example has 5 words. In general, the division into nif:Word is done by a Tokenizer. Instances of this class should be a string, that is a 'meaningful' unit of characters. The class has not been named 'Token' as the NLP definition of 'Token' is more similar to our definition of nif:String in general. </rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word">
     <rdfs:subClassOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure"/>
@@ -316,10 +316,10 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Phrase">
-    <rdfs:label xml:lang="en"></rdfs:label>
+    <rdfs:label xml:lang="en">phrase</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Phrase">
-    <rdfs:comment>TODO</rdfs:comment>
+    <rdfs:comment>A nif:Phrase can be a nif:String, that is a chunk of several words or a word itself (e.g. a NounPhrase as a Named Entity). The term is underspecified and can be compatible with many defintitions of phrase. Please subClass it to specify the meaning (e.g. for Chunking or Phrase Structure Grammar). Example: ((My dog)(also)(likes)(eating (sausage))) </rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Phrase">
     <rdfs:subClassOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure"/>
@@ -328,10 +328,10 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence">
-    <rdfs:label xml:lang="en"></rdfs:label>
+    <rdfs:label xml:lang="en">sentence</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence">
-    <rdfs:comment>TODO</rdfs:comment>
+    <rdfs:comment>a sentence.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence">
     <rdfs:subClassOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure"/>
@@ -680,6 +680,9 @@ NLP2RDF works together with several other projects, that make very good ontologi
   </rdf:Description>
   <rdf:Description rdf:about="http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,6">
     <itsrdf:taIdentRef rdf:resource="http://dbpedia.org/resource/Mexico"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,6">
+    <itsrdf:taConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.99</itsrdf:taConfidence>
   </rdf:Description>
   <rdf:Description rdf:about="http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,6">
     <itsrdf:taClassRef rdf:resource="http://nerd.eurecom.fr/ontology#Country"/>

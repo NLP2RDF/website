@@ -20,6 +20,10 @@
 # <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext> a owl:FunctionalProperty .
 # nif:HTMLString
 
+# these axioms are experimental for now
+nif:Context owl:hasKey ( nif:isString ) .
+nif:String owl:hasKey (nif:referenceContext ) (nif:beginIndex, nif:endIndex)
+
 ###################
 # Transitivity
 ###################
