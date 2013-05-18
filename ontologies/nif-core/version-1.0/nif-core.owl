@@ -445,7 +445,7 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdfs:subPropertyOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentenceTrans"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentenceTrans">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentenceTrans">
     <rdfs:comment xml:lang="en">see nif:nextSentence</rdfs:comment>

@@ -1,0 +1,78 @@
+NIF simple broaderContext+context for each mention: (baseLine)
+		Triples:(Number of URIs)*4 + (Number of Mentions)*13				8910391*4 + 33969925*13 = 477250589 triples 	100%
+	One Uri for each broaderContext, 2 URIs per mention (mention+context)
+		Coined URIs:(Number of URIs) + (Number of Mentions)*2				8910391 + 33969925*2 = 76850241 URIS			100%
+		
+NIF simple ideal one context per URI
+		Triples:(Number of URIs)*5 + (Number of Mentions)*8					8910391*5 + 33969925*8 = 316311355 triples		66.28%
+	One Uri for each context, 1 URIs per mention
+		Coined URIs:(Number of URIs) + (Number of Mentions)					8910391 + 33969925 = 42880316 URIS				55.79%
+		
+NIF+Stanbol broaderContext+context for each mention:
+		Triples:(Number of URIs)*4 + (Number of Mentions)*14				8910391*4 + 33969925*14 = 511220514 triples		107.12%
+     One Uri for each broaderContext, 3 URIs per mention (mention+context+enhancementUri)
+		Coined URIs:(Number of URIs) + (Number of Mentions)*3				8910391 + 33969925*3 = 110820166 URIS			144.2%   
+		
+NIF+Stanbol ideal one context per URI
+		Triples:(No. URIs with valid Mentions)*5 + (No. valid Mentions)*9	8910391*5 + 33969925*9 = 350281280 triples	 	73.40%
+	One Uri for each context, 2 URIs per mention
+		Coined URIs:(Number of URIs) + (Number of Mentions)*2				8910391 + 33969925*2 = 76850241 URIS			100%
+
+OpenAnnotation StandAlone
+triples: 
+	<Anno> a oa:Ann
+	<Anno> hasBody <Body1>
+	<Body1> a cnt:contextAsText
+	<Body1> cnt:chars "contextString"
+	<Body1> dc:format "text/plain"
+	<Body1> a dctype:Text
+	<Anno>  hasBody <Body2>
+	<Body2> a oa:SemanticTag
+	<Body2> foaf:page dbpedia:...
+	<Anno> hasTarget <Target1>
+	<Target1> a oa:SpecificResource
+	<Target1> hasSource: URL
+	<Target1> a dctype:URI
+	<Target1> hasSelector <Selector1>
+	<Selector1> a oa:FragmentSelector
+	<Selector1> conformsTo rfc5147
+	<Selector1> rdf:value "#char=begin,end"
+-> 17 triple per mention
+		Triples:(No. valid Mentions)*17										33969925*17 = 577488725 triples					121.00%
+	5 URIS per mention
+		Coined URIs:(Number of Mentions)*5									33969925*5 = 169849625 URIs						221.01%
+
+UIMA + Clerezza
+triples:
+	<uima:Jcas> clerezza:contains <uima:Annotation1>
+	<uima:Annotation1> clerezza:begin "begin"
+	<uima:Annotation1> clerezza:end "end"
+	<uima:Annotation1> a uima:SemanticTag
+	<uima:Annotation1> clerezza:hasFeature <uima:Feature1>
+	<uima:Feature1> clerezza:FeatureName "coveredText"
+	<uima:Feature1> clerezza:FeatureValue "$anchorOf"
+	<uima:Annotation1> clerezza:hasFeature <uima:Feature2>
+	<uima:Feature2> clerezza:FeatureName "type"
+	<uima:Feature2> clerezza:FeatureValue "word/phrase"
+	<uima:Annotation1> clerezza:hasFeature <uima:Feature3>
+	<uima:Feature3> clerezza:FeatureName "URI"
+	<uima:Feature3> clerezza:FeatureValue dbpedia:...
+	<uima:Annotation1> clerezza:hasFeature <uima:Feature4>
+	<uima:Feature4> clerezza:FeatureName "sofa"
+	<uima:Jcas> clerezza:contains <uima:Annotation2>
+	<uima:Annotation2> clerezza:begin "0"
+	<uima:Annotation2> a uima:Context
+	<uima:Annotation2> clerezza:hasFeature <uima:Feature5>
+	<uima:Feature5> clerezza:FeatureName "coveredText"
+	<uima:Feature5> clerezza:FeatureValue "$context"
+	<uima:Annotation2> clerezza:hasFeature <uima:Feature6>
+	<uima:Feature6> clerezza:FeatureName "sofa"
+	<uima:Annotation2> clerezza:hasFeature <uima:Feature7>
+	<uima:Feature7> clerezza:FeatureName "contextURI"
+	<uima:Feature7> clerezza:FeatureValue $uri
+
+-> 11 triples per URI (broaderContext, via annotation2) + 15 triples per mention (via annotation1)
+		Triples:															8910391*11 + 33969925*15 = 607563176 triples	127.30%
+		Coined URIs:(Number of URIs)*6 + (Number of Mentions)*4				8910391*6 + 33969925*4 = 189342046 URIS			246.38%
+
+

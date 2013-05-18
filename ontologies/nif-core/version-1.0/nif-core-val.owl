@@ -16,7 +16,7 @@
     <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#datetime"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String">
-    <owl:equivalentClass rdf:nodeID="genid1"/>
+    <owl:subClassOf rdf:nodeID="genid1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>

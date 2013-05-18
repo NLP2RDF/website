@@ -3,9 +3,7 @@ persistence.uni-leipzig.de
 
 All ontologies used in NIF (nif-core + vocabulary modules )
 
-
-## Note the workflow for these ontologies
-I decided to put this here, as I find it quite practical. 
+## Workflow for the ontologies
 
 ### '\#' vs. '/' URIs
 There has been an ongoing debate about '\#' vs. '/' . We focus on ontologies with '\#' here with URIs like:

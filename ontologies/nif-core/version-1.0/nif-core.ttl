@@ -267,7 +267,7 @@ nif:previousSentence
     rdfs:subPropertyOf nif:previousSentenceTrans .
 
 nif:previousSentenceTrans
-    a owl:TransitiveProperty ;
+    a owl:ObjectProperty ;
     rdfs:comment "see nif:nextSentence"@en ;
     rdfs:domain nif:Sentence ;
     rdfs:range nif:Sentence .
