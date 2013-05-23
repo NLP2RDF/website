@@ -109,19 +109,22 @@ nif:isString
 
 nif:anchorOf
     a owl:DatatypeProperty ;
+    vs:term_status <https://github.com/NLP2RDF/persistence.uni-leipzig.org/issues/1> ;
     rdfs:label "anchor of"@en ;
     rdfs:comment "The string, which the uri is representing as an RDF Literal. This property is nice to have, but can be re-created from the context." ;
     rdfs:domain nif:String .
 
 nif:sourceUrl
     a owl:ObjectProperty ;
+    vs:term_status "unstable" ;
     rdfs:label "source URL"@en ;	
     rdfs:comment "The URL the context was extracted from, e.g. the blog or news article url. Doesn't matter whether it is HTML or XML or plain text. rdfs:range is foaf:Document, if the string comes form another NIF String, please use nif:convertedFrom"@en ;
     rdfs:domain nif:Context ;
     rdfs:range foaf:Document .
 
-nif:convertedFrom
+nif:wasConvertedFrom
     a owl:ObjectProperty ;
+    vs:term_status "testing" ;
     rdfs:label "converted from"@en ;	
     rdfs:comment "This property is used to map from one NIF String URI to another. It mainly is used to provide provenance during a conversion process, e.g. linking xpath URIs to offsets of the extracted texts."@en ;
     rdfs:domain nif:String ;
@@ -129,6 +132,7 @@ nif:convertedFrom
     
 nif:broaderContext
     a owl:ObjectProperty ;
+    vs:term_status "testing" ;
     rdfs:label "broader Context"@en ;	
     rdfs:comment "This property should be used to express that one Context is contained in another Context, e.g. several sentences of a document are modelled indivudally and refer to the broader context of the whole document."@en ;
     rdfs:domain nif:Context ;
@@ -136,7 +140,7 @@ nif:broaderContext
     
 nif:beginIndex
     a owl:DatatypeProperty ;
-    vs:term_status "stable" ;
+    vs:term_status "unstable, but rdfs:range might be changed." ;
     rdfs:label "begin index"@en ;
     rdfs:comment "The begin index of the string relative to the content of isString in the reference context, defined by RFC 5147. " ;
     rdfs:range <http://www.w3.org/2001/XMLSchema#long> ;

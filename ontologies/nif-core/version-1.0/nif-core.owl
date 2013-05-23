@@ -166,6 +166,9 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf">
+    <vs:term_status rdf:resource="https://github.com/NLP2RDF/persistence.uni-leipzig.org/issues/1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf">
     <rdfs:label xml:lang="en">anchor of</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf">
@@ -176,6 +179,9 @@ NLP2RDF works together with several other projects, that make very good ontologi
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl">
+    <vs:term_status>unstable</vs:term_status>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl">
     <rdfs:label xml:lang="en">source URL</rdfs:label>
@@ -189,23 +195,29 @@ NLP2RDF works together with several other projects, that make very good ontologi
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl">
     <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#convertedFrom">
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#wasConvertedFrom">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#convertedFrom">
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#wasConvertedFrom">
+    <vs:term_status>testing</vs:term_status>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#wasConvertedFrom">
     <rdfs:label xml:lang="en">converted from</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#convertedFrom">
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#wasConvertedFrom">
     <rdfs:comment xml:lang="en">This property is used to map from one NIF String URI to another. It mainly is used to provide provenance during a conversion process, e.g. linking xpath URIs to offsets of the extracted texts.</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#convertedFrom">
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#wasConvertedFrom">
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#convertedFrom">
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#wasConvertedFrom">
     <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#broaderContext">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#broaderContext">
+    <vs:term_status>testing</vs:term_status>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#broaderContext">
     <rdfs:label xml:lang="en">broader Context</rdfs:label>
@@ -223,7 +235,7 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#beginIndex">
-    <vs:term_status>stable</vs:term_status>
+    <vs:term_status>unstable, but rdfs:range might be changed.</vs:term_status>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#beginIndex">
     <rdfs:label xml:lang="en">begin index</rdfs:label>
