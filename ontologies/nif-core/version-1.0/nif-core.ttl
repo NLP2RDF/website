@@ -140,18 +140,18 @@ nif:broaderContext
     
 nif:beginIndex
     a owl:DatatypeProperty ;
-    vs:term_status "unstable, but rdfs:range might be changed." ;
+    vs:term_status "unstable" ;
     rdfs:label "begin index"@en ;
     rdfs:comment "The begin index of the string relative to the content of isString in the reference context, defined by RFC 5147. " ;
-    rdfs:range <http://www.w3.org/2001/XMLSchema#long> ;
+    rdfs:range <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
     rdfs:domain nif:String .
 
 nif:endIndex
     a owl:DatatypeProperty ;
-    vs:term_status "stable" ;
-    rdfs:label "reference context"@en ;
+    vs:term_status "unstable" ;
+    rdfs:label "endIndex"@en ;
 	rdfs:comment "The end index of the string relative to the content of isString in the reference context, defined by RFC 5147. " ;
-	rdfs:range <http://www.w3.org/2001/XMLSchema#long> ;
+	rdfs:range <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
     rdfs:domain nif:String .
 
 nif:leftPrefix
