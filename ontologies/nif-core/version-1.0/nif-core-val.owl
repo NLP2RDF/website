@@ -1,72 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rdf:RDF xmlns:dcterms="http://purl.org/dc/terms/" xmlns:nif="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#">
-    <owl:imports rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl"/>
-  </rdf:Description>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:nif="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#">
     <owl:imports rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core-inf.ttl"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="genid1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="genid1">
-    <owl:onProperty rdf:resource="http://purl.org/dc/terms/created"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="genid1">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#datetime"/>
+    <owl:imports rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String">
-    <owl:subClassOf rdf:nodeID="genid1"/>
+    <owl:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#datetime"/>
+        <owl:onProperty rdf:resource="http://purl.org/dc/terms/created"/>
+      </owl:Restriction>
+    </owl:subClassOf>
   </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext">
+  <owl:FunctionalProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf"/>
+  <owl:FunctionalProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord"/>
+  <owl:FunctionalProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString"/>
+  <owl:FunctionalProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence"/>
+  <owl:FunctionalProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextWord"/>
+  <owl:FunctionalProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence"/>
+  <owl:FunctionalProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousWord">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextWord">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousWord">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousWord">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="genid2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="genid2">
-    <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="genid2">
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext"/>
+  <owl:AllDisjointClasses>
     <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#ContextHashBasedString"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="genid2">
-    <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="genid2">
     <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OccuringWord"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="genid3">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="genid3">
-    <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="genid3">
+    <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString"/>
+    <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String"/>
+  </owl:AllDisjointClasses>
+  <owl:AllDisjointClasses>
     <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#LabelString"/>
-  </rdf:Description>
+    <owl:members rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
+  </owl:AllDisjointClasses>
 </rdf:RDF>

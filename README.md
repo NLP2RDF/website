@@ -8,10 +8,10 @@ All ontologies used in NIF (nif-core + vocabulary modules )
 ### '\#' vs. '/' URIs
 There has been an ongoing debate about '\#' vs. '/' . We focus on ontologies with '\#' here with URIs like:
 http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core\#String 
-Note that ontologies with '/' URIs need to published differently (description not included here). 
+Note that ontologies with '/' URIs need to published differently (partly discussed here: http://lists.w3.org/Archives/Public/semantic-web/2013Apr/0157.html). 
 
 ### Workflow for '\#' ontologies
-1. I edit the ontologies in turtle syntax with the Geany text editor (or a Turtle editor http://blog.aksw.org/2013/xturtle-turtle-editing-the-eclipse-way ),
+1. I edit the ontologies in turtle syntax with the Geany text editor or any other Turtle editor e.g. http://aksw.org/Projects/Xturtle.html ),
    This allows me to make developers comments using "#" directly in the source, see e.g. nlp2rdf/ontologies/nif-core.ttl
 2. When I am finished I use rapper (http://librdf.org/raptor/rapper.html) to convert it to rdfxml ( nlp2rdf/ontologies/nif-core.owl )
 3. I am versioning the ontologies in a folder with the version number, e.g. version-1.0
