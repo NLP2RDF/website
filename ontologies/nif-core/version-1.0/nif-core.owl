@@ -187,7 +187,6 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
     <rdfs:label xml:lang="en">begin index</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/oa#start"/>
     <vs:term_status>testing</vs:term_status>
   </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#broaderContext">
@@ -206,7 +205,6 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
     <rdfs:label xml:lang="en">end index</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/oa#end"/>
     <vs:term_status>testing</vs:term_status>
   </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord">
