@@ -7,6 +7,7 @@
    xmlns:nif="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#"
    xmlns:oa="http://www.w3.org/ns/oa#"
    xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:prov="http://www.w3.org/ns/prov#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
@@ -30,11 +31,12 @@ Until a year ago the U.S. had delivered only about 9 percent of the promised aid
   </nif:RFC5147String>
   <nif:RFC5147String rdf:about="http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,6">
     <nif:anchorOf>Mexico</nif:anchorOf>
-    <nif:beginIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</nif:beginIndex>
-    <nif:endIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</nif:endIndex>
+    <nif:beginIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</nif:beginIndex>
+    <nif:endIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">6</nif:endIndex>
     <nif:oliaCategory rdf:resource="http://purl.org/olia/olia.owl#Noun"/>
     <nif:oliaCategory rdf:resource="http://purl.org/olia/olia.owl#ProperNoun"/>
     <nif:oliaLink rdf:resource="http://purl.org/olia/penn.owl#NNP"/>
+    <nif:oliaLinkConfidence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.99</nif:oliaLinkConfidence>
     <nif:referenceContext rdf:resource="http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,"/>
     <rdf:type rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Phrase"/>
     <rdf:type rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
@@ -44,24 +46,22 @@ Until a year ago the U.S. had delivered only about 9 percent of the promised aid
     <itsrdf:taIdentRef rdf:resource="http://dbpedia.org/resource/Mexico"/>
   </nif:RFC5147String>
   <owl:Ontology rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#">
-    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
     <vann:changes rdf:resource="https://github.com/NLP2RDF/persistence.uni-leipzig.org/commits/master/ontologies/nif-core"/>
     <vann:preferredNamespacePrefix>nif</vann:preferredNamespacePrefix>
     <vann:preferredNamespaceUri>http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#</vann:preferredNamespaceUri>
     <rdfs:comment xml:lang="en">
-# Disclaimer: 
-This is a draft of version 1.0, it will still change for some weeks, while we move to another server and from Google Code (http://code.google.com/p/nlp2rdf/) to GitHub.
-
-# Actual comment:
-This ontology is part of the NLP2RDF project: http://nlp2rdf.org and provided as part of the NLP Interchange Format Version 2.0 Standard und the CC-BY license. 
-
-# Important notice
+# Disclaimer
+This is a draft of version 1.0, it will still change for some weeks. The NLP2RDF and NIF project are undergoing some structural changes.
+This ontology is part of the NLP2RDF project and provided as part of the NLP Interchange Format Version 2.0 under CC-BY license. 
+More documentation is available at the NIF/NLP2RDF overview page: http://persistence.uni-leipzig.org/nlp2rdf/
+# Ontolgy setup
 This ontology is split in three parts:
 * a terminological model (containing rdfs:comment, rdfs:label, rdfs:subClassOf, rdfs:subPropertyOf, rdfs:range and rdfs:domain statements)
 * an inference model (containing owl:TransitiveProperty, owl:hasKey)
 * a validation model (containing owl:FunctionalProperty, owl:DisjointWith)
 This is also the reason for the three rdfs:isDefinedBy properties.
-The ontology is developed at GitHub: https://github.com/NLP2RDF/persistence.uni-leipzig.org#readme (also older versions are there)
+The ontology is developed at GitHub: https://github.com/NLP2RDF/persistence.uni-leipzig.org#readme (also older versions are there).
 We provide an RDF/XML serialization, but we only edit the turtle file. 
 
 # Other Ontologies
@@ -73,7 +73,7 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdfs:isDefinedBy rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core-inf.ttl"/>
     <rdfs:isDefinedBy rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core-val.ttl"/>
     <rdfs:isDefinedBy rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl"/>
-    <rdfs:label xml:lang="en">NIF 2.0 Core Ontology, version 1.0</rdfs:label>
+    <rdfs:label xml:lang="en">NIF Core Ontology</rdfs:label>
     <owl:versionIRI rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl"/>
     <owl:versionInfo>see GitHub for all version https://github.com/NLP2RDF/persistence.uni-leipzig.org </owl:versionInfo>
   </owl:Ontology>
@@ -176,7 +176,7 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdfs:comment>The string, which the uri is representing as an RDF Literal. This property is nice to have, but can be re-created from the context.</rdfs:comment>
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
     <rdfs:label xml:lang="en">anchor of</rdfs:label>
-    <vs:term_status>cf. https://github.com/NLP2RDF/persistence.uni-leipzig.org/issues/1</vs:term_status>
+    <vs:term_status>unstable, cf. https://github.com/NLP2RDF/persistence.uni-leipzig.org/issues/1</vs:term_status>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#beginIndex">
     <rdfs:comment>The begin index of a character range as defined in http://tools.ietf.org/html/rfc5147#section-2.2.1 and http://tools.ietf.org/html/rfc5147#section-2.2.2, measured as the gap between two characters, starting to count from 0 (the position before the first character of a text). 
@@ -406,10 +406,14 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <vs:term_status>unstable</vs:term_status>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#wasConvertedFrom">
-    <rdfs:comment xml:lang="en">This property is used to map from one NIF String URI to another. It mainly is used to provide provenance during a conversion process, e.g. linking xpath URIs to offsets of the extracted texts.</rdfs:comment>
+    <rdfs:comment xml:lang="en">This property should be used, when mapping one NIF String URI to another.
+    It mainly is used to provide provenance during a conversion process, e.g. when removing tags from XHTML and then linking XPath URIs to NIF index based URIs (e.g.  RFC 5147 with char=x,y).
+    An example of the usage of this property can be found here: http://www.w3.org/TR/its20/#conversion-to-nif
+    </rdfs:comment>
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
-    <rdfs:label xml:lang="en">converted from</rdfs:label>
+    <rdfs:label xml:lang="en">was Converted from</rdfs:label>
     <rdfs:range rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
     <vs:term_status>testing</vs:term_status>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word">

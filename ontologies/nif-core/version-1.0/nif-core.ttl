@@ -7,6 +7,7 @@
 @prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
 @prefix nerd: <http://nerd.eurecom.fr/ontology#> .
 @prefix itsrdf: <http://www.w3.org/2005/11/its/rdf#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -15,24 +16,22 @@
 
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> 
     a owl:Ontology ;
-    rdfs:label "NIF 2.0 Core Ontology, version 1.0"@en ;
+    rdfs:label "NIF Core Ontology"@en ;
     vann:preferredNamespacePrefix "nif" ;
     vann:preferredNamespaceUri "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#" ;
     vann:changes <https://github.com/NLP2RDF/persistence.uni-leipzig.org/commits/master/ontologies/nif-core> ;
     rdfs:comment """
-# Disclaimer: 
-This is a draft of version 1.0, it will still change for some weeks, while we move to another server and from Google Code (http://code.google.com/p/nlp2rdf/) to GitHub.
-
-# Actual comment:
-This ontology is part of the NLP2RDF project: http://nlp2rdf.org and provided as part of the NLP Interchange Format Version 2.0 Standard und the CC-BY license. 
-
-# Important notice
+# Disclaimer
+This is a draft of version 1.0, it will still change for some weeks. The NLP2RDF and NIF project are undergoing some structural changes.
+This ontology is part of the NLP2RDF project and provided as part of the NLP Interchange Format Version 2.0 under CC-BY license. 
+More documentation is available at the NIF/NLP2RDF overview page: http://persistence.uni-leipzig.org/nlp2rdf/
+# Ontolgy setup
 This ontology is split in three parts:
 * a terminological model (containing rdfs:comment, rdfs:label, rdfs:subClassOf, rdfs:subPropertyOf, rdfs:range and rdfs:domain statements)
 * an inference model (containing owl:TransitiveProperty, owl:hasKey)
 * a validation model (containing owl:FunctionalProperty, owl:DisjointWith)
 This is also the reason for the three rdfs:isDefinedBy properties.
-The ontology is developed at GitHub: https://github.com/NLP2RDF/persistence.uni-leipzig.org#readme (also older versions are there)
+The ontology is developed at GitHub: https://github.com/NLP2RDF/persistence.uni-leipzig.org#readme (also older versions are there).
 We provide an RDF/XML serialization, but we only edit the turtle file. 
 
 # Other Ontologies
@@ -46,7 +45,7 @@ NLP2RDF works together with several other projects, that make very good ontologi
     rdfs:isDefinedBy <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core-val.ttl> ;
     owl:versionInfo "see GitHub for all version https://github.com/NLP2RDF/persistence.uni-leipzig.org " ;
     owl:versionIRI <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl> ;
-    dcterms:license <http://creativecommons.org/licenses/by/2.0/> .
+    dcterms:license <http://creativecommons.org/licenses/by/3.0/> .
 
 ###################
 # Base Classes
@@ -116,7 +115,7 @@ nif:isString
 
 nif:anchorOf
     a owl:DatatypeProperty ;
-    vs:term_status "cf. https://github.com/NLP2RDF/persistence.uni-leipzig.org/issues/1" ;
+    vs:term_status "unstable, cf. https://github.com/NLP2RDF/persistence.uni-leipzig.org/issues/1" ;
     rdfs:label "anchor of"@en ;
     rdfs:comment "The string, which the uri is representing as an RDF Literal. This property is nice to have, but can be re-created from the context." ;
     rdfs:domain nif:String .
@@ -132,8 +131,12 @@ nif:sourceUrl
 nif:wasConvertedFrom
     a owl:ObjectProperty ;
     vs:term_status "testing" ;
-    rdfs:label "converted from"@en ;	
-    rdfs:comment "This property is used to map from one NIF String URI to another. It mainly is used to provide provenance during a conversion process, e.g. linking xpath URIs to offsets of the extracted texts."@en ;
+    rdfs:label "was Converted from"@en ;	
+    rdfs:comment """This property should be used, when mapping one NIF String URI to another.
+    It mainly is used to provide provenance during a conversion process, e.g. when removing tags from XHTML and then linking XPath URIs to NIF index based URIs (e.g.  RFC 5147 with char=x,y).
+    An example of the usage of this property can be found here: http://www.w3.org/TR/its20/#conversion-to-nif
+    """@en ;
+    rdfs:subPropertyOf prov:wasDerivedFrom ;
     rdfs:domain nif:String ;
     rdfs:range nif:String .
     
@@ -510,12 +513,14 @@ nif:posTag
 # Plain text example
 ###############
 
-# the first word
+# Stable part:
+# URI for the first word
 <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,6> 
 	a nif:RFC5147String , nif:String ;
 	nif:referenceContext <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,>  ;
-	nif:beginIndex "0"^^xsd:int ;
-	nif:endIndex "6"^^xsd:int ;
+	nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+	nif:endIndex "6"^^xsd:nonNegativeInteger ;
+# unstable /testing part begins below	
 	nif:anchorOf "Mexico" ;
 	
 	# Tokenization
@@ -532,19 +537,13 @@ nif:posTag
 	# PartOfSpeech tagging
 	######################
 	nif:oliaLink <http://purl.org/olia/penn.owl#NNP> ;
+	nif:oliaLinkConfidence "0.99"^^xsd:decimal ;
 	nif:oliaCategory <http://purl.org/olia/olia.owl#Noun> ;
 	nif:oliaCategory <http://purl.org/olia/olia.owl#ProperNoun> .
 
 # the mention found in the first word
 <http://dbpedia.org/resource/Mexico> 
 	a <http://nerd.eurecom.fr/ontology#Country> .
-
- 
-
-# <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,> 
-# 	owl:sameAs <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,1765> .
-# <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,> 
-# 	owl:sameAs <http://nlp2rdf.lod2.eu/usecases/plaintext.txt>  .
 
 ## Context
 <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,> 
