@@ -176,7 +176,7 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdfs:comment>The string, which the uri is representing as an RDF Literal. This property is nice to have, but can be re-created from the context.</rdfs:comment>
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
     <rdfs:label xml:lang="en">anchor of</rdfs:label>
-    <vs:term_status>unstable, cf. https://github.com/NLP2RDF/persistence.uni-leipzig.org/issues/1</vs:term_status>
+    <vs:term_status>unstable, optional, cf. https://github.com/NLP2RDF/persistence.uni-leipzig.org/issues/1</vs:term_status>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#beginIndex">
     <rdfs:comment>The begin index of a character range as defined in http://tools.ietf.org/html/rfc5147#section-2.2.1 and http://tools.ietf.org/html/rfc5147#section-2.2.2, measured as the gap between two characters, starting to count from 0 (the position before the first character of a text). 
@@ -365,7 +365,6 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdfs:comment xml:lang="en">The URL the context was extracted from, e.g. the blog or news article url. Doesn't matter whether it is HTML or XML or plain text. rdfs:range is foaf:Document, if the string comes form another NIF String, please use nif:convertedFrom</rdfs:comment>
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context"/>
     <rdfs:label xml:lang="en">source URL</rdfs:label>
-    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
     <vs:term_status>testing</vs:term_status>
   </owl:ObjectProperty>
   <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#stem">

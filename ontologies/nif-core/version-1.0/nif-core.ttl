@@ -115,7 +115,7 @@ nif:isString
 
 nif:anchorOf
     a owl:DatatypeProperty ;
-    vs:term_status "unstable, cf. https://github.com/NLP2RDF/persistence.uni-leipzig.org/issues/1" ;
+    vs:term_status "unstable, optional, cf. https://github.com/NLP2RDF/persistence.uni-leipzig.org/issues/1" ;
     rdfs:label "anchor of"@en ;
     rdfs:comment "The string, which the uri is representing as an RDF Literal. This property is nice to have, but can be re-created from the context." ;
     rdfs:domain nif:String .
@@ -125,8 +125,8 @@ nif:sourceUrl
     vs:term_status "testing" ;
     rdfs:label "source URL"@en ;	
     rdfs:comment "The URL the context was extracted from, e.g. the blog or news article url. Doesn't matter whether it is HTML or XML or plain text. rdfs:range is foaf:Document, if the string comes form another NIF String, please use nif:convertedFrom"@en ;
-    rdfs:domain nif:Context ;
-    rdfs:range foaf:Document .
+    rdfs:domain nif:Context .
+    
 
 nif:wasConvertedFrom
     a owl:ObjectProperty ;
