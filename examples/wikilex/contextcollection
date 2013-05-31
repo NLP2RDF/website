@@ -1,0 +1,156 @@
+@base <http://persistence.uni-leipzig.org/nlp2rdf/examples/wikilex/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix nif: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+@prefix itsrdf: <http://www.w3.org/2005/11/its/rdf#> .
+
+
+###############
+# Alcoholism Context 
+##############	
+
+<Alcoholism.txt#char=0,91429> 
+	a nif:Context, nif:RFC5147String ;
+	nif:beginIndex "0" ;
+	nif:endIndex "91429" ;
+	nif:sourceUrl <http://en.wikipedia.org/wiki/Alcoholism> ;
+	nif:isString "(snip) ... Benzodiazepines, while useful in the management of acute alcohol withdrawal, if used long-term can cause a worse outcome in alcoholism. Alcoholics on chronic benzodiazepines have a lower rate of achieving abstinence from alcohol than those not taking benzodiazepines....."  .
+
+################
+# Alcoholism, the concrete occurrence of "Benzodiazepines"
+# grep -b -o 'Benzodiazepines, while' Alcoholism.txt 
+# 37028:Benzodiazepines, while
+################
+<Alcoholism.txt#char=37028,37043> 
+	a  nif:RFC5147String ;
+	nif:beginIndex "37028" ;
+	nif:endIndex "37043" ;
+	itsrdf:taIdentRef <http://dbpedia.org/resource/Benzodiazepine> ;
+	nif:referenceContext <Alcoholism.txt#char=0,91429>  .
+
+################
+# Alcoholism, context level aggregation
+# since the context == the content of one doc here its also a document level aggregation
+# grep Benzodiazepines Alcoholism.txt | wc -l
+# 2
+################
+<Alcoholism.txt#term=Benzodiazepines>  
+		a nif:ContextOccurrence ;
+		nif:count "2" ;
+		nif:occurrence <Alcoholism.txt#char=37028,37043> ;
+		nif:occurrence <Alcoholism.txt#char=40028,40043> ;
+		nif:referenceContext <Alcoholism.txt#char=0,91429> .
+
+################
+# Alcoholism, normalized context level aggregation
+# grep -E '(benzodiazepine|benzodiazepines|Benzodiazepine|Benzodiazepines)' Alcoholism.txt | wc -l
+# 17
+################
+<Alcoholism.txt#normterm=benzodiazepine>  
+		a nif:NormalizedContextOccurrence ;
+		nif:count "17" ;
+		nif:occurrence <Alcoholism.txt#char=37028,37043> ;
+		# ... 17 total
+		nif:term <Alcoholism.txt#term=benzodiazepine> ;
+		nif:term <Alcoholism.txt#term=benzodiazepines> ;
+		nif:term <Alcoholism.txt#term=Benzodiazepine> ;
+		nif:term <Alcoholism.txt#term=Benzodiazepines> ;
+		nif:referenceContext <Alcoholism.txt#char=0,91429> .
+
+
+###############
+# Arachnophobia
+##############
+	
+	
+<Arachnophobia.txt#char=0,12968> 
+	a nif:Context, nif:RFC5147String ;
+	nif:beginIndex "0" ;
+	nif:endIndex "12968" ;
+	nif:sourceUrl <http://en.wikipedia.org/wiki/Arachnophobia> ;
+	nif:isString "(the whole) ... In addition beta blockers, serotonin reuptake inhibitors and sedatives are used in the treatment of phobias...." 	.
+
+
+################
+# Arachnophobia the concrete occurrence
+# grep -b -o sedatives Arachnophobia.txt
+# 5699:sedatives
+################
+<Arachnophobia.txt#char=5699,5715>  
+	a  nif:RFC5147String ;
+	nif:beginIndex "5699" ;
+	nif:endIndex "5715" ;
+	itsrdf:taIdentRef <http://dbpedia.org/resource/Benzodiazepine> ;
+	nif:referenceContext <Arachnophobia.txt#char=0,12968>
+	
+################
+# Arachnophobia context level aggregation
+# grep sedatives Arachnophobia.txt | wc -l
+# 1
+################
+<Arachnophobia.txt#term=sedatives>  
+		a nif:ContextOccurrence ;
+		nif:count "1" ;
+		nif:occurrence <Arachnophobia.txt#char=5699,5715> ;
+		nif:referenceContext <Arachnophobia.txt#char=0,12968> .
+
+################
+# Arachnophobia context level aggregation
+# grep -E '(sedatives|sedative)' Arachnophobia.txt | wc -l
+# 1
+################
+<Arachnophobia.txt#normterm=sedative>  
+		a nif:NormalizedContextOccurrence ;
+		nif:count "1" ;
+		nif:occurrence <Arachnophobia.txt#char=5699,5715> ;
+		nif:term <Arachnophobia.txt#term=sedatives> ;
+		nif:referenceContext <Arachnophobia.txt#char=0,12968> .
+
+################
+# collection (corpus) level aggregation
+################
+<contextcollection> 
+		nif:context <Arachnophobia.txt#char=0,12968> ;
+		nif:context <Alcoholism.txt#char=0,91429> ;
+		a nif:ContextCollection .
+
+################
+# terms in the collection/corpus
+# grep 'sedatives' *.txt | wc -l
+# 1
+###############
+<contextcollection#term=sedatives> 
+		a nif:CollectionOccurrence ;
+		nif:count "1" ;
+		nif:occurrence <Arachnophobia.txt#char=5699,5715> ;
+		nif:term <Arachnophobia.txt#term=sedatives> ;
+		nif:collection <contextcollection> .
+################
+# normalized terms in the collection/corpus
+# grep -E '(sedatives|sedative)' *.txt | wc -l
+# 11
+###############
+<contextcollection#normterm=sedative> 
+		a nif:NormalizedCollectionOccurrence ;
+		nif:count "11" ;
+		nif:occurrence <Arachnophobia.txt#char=5699,5715> ;
+		nif:occurrence <Arachnophobia.txt#char=x0,y0> ;
+		# ... 11 total
+		nif:occurrence <Arachnophobia.txt#char=x10,y10> ;
+		nif:term <Arachnophobia.txt#term=sedative> ;
+		nif:term <Arachnophobia.txt#term=sedatives> ;
+		nif:collection <contextcollection> .
+		
+# values are not correct
+<http://dbpedia.org/resource/Benzodiazepine>  
+	<http://dbpedia.org/spotlight/score#uriCount> "2"^^<http://www.w3.org/2001/XMLSchema#integer> ;
+    <http://dbpedia.org/spotlight/score#uriProbability> "2.8664689548369758E-8"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+# this is calculated based on the collection of contexts
+<http://dbpedia.org/spotlight/id/Benzodiazepine---sedatives> 
+	 rdfs:label "sedatives" ;
+	 <http://dbpedia.org/spotlight/score#entity> <http://dbpedia.org/resource/Benzodiazepine> ;
+	 <http://dbpedia.org/spotlight/score#collectionOccurrence> <contextcollection#term=sedatives> ;
+	 <http://dbpedia.org/spotlight/score#pmi> "14.35124824022569"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	 <http://dbpedia.org/spotlight/score#uriGivenSf> "14.35124824022569"^^<http://www.w3.org/2001/XMLSchema#double> ;
+	 <http://dbpedia.org/spotlight/score#sfGivenUri> "14.35124824022569"^^<http://www.w3.org/2001/XMLSchema#double> .

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
    xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:marl="http://purl.org/marl/ns#"
    xmlns:nif="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#"
    xmlns:owl="http://www.w3.org/2002/07/owl#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -16,6 +17,12 @@
         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
       </rdf:Description>
     </owl:hasKey>
+    <owl:subClassOf>
+      <owl:Restriction>
+        <owl:hasSelf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasSelf>
+        <owl:onProperty rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext"/>
+      </owl:Restriction>
+    </owl:subClassOf>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String">
     <owl:hasKey>
@@ -34,6 +41,12 @@
         </rdf:rest>
       </rdf:Description>
     </owl:hasKey>
+    <owl:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext"/>
+        <owl:someValuesFrom rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context"/>
+      </owl:Restriction>
+    </owl:subClassOf>
   </rdf:Description>
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence">
     <owl:inverseOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence"/>
@@ -43,6 +56,9 @@
     <owl:inverseOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousWord"/>
   </rdf:Description>
   <owl:TransitiveProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextWordTrans"/>
+  <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#opinion">
+    <owl:inverseOf rdf:resource="http://purl.org/marl/ns#extractedFrom"/>
+  </rdf:Description>
   <owl:TransitiveProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentenceTrans"/>
   <owl:TransitiveProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousWordTrans">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>

@@ -12,7 +12,7 @@
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
-
+@prefix marl: <http://purl.org/marl/ns#> .
 
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> 
     a owl:Ontology ;
@@ -97,7 +97,7 @@ nif:referenceContext
     rdfs:label "reference context"@en ;
     rdfs:comment """The reference text (called nif:Context) a nif:String occurs in.  
     Each String instance must have exactly one reference context. 
-    Instances of nif:Context have itself as reference context (TODO formalize). 
+    Instances of nif:Context have itself as reference context ( see also nif-core-inf.ttl)  . 
     This property is functional in the validation model (nif-core-val.ttl)."""@en ;
     rdfs:domain nif:String ;
     rdfs:range nif:Context .
@@ -176,18 +176,20 @@ nif:endIndex
     rdfs:range <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
     rdfs:domain nif:String .
 
-nif:leftPrefix
+nif:prefix
     a owl:DatatypeProperty ;
     vs:term_status "unstable" ;
-    rdfs:label "left prefix"@en ;
-    rdfs:comment "For each string you can include a snippet (e.g. 20-40 characters of text), that is left or right of the subject string. " ;
+    rdfs:label "prefix"@en ;
+    rdfs:comment "For each string you can include a snippet (e.g. 10-40 characters of text), that occurs immediately before the subject string." ;
+    rdfs:subPropertyOf oa:prefix ;
     rdfs:domain nif:String .
 
-nif:rightSuffix
+nif:suffix
     a owl:DatatypeProperty ;
     vs:term_status "unstable" ;
     rdfs:label "right suffix"@en ;
-    rdfs:comment "For each string you can include a snippet (e.g. 20-40 characters of text), that is left or right of the subject string. " ;
+    rdfs:comment "For each string you can include a snippet (e.g. 10-40 characters of text), that occurs immediately after the subject string." ;
+    rdfs:subPropertyOf oa:suffix ;
     rdfs:domain nif:String .
 
 ###################
@@ -236,6 +238,9 @@ nif:XPathString
     rdfs:label "XPath string"@en ;
 #   rdfs:comment """ TODO """ ;
     rdfs:subClassOf nif:HTMLString , nif:String .
+  
+
+
     
 ###################
 # Structure
@@ -492,7 +497,25 @@ nif:posTag
 	rdfs:comment "To include the pos tag as it comes out of the NLP tool as RDF Literal. This property is discouraged to use alone, please use oliaLink and oliaCategory.  " ;
 	rdfs:domain nif:String ;
 	rdfs:range xsd:string .
-    
+
+###################
+# Lexical and Corpus Level
+###################  
+
+nif:ContextOccurrence a owl:Class . #nif:URIScheme .
+nif:NormalizedContextOccurrence a owl:Class . #nif:URIScheme .
+nif:CollectionOccurrence a owl:Class . #nif:URIScheme .
+nif:NormalizedCollectionOccurrence a owl:Class . #nif:URIScheme .
+
+###################
+# Machine Learning
+###################  
+
+nif:class 
+	rdfs:label "class";
+	vs:term_status "unstable" ; 
+	rdfs:comment """A simple annotation for machine learning purposes. The object can be anything, e.g. the literal "A. PRESS: Reportage" from brown or any URI.  """@en ;
+	a owl:AnnotationProperty .
 
 ###############
 # NamedEntity
@@ -502,6 +525,22 @@ nif:posTag
 ###############
 # Sentiment
 ###############    
+
+nif:sentimentValue 
+	rdfs:label "sentiment value";
+	vs:term_status "unstable" ; 
+	rdfs:comment """Between -1 negative and 1 positive """@en ;
+	rdfs:range xsd:decimal ;
+	a owl:DatatypeProperty .
+
+nif:opinion 
+	rdfs:label "opinion";
+	vs:term_status "unstable" ; 
+	rdfs:comment """This property is used to link to a marl:Opinion. We have not investigated marl, so it might be replaced. http://marl.gi2mo.org/?page_id=1#overview . InverseOf marl:extractedFrom"""@en ;
+	rdfs:domain nif:String ;
+	rdfs:range marl:Opinion ;
+	a owl:ObjectProperty .
+	
 
 
 ###############
@@ -518,8 +557,8 @@ nif:posTag
 <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,6> 
 	a nif:RFC5147String , nif:String ;
 	nif:referenceContext <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,>  ;
-	nif:beginIndex "0"^^xsd:nonNegativeInteger ;
-	nif:endIndex "6"^^xsd:nonNegativeInteger ;
+	nif:beginIndex "0" ;
+	nif:endIndex "6" ;
 # unstable /testing part begins below	
 	nif:anchorOf "Mexico" ;
 	

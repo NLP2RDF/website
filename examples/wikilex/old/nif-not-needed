@@ -1,0 +1,13 @@
+
+
+<Arachnophobia.wiki#char=0,13520> 
+	a nif:Context, nif:RFC5147String ;
+	nif:beginIndex "0" ;
+	nif:endIndex "13520" ;
+	nif:isString "" .
+	
+<Alcoholism.wiki#char=0,105754> 
+	a nif:Context, nif:RFC5147String ;
+	nif:beginIndex "0" ;
+	nif:endIndex "105754" ;
+	nif:isString "" .

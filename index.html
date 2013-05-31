@@ -36,8 +36,8 @@ This foundation is created by:
 		<li><a href="http://www.w3.org/community/ontolex/" target="_blank">Ontology-Lexica Community Group</a></li>
 		<li><a href="http://nerd.eurecom.fr/" target="_blank">Named Entity Recognition and Disambiguation (NERD)</a></li>
 		<li><a href="http://purl.org/olia" target="_blank">Ontologies of Linguistic Annotation (OLiA)</a></li>
-		<li><a href="http://stanbol.apache.org/" target="_blank">Apache Stanbol</a></li>
-		<li><a href="http://www.openannotation.org/" target="_blank">Open Annotation Collaboration</a></li>
+		<!--li><a href="http://stanbol.apache.org/" target="_blank">Apache Stanbol</a></li>
+		<li><a href="http://www.openannotation.org/" target="_blank">Open Annotation Collaboration</a></li-->
 	</ul>
 </li>
 </ul>
@@ -47,7 +47,7 @@ This foundation is created by:
 
 
 <h2>Persistence</h2>
-<p>The computer center of the 600 year old University of Leipzig kindly provided us with a small amount of persistent web space for the publication of the NIF standard. 
+<p>The computer center of the 600 year old University of Leipzig kindly provided us with persistent web space for the publication of the NIF standard. 
 This will guarantuee the persistent hosting of the ontologies and the specs. 
 NIF also has an open license and all available parts can be further exploited by any standardization body (e.g. ISO or W3C) in the future without any problems. 
 </p>
@@ -65,8 +65,6 @@ We will try to provide any code produced by NLP2RDF project (and the related Git
 <p> This document serves to give an overview of NIF and can frequently change due to updates and news.
 We are preparing a version 2.0 release candidate for the ontologies and the specification at the moment. 
 Documentation and the ontologies are still subject to change at any time as we are migrating infrastructure. 
-<strong>Important note: We have marked the accepted terms in the ontology as "stable" or a link to the Github issue tracker.</strong>
-
 <h3>Infrastructure and pointers (some are currently replaced and updated):</h3>
 <ul>
 	<li><a href="http://lists.informatik.uni-leipzig.de/mailman/listinfo/nlp2rdf" target="_blank" >Mailing list</a> remains the same</a></li>
@@ -85,14 +83,24 @@ Documentation and the ontologies are still subject to change at any time as we a
 <h2>Ontologies</h2>
 <p>For all ontologies, turtle is the default format with additional comments in the code.  
 All other formats are generated.
+Note: We have marked the terms in the ontology as "stable", "testing", "unstable", "deprecated", "discouraged" or a link to issues in the <a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/issues" target="_blank" >Github issue tracker</a>.
 </p>
 <h3>NIF Core</h3>
 Namespace for the NIF Core Ontology is: </br><code>http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#</code> with the default prefix <code>nif:</code></br>
 <ul>
-<li><a href="nif-core.ttl" target="_blank" >Terminological Model in Turtle</a>, <a href="nif-core.owl" target="_blank" >OWL</a>, HTML (coming soon)</li>
-<li><a href="nif-core-inf.ttl" target="_blank">Inference Model in Turtle</a>, <a href="nif-core-inf.owl" target="_blank" >OWL</a>, HTML (coming soon)</li>
-<li><a href="nif-core-val.ttl" target="_blank" >Validation Model in Turtle</a>, <a href="nif-core-val.owl" target="_blank" >OWL</a>, HTML (coming soon)</li>
+<li><a href="ontologies/version-1.0/nif-core.ttl" target="_blank" >Terminological Model in Turtle</a>, <a href="ontologies/version-1.0/nif-core.owl" target="_blank" >OWL</a>, HTML (coming soon)</li>
+<li><a href="ontologies/version-1.0/nif-core-inf.ttl" target="_blank">Inference Model in Turtle</a>, <a href="ontologies/version-1.0/nif-core-inf.owl" target="_blank" >OWL</a>, HTML (coming soon)</li>
+<li><a href="ontologies/version-1.0/nif-core-val.ttl" target="_blank" >Validation Model in Turtle</a>, <a href="ontologies/version-1.0/nif-core-val.owl" target="_blank" >OWL</a>, HTML (coming soon)</li>
 </ul>
+
+<h3>Specification</h3>
+<ul>
+	<li><strong>(in progress) </strong><a href="spec/2.0.html" target="_blank" >NIF Specification Version 2.0</a></li>
+	<li><a href="http://nlp2rdf.org/nif-2-0-draft" target="_blank" >Changelog</a> remains where it is (for historical reasons)</li>
+	<li><a href="http://nlp2rdf.org/nif-1-0" target="_blank" >NIF Version 1.0</a> remains where it is (for historical reasons)</li>
+	
+</ul>
+
 
 <h3>Attribution</h3>
 tba

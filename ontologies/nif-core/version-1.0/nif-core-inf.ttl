@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix marl: <http://purl.org/marl/ns#> .
 
 
 ###################
@@ -12,6 +13,23 @@
 
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>  owl:imports <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl> .
 
+###################
+# Equivalents
+###################  
+
+nif:String 
+	owl:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty nif:referenceContext ;
+		owl:someValuesFrom nif:Context 
+	] . 
+
+nif:Context
+	owl:subClassOf [
+		a owl:Restriction ;
+		owl:onProperty nif:referenceContext ;
+		owl:hasSelf "true"^^xsd:boolean 
+	] . 
 
 ###################
 # hasKey Definitions 
@@ -65,3 +83,6 @@ nif:nextWord
    
 nif:sentence 
    owl:inverseOf nif:word .
+
+nif:opinion 
+	owl:inverseOf marl:extractedFrom . 

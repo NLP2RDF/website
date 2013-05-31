@@ -13,6 +13,12 @@
   <rdf:Description rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String">
     <owl:subClassOf>
       <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context"/>
+        <owl:onProperty rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext"/>
+      </owl:Restriction>
+    </owl:subClassOf>
+    <owl:subClassOf>
+      <owl:Restriction>
         <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#datetime"/>
         <owl:onProperty rdf:resource="http://purl.org/dc/terms/created"/>
       </owl:Restriction>
