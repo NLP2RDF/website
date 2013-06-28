@@ -38,8 +38,6 @@ rlog:Level
     vs:term_status "stable" ;
     rdfs:label "Log Level"@en ;
     rdfs:comment """look here: http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/Level.html """ .   
-    
-    
    
 rlog:message
     a owl:DatatypeProperty ;

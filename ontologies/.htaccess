@@ -17,6 +17,8 @@ RewriteRule \.(owl|rdf|html|ttl|nt|txt|md)$ - [L]
 ##################
 RewriteCond %{HTTP_ACCEPT} text/html
 RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/index.html [R=302,L]
+
+RewriteCond %{HTTP_ACCEPT} text/html
 RewriteRule ^rlog$ /nlp2rdf/ontologies/rlog/index.html [R=302,L]
 
 ##################
@@ -24,6 +26,8 @@ RewriteRule ^rlog$ /nlp2rdf/ontologies/rlog/index.html [R=302,L]
 ##################
 RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
 RewriteRule ^nif-core$ /nlp2rdf/ontologies/nif-core/version-1.0/nif-core.owl [R=303,L]
+
+RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
 RewriteRule ^rlog$ /nlp2rdf/ontologies/rlog/version-1.0/rlog.owl [R=303,L]
 
 #################

@@ -158,6 +158,13 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <rdfs:subClassOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
     <vs:term_status>unstable</vs:term_status>
   </owl:Class>
+  <owl:Class rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Title">
+    <rdfs:comment>a title within a text.</rdfs:comment>
+    <rdfs:label xml:lang="en">title</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String"/>
+    <rdfs:subClassOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure"/>
+    <vs:term_status>unstable</vs:term_status>
+  </owl:Class>
   <owl:Class rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#URIScheme">
     <rdfs:comment>A URI Scheme for NIF, subclasses need to define guidelines on the URI Scheme as well as the text it refers to. This class is just to keep some order, please don't serialize.</rdfs:comment>
     <rdfs:label xml:lang="en">URI Scheme</rdfs:label>

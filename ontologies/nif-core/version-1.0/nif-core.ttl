@@ -274,6 +274,13 @@ nif:Paragraph
     rdfs:comment "a paragraph." ;
     rdfs:subClassOf nif:Structure , nif:String .
     
+nif:Title
+    a owl:Class ;
+    vs:term_status "unstable" ;  
+    rdfs:label "title"@en ;
+    rdfs:comment "a title within a text." ;
+    rdfs:subClassOf nif:Structure , nif:String .
+    
 ###################
 # Structure properties
 ###################
