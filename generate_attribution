@@ -1,0 +1,51 @@
+#!/usr/bin/php
+<?
+
+$organisations = array(
+	"LOD2"=>array("name"=>"LOD2 EU Project","url"=>"http://lod2.eu", "logo"=>"http://lod2.eu/BlogPost/wp-content/uploads/2010/09/lod2-logo.jpg"),
+	"IMP"=>array("name"=>"Institute Mihailo Pupin","url"=>"http://www.pupin.rs/", "logo"=>""),
+	"Zemanta"=>array("name"=>"Zemanta","url"=>"http://www.zemanta.com/", "logo"=>""),
+	"VistaTEC"=>array("name"=>"VistaTEC","url"=>"http://vistatec.ie", "logo"=>""),
+	"OpenLink"=>array("name"=>"OpenLink Software","url"=>"http://www.openlinksw.com/", "logo"=>""),
+
+	"MLW-LT"=>array("name"=>"MultilingualWeb-LT Working Group","url"=>"http://www.w3.org/International/multilingualweb/lt/", "logo"=>""),
+	"ULEI"=>array("name"=>"University  of Leipzig","url"=>"http://uni-leipzig.de", "logo"=>""),
+	"KAIST"=>array("name"=>"SWRC at KAIST","url"=>"http://semanticweb.kaist.ac.kr/", "logo"=>""),
+	"SWC"=>array("name"=>"Semantic Web Company","url"=>"http://www.semantic-web.at/", "logo"=>""),
+	"TCD"=>array("name"=>"Trinity College Dublin","url"=>"http://www.tcd.ie", "logo"=>""),
+	"Ontos"=>array("name"=>"Ontos","url"=>"http://www.ontos.com", "logo"=>""),
+	"AKSW"=>array("name"=>"AKSW","url"=>"http://aksw.org", "logo"=>"")
+	);
+$persons = array("LOD2"=>"http://lod2.eu");
+$tools = array("LOD2"=>"http://lod2.eu");
+//$projectlogo = array("LOD2"=>"http://lod2.eu")
+
+$attribution = array();
+
+$attribution[] = array("persons"=>array("Harald Beck"),  	"orga"=>array("SWC","LOD2"), 			"tools"=>array("PoolParty"));
+$attribution[] = array("persons"=>array("Key-Sun Choi"), 	"orga"=>array("KAIST","LOD2") , 		"tools"=>array("COAT", "Korean NLP2RDF"));
+$attribution[] = array("persons"=>array("Mateja Verlic"),	"orga"=>array("Zemanta","LOD2"), 				"tools"=>array("Zemanta"));
+$attribution[] = array("persons"=>array("Mladen Stanojevic", "Uros Milosevic"),			"orga"=>array("IMP","LOD2"), 			"tools"=>array("Zemanta"));
+$attribution[] = array("persons"=>array("Mitko Illiev"),   	"orga"=>array("OpenLink", "LOD2"), 			"tools"=>array("Virtuoso Sponger"));
+
+$attribution[] = array("persons"=>array("Ali Khalili"),  	"orga"=>array("AKSW", "Ontos"), 		"tools"=>array("RDFaCE"));
+$attribution[] = array("persons"=>array("Phil Ritchie"), 	"orga"=>array("VistaTEC","MLW-LT"), "tools"=>array());
+$attribution[] = array("persons"=>array("Leroy Finn"),   	"orga"=>array("TCD","MLW-LT"), 			"tools"=>array());
+$attribution[] = array("persons"=>array("Marcus Nitzschke"),   	"orga"=>array("ULEI", "AKSW"), 			"tools"=>array("DBpedia Spotlight", "MontyLingua"));
+$attribution[] = array("persons"=>array("Axel Ngonga"),   	"orga"=>array("ULEI", "AKSW"), 			"tools"=>array("Fox"));
+$attribution[] = array("persons"=>array("Daniel Gerber"),   	"orga"=>array("ULEI", "AKSW"), 			"tools"=>array("RDF Live News"));
+
+?>
+<ul>
+<? foreach ($attribution as $arr){
+	$ps = implode(", ",$arr["persons"]);
+	$orgs = ""; 
+	foreach ($arr["orga"] as $o)  {
+			$orgs .= '<a href="'.$organisations[$o]['url'].'" target="_blank">'.$organisations[$o]['name'].'</a>, ';
+		}
+	?>
+<li><?=$ps ?><?=$orgs ?></li>
+<?}?>
+
+</ul>
+

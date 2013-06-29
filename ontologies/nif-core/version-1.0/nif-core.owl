@@ -32,8 +32,8 @@ Until a year ago the U.S. had delivered only about 9 percent of the promised aid
   </nif:RFC5147String>
   <nif:RFC5147String rdf:about="http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,6">
     <nif:anchorOf>Mexico</nif:anchorOf>
-    <nif:beginIndex>0</nif:beginIndex>
-    <nif:endIndex>6</nif:endIndex>
+    <nif:beginIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</nif:beginIndex>
+    <nif:endIndex rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">6</nif:endIndex>
     <nif:oliaCategory rdf:resource="http://purl.org/olia/olia.owl#Noun"/>
     <nif:oliaCategory rdf:resource="http://purl.org/olia/olia.owl#ProperNoun"/>
     <nif:oliaLink rdf:resource="http://purl.org/olia/penn.owl#NNP"/>

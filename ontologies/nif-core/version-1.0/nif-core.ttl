@@ -564,8 +564,8 @@ nif:opinion
 <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,6> 
 	a nif:RFC5147String , nif:String ;
 	nif:referenceContext <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,>  ;
-	nif:beginIndex "0" ;
-	nif:endIndex "6" ;
+	nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+	nif:endIndex "6"^^xsd:nonNegativeInteger ;
 # unstable /testing part begins below	
 	nif:anchorOf "Mexico" ;
 	
