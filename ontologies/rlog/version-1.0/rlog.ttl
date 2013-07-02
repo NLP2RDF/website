@@ -39,6 +39,21 @@ rlog:Level
     rdfs:label "Log Level"@en ;
     rdfs:comment """look here: http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/Level.html """ .   
    
+rlog:class 
+    a owl:DatatypeProperty ;
+    vs:term_status "stable" ;  
+    rdfs:domain rlog:Entry ;  
+    rdfs:label "class name"@en ;
+	rdfs:comment """Outputs the fully qualified class name of the caller issuing the logging request."""@en.
+
+rlog:resource 
+    a owl:ObjectProperty ;
+    vs:term_status "stable" ;  
+    rdfs:domain rlog:Entry ;  
+    rdfs:label "an associated resource"@en ;
+	rdfs:comment """If we mix normal and log output, this can be used to refer to the resource. """@en.
+   
+   
 rlog:message
     a owl:DatatypeProperty ;
     vs:term_status "stable" ;  
@@ -140,6 +155,8 @@ rlog:OFF
 	a rlog:Entry ;
 	rlog:level rlog:INFO ;
 	rlog:date "2013-06-08T17:00:00Z"^^xsd:datetime ;
+	rlog:class "org.nlp2rdf.core.SPARQLValidator";
+	rlog:resource <http://example.org/aResourceRelatedToThisLogEntry> ;
 	rlog:message "Example log message, put whatever you want." . 
  
  

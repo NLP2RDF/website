@@ -385,7 +385,7 @@ NLP2RDF works together with several other projects, that make very good ontologi
     <vs:term_status>unstable</vs:term_status>
   </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl">
-    <rdfs:comment xml:lang="en">The URL the context was extracted from, e.g. the blog or news article url. Doesn't matter whether it is HTML or XML or plain text. rdfs:range is foaf:Document, if the string comes form another NIF String, please use nif:convertedFrom</rdfs:comment>
+    <rdfs:comment xml:lang="en">The URL the context was extracted from, e.g. the blog or news article url. Doesn't matter whether it is HTML or XML or plain text. rdfs:range is foaf:Document, if the string comes form another NIF String, please use nif:wasConvertedFrom</rdfs:comment>
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context"/>
     <rdfs:label xml:lang="en">source URL</rdfs:label>
     <vs:term_status>testing</vs:term_status>

@@ -3,49 +3,106 @@
 
 $organisations = array(
 	"LOD2"=>array("name"=>"LOD2 EU Project","url"=>"http://lod2.eu", "logo"=>"http://lod2.eu/BlogPost/wp-content/uploads/2010/09/lod2-logo.jpg"),
-	"IMP"=>array("name"=>"Institute Mihailo Pupin","url"=>"http://www.pupin.rs/", "logo"=>""),
-	"Zemanta"=>array("name"=>"Zemanta","url"=>"http://www.zemanta.com/", "logo"=>""),
-	"VistaTEC"=>array("name"=>"VistaTEC","url"=>"http://vistatec.ie", "logo"=>""),
-	"OpenLink"=>array("name"=>"OpenLink Software","url"=>"http://www.openlinksw.com/", "logo"=>""),
+	"IMP"=>array("name"=>"Institute Mihailo Pupin","url"=>"http://www.pupin.rs/" ),
+	"Zemanta"=>array("name"=>"Zemanta","url"=>"http://www.zemanta.com/" ),
+	"VistaTEC"=>array("name"=>"VistaTEC","url"=>"http://vistatec.ie" ),
+	"OpenLink"=>array("name"=>"OpenLink Software","url"=>"http://www.openlinksw.com/" ),
 
-	"MLW-LT"=>array("name"=>"MultilingualWeb-LT Working Group","url"=>"http://www.w3.org/International/multilingualweb/lt/", "logo"=>""),
-	"ULEI"=>array("name"=>"University  of Leipzig","url"=>"http://uni-leipzig.de", "logo"=>""),
-	"KAIST"=>array("name"=>"SWRC at KAIST","url"=>"http://semanticweb.kaist.ac.kr/", "logo"=>""),
-	"SWC"=>array("name"=>"Semantic Web Company","url"=>"http://www.semantic-web.at/", "logo"=>""),
-	"TCD"=>array("name"=>"Trinity College Dublin","url"=>"http://www.tcd.ie", "logo"=>""),
-	"Ontos"=>array("name"=>"Ontos","url"=>"http://www.ontos.com", "logo"=>""),
-	"AKSW"=>array("name"=>"AKSW","url"=>"http://aksw.org", "logo"=>"")
+	"MLW-LT"=>array("name"=>"MultilingualWeb-LT Working Group","url"=>"http://www.w3.org/International/multilingualweb/lt/" ),
+	"ULEI"=>array("name"=>"University  of Leipzig","url"=>"http://uni-leipzig.de" ),
+	"KAIST"=>array("name"=>"SWRC at KAIST","url"=>"http://semanticweb.kaist.ac.kr/" ),
+	"SWC"=>array("name"=>"Semantic Web Company","url"=>"http://www.semantic-web.at/" ),
+	"TCD"=>array("name"=>"Trinity College Dublin","url"=>"http://www.tcd.ie" ),
+	"Ontos"=>array("name"=>"Ontos","url"=>"http://www.ontos.com" ),
+	"AKSW"=>array("name"=>"AKSW","url"=>"http://aksw.org" )
 	);
+$tools = array("PoolParty"=>"http://lod2.eu");
 $persons = array("LOD2"=>"http://lod2.eu");
-$tools = array("LOD2"=>"http://lod2.eu");
+
 //$projectlogo = array("LOD2"=>"http://lod2.eu")
+$maintainer = array();
+
 
 $attribution = array();
 
-$attribution[] = array("persons"=>array("Harald Beck"),  	"orga"=>array("SWC","LOD2"), 			"tools"=>array("PoolParty"));
-$attribution[] = array("persons"=>array("Key-Sun Choi"), 	"orga"=>array("KAIST","LOD2") , 		"tools"=>array("COAT", "Korean NLP2RDF"));
-$attribution[] = array("persons"=>array("Mateja Verlic"),	"orga"=>array("Zemanta","LOD2"), 				"tools"=>array("Zemanta"));
-$attribution[] = array("persons"=>array("Mladen Stanojevic", "Uros Milosevic"),			"orga"=>array("IMP","LOD2"), 			"tools"=>array("Zemanta"));
-$attribution[] = array("persons"=>array("Mitko Illiev"),   	"orga"=>array("OpenLink", "LOD2"), 			"tools"=>array("Virtuoso Sponger"));
+$attribution[] = array("persons"=>array("Harald Beck"), "orga"=>array("SWC","LOD2"), "tools"=>array("PoolParty"), "desc"="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentiall");
+$attribution[] = array("persons"=>array("Key-Sun Choi", "Martin Rezk"),  "orga"=>array("KAIST","LOD2") ,"tools"=>array("COAT", "Korean NLP2RDF"));
+$attribution[] = array("persons"=>array("Mateja Verlic"), "orga"=>array("Zemanta","LOD2"),  "tools"=>array("Zemanta"));
+$attribution[] = array("persons"=>array("Mladen Stanojevic", "Uros Milosevic"),   "orga"=>array("IMP","LOD2"), "tools"=>array("DS2"));
+$attribution[] = array("persons"=>array("Mitko Illiev"),    "orga"=>array("OpenLink", "LOD2"), "tools"=>array("Virtuoso Sponger"));
 
-$attribution[] = array("persons"=>array("Ali Khalili"),  	"orga"=>array("AKSW", "Ontos"), 		"tools"=>array("RDFaCE"));
-$attribution[] = array("persons"=>array("Phil Ritchie"), 	"orga"=>array("VistaTEC","MLW-LT"), "tools"=>array());
-$attribution[] = array("persons"=>array("Leroy Finn"),   	"orga"=>array("TCD","MLW-LT"), 			"tools"=>array());
-$attribution[] = array("persons"=>array("Marcus Nitzschke"),   	"orga"=>array("ULEI", "AKSW"), 			"tools"=>array("DBpedia Spotlight", "MontyLingua"));
-$attribution[] = array("persons"=>array("Axel Ngonga"),   	"orga"=>array("ULEI", "AKSW"), 			"tools"=>array("Fox"));
-$attribution[] = array("persons"=>array("Daniel Gerber"),   	"orga"=>array("ULEI", "AKSW"), 			"tools"=>array("RDF Live News"));
+$attribution[] = array("persons"=>array("Ali Khalili", "Daniel Hladky"),   "orga"=>array("AKSW", "Ontos"),"tools"=>array("RDFaCE"));
+$attribution[] = array("persons"=>array("Phil Ritchie"),  "orga"=>array("VistaTEC","MLW-LT"), "tools"=>array());
+$attribution[] = array("persons"=>array("Leroy Finn"),    "orga"=>array("TCD","MLW-LT"), "tools"=>array());
+
+$attribution[] = array("persons"=>array("Christian Chiarcos"),    "orga"=>array("TCD","MLW-LT"), "tools"=>array());
+$attribution[] = array("persons"=>array("Felix Sasaki"),    "orga"=>array("DFKI", "W3C"), "tools"=>array());
+$attribution[] = array("persons"=>array("xxx", "Tomas Kliegr"),    "orga"=>array("LinkedTX"), "tools"=>array("THD"));
+$attribution[] = array("persons"=>array("Rupert Westenthaler"),    "orga"=>array(""), "tools"=>array("Apache Stanbol"));
+$attribution[] = array("persons"=>array("Artjom Klein"),    "orga"=>array(""), "tools"=>array(""));
+$attribution[] = array("persons"=>array("Tadej Stainer"),    "orga"=>array(""), "tools"=>array(""));
+$attribution[] = array("persons"=>array("Chris Röder"),    "orga"=>array("ULEI", "AKSW"), "tools"=>array("DBpedia Spotlight", "MontyLingua"));
+
+
+http://ubo.openphacts.org/index.php?id=4684
+//LINGPIPE
+
+
+$attribution[] = array("persons"=>array("Marcus Nitzschke"),    "orga"=>array("ULEI", "AKSW"), "tools"=>array("DBpedia Spotlight", "MontyLingua"));
+$attribution[] = array("persons"=>array("Ddier Cherix"),    "orga"=>array("ULEI", "AKSW"), "tools"=>array("DBpedia Spotlight", "MontyLingua"));
+$attribution[] = array("persons"=>array("Markus Ackermann"),    "orga"=>array("ULEI", "AKSW"), "tools"=>array("DBpedia Spotlight", "MontyLingua"));
+$attribution[] = array("persons"=>array("Robert Schulze"),    "orga"=>array("ULEI", "AKSW"), "tools"=>array("DBpedia Spotlight", "MontyLingua"));
+$attribution[] = array("persons"=>array("Alexander Lust"),    "orga"=>array("ULEI", "AKSW"), "tools"=>array("DBpedia Spotlight", "MontyLingua"));
+$attribution[] = array("persons"=>array("Thanh Nghia Lam"),    "orga"=>array("ULEI", "AKSW"), "tools"=>array("SemanticQuran", "SemanticQuran"));
+$attribution[] = array("persons"=>array("Mohamed Sherif"),    "orga"=>array("ULEI", "AKSW"), "tools"=>array("SemanticQuran", "SemanticQuran"));
+$attribution[] = array("persons"=>array("Sebastian Lippert"),    "orga"=>array("ULEI", "AKSW"), "tools"=>array("COAT"));
+$attribution[] = array("persons"=>array("Axel Ngonga"),    "orga"=>array("ULEI", "AKSW"),    "tools"=>array("Fox"));
+$attribution[] = array("persons"=>array("Daniel Gerber"),    "orga"=>array("ULEI", "AKSW"),   	"tools"=>array("RDF Live News"));
+
+
+$attribution[] = array("persons"=>array("V UK + MIRKO"),    "orga"=>array("ULEI", "AKSW"), "tools"=>array("SemanticQuran", "SemanticQuran"));
+
+
+
+function render ($id, $entity){
+	
+	if (isset($entity ['logo'] ){
+		$anchor = "<img src = ".$entity['logo']."/>";
+		
+	}else if(isset($entity ['name'])) {
+		$anchor = $entity['name'];
+	}else{
+		$anchor = $id;
+		}
+		
+	if(isset($entity ['url'] )){
+		$anchor = '<a href="'.$entity ['url'].'" target="_blank">'.$anchor.'</a>, ';
+		}	
+		
+	return $anchor;
+	
+}
+
 
 ?>
 <ul>
 <? foreach ($attribution as $arr){
-	$ps = implode(", ",$arr["persons"]);
+	$ps = ""; 
+	foreach ($arr["persons"] as $o)  {
+		$ps .= render($o, $persons[$o]).", ";
+	}
 	$orgs = ""; 
 	foreach ($arr["orga"] as $o)  {
-			$orgs .= '<a href="'.$organisations[$o]['url'].'" target="_blank">'.$organisations[$o]['name'].'</a>, ';
-		}
+		$orgs .= render($o, $organisations[$o]).", ";
+	}
+	$ts = ""; 
+	foreach ($arr["tools"] as $o)  {
+		$ts .= render($o, $tools[$o]).", ";
+	}
+	
+		
 	?>
-<li><?=$ps ?><?=$orgs ?></li>
+<li><?=$ps ?><?=$orgs ?><?=$ts ?></li>
 <?}?>
-
 </ul>
 

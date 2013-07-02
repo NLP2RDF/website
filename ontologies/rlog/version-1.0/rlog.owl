@@ -91,6 +91,12 @@
     <rdfs:label xml:lang="en">WARN</rdfs:label>
     <vs:term_status>stable</vs:term_status>
   </rlog:Level>
+  <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#class">
+    <rdfs:comment xml:lang="en">Outputs the fully qualified class name of the caller issuing the logging request.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"/>
+    <rdfs:label xml:lang="en">class name</rdfs:label>
+    <vs:term_status>stable</vs:term_status>
+  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#date">
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"/>
     <rdfs:label xml:lang="en">Logging date in datetime</rdfs:label>
@@ -109,9 +115,11 @@
     <vs:term_status>stable</vs:term_status>
   </owl:DatatypeProperty>
   <rlog:Entry rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#mylog1">
+    <rlog:class>org.nlp2rdf.core.SPARQLValidator</rlog:class>
     <rlog:date rdf:datatype="http://www.w3.org/2001/XMLSchema#datetime">2013-06-08T17:00:00Z</rlog:date>
     <rlog:level rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#INFO"/>
     <rlog:message>Example log message, put whatever you want.</rlog:message>
+    <rlog:resource rdf:resource="http://example.org/aResourceRelatedToThisLogEntry"/>
   </rlog:Entry>
   <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#priority">
     <rdfs:comment xml:lang="en">Attention: the ids here can change, they are just used to define an order over the levels!</rdfs:comment>
@@ -120,4 +128,10 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     <vs:term_status>stable</vs:term_status>
   </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#resource">
+    <rdfs:comment xml:lang="en">If we mix normal and log output, this can be used to refer to the resource. </rdfs:comment>
+    <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"/>
+    <rdfs:label xml:lang="en">an associated resource</rdfs:label>
+    <vs:term_status>stable</vs:term_status>
+  </owl:ObjectProperty>
 </rdf:RDF>
