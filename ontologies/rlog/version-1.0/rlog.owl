@@ -91,7 +91,7 @@
     <rdfs:label xml:lang="en">WARN</rdfs:label>
     <vs:term_status>stable</vs:term_status>
   </rlog:Level>
-  <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#class">
+  <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#className">
     <rdfs:comment xml:lang="en">Outputs the fully qualified class name of the caller issuing the logging request.</rdfs:comment>
     <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"/>
     <rdfs:label xml:lang="en">class name</rdfs:label>
