@@ -215,12 +215,12 @@ Please also email Sebastian, if you wish to be added as a maintainer/supporter b
 <h4>Software (open source and industrial) </h4>
 <!--p>The code is in the main repo, default trunk; NIF is implemented and the tools are shipped with it. </p-->
 <p>
-Complete attribution is important for us. If your tool is missing on the list, please email <?=l("SebastianHellmann")?> or send a pull request <a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/blob/master/generate_attribution">here</a>
+Complete attribution is important for us. If your tool is missing on the list, please email <?=l("SebastianHellmann")?> or send a pull request <a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/blob/master/generate_attribution">here</a>.
 Most of the tools are being updated to NIF 2.0, currently.
-Some only implement NIF within the soon-to-be<a href="http://www.w3.org/TR/its20/#its-conformance-2-4" target="_blank">ITS 2.0 W3C Recommendation</a>.
+Some only implement NIF within the soon-to-be <a href="http://www.w3.org/TR/its20/#its-conformance-2-4" target="_blank">ITS 2.0 W3C Recommendation</a>.
 </p>
 <ul>
-<li>(work in progress)<?=l("DBpediaSpotlight")?></li>
+<li>(work in progress) <?=l("DBpediaSpotlight")?></li>
 <li>(work in progress) <?=l("THD")?> </li>
 <li>(work in progress) <?=l("OpenNLP")?> </li>
 <li>(work in progress) <?=l("NERD")?> </li>
@@ -233,7 +233,7 @@ Some only implement NIF within the soon-to-be<a href="http://www.w3.org/TR/its20
 </ul>
 
 <h4>Third-Party wrappers and converters</h4>
-<p>Wrapper have been implemented by third parties.</p>
+Almost everything included in the <a href="https://docs.google.com/spreadsheet/ccc?key=0AiiN4qqMDPcadG5INW1PeG9Rai1aWnV6NnZZWkgzM0E#gid=9">developers study</a>. Will be migrated here soon. 
 <ul>
 	<li><?=l("StanfordCore")?></li>
 	<li>ITS 2 NIF converter (XSLT) by <?=l("FelixSasaki")?></li>
@@ -268,6 +268,7 @@ If your name is missing on the list, please email <?=l("SebastianHellmann")?> or
 <li> <?=l("MatejaVerlic")?> implements the wrapper for <?=l("Zemanta")?>. The code is available here: <a href="https://github.com/sparkica/zem-api-wrapper">https://github.com/sparkica/zem-api-wrapper</a></li>
 <li><?=l("MladenStanojevic")?> and <?=l("UrosMilosevic")?> are implementing a NIF wrapper in <?=p("DS2")?>.</li>
 <li><?=l("TomasKliegr")?> and <?=l("MilanDojchinovski")?> using it in <?=l("THD")?> and the <?=l("LinkedTV")?>.</li>
+<li><?=l("ArtjomKlein")?></li>
 <li><?=l("ArtjomKlein")?></li>
 
 <li><?=l("MohamedSherif")?> used NIF for his Semantic Quran conversion</li>
