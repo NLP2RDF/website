@@ -3,96 +3,263 @@
 
 global $entities;
 $entities = array(
-	"LOD2"=>array("label"=>"LOD2 EU Project","url"=>"http://lod2.eu", "logo"=>"http://lod2.eu/BlogPost/wp-content/uploads/2010/09/lod2-logo.jpg"),
 	"ACoLi"=>array("label"=>"ACoLi: Angewandte Computerlinguistik","url"=>"http://acoli.cs.uni-frankfurt.de/", "logo"=>"http://www.informatik.uni-frankfurt.de/images/logos/goethe-universitaet-logo.jpg"),
+	"AKSW"=>array("label"=>"AKSW","url"=>"http://aksw.org", "logo"=>"http://wiki.aksw.org/files/logos/General/AKSW_Logo_rgb.png" ),
+
+	"CNGL"=>array("label"=>"CNGL","url"=>"http://www.cngl.ie", "logo"=>"http://personalpages.manchester.ac.uk/staff/harold.somers/CNGL.jpg" ),
+	"DFKI"=>array("label"=>"DFKI","url"=>"http://www.dfki.de", "logo"=>"http://www.dfki.uni-kl.de/~vega/gifs/dfki_en.gif"),
+	"LIDER"=>array("label"=>"LIDER EU Project","url"=>"http://lider-project.eu/", "logo"=>""),
+	"LOD2"=>array("label"=>"LOD2 EU Project","url"=>"http://lod2.eu", "logo"=>"http://lod2.eu/BlogPost/wp-content/uploads/2010/09/lod2-logo.jpg"),
 	"IMP"=>array("label"=>"Institute Mihailo Pupin","url"=>"http://www.pupin.rs/" ),
-	"Zemanta"=>array("label"=>"Zemanta","url"=>"http://www.zemanta.com/" ),
-	"VistaTEC"=>array("label"=>"VistaTEC","url"=>"http://vistatec.ie" ),
+	"KAIST"=>array("label"=>"SWRC at KAIST","url"=>"http://semanticweb.kaist.ac.kr/", "logo"=>"http://2011.igem.org/wiki/images/thumb/b/ba/Kaist2011_team_logo.png/400px-Kaist2011_team_logo.png" ),
+	"LinkedTV"=>array("label"=>"LinkedTV EU Project","url"=>"http://www.linkedtv.eu/", "logo"=>"http://www.linkedtv.eu/wp/wp-content/themes/edegree/uploads/logo_haupt.png" ),
+	"MLW-LT"=>array("label"=>"MultilingualWeb-LT Working Group","url"=>"http://www.w3.org/International/multilingualweb/lt/", "logo"=>"http://www.w3.org/International/multilingualweb/lt/mlw-logo-lt.svg"),
+	"Ontos"=>array("label"=>"Ontos","url"=>"http://www.ontos.com", "logo"=>"http://geoknow.eu/site/images/logo-ontos.png" ),
 	"OpenLink"=>array("label"=>"OpenLink Software","url"=>"http://www.openlinksw.com/" ),
-	"MLW-LT"=>array("label"=>"MultilingualWeb-LT Working Group","url"=>"http://www.w3.org/International/multilingualweb/lt/" ),
-	"ULEI"=>array("label"=>"University  of Leipzig","url"=>"http://uni-leipzig.de" ),
-	"KAIST"=>array("label"=>"SWRC at KAIST","url"=>"http://semanticweb.kaist.ac.kr/" ),
 	"SWC"=>array("label"=>"Semantic Web Company","url"=>"http://www.semantic-web.at/" ),
-	"TCD"=>array("label"=>"Trinity College Dublin","url"=>"http://www.tcd.ie" ),
-	"Ontos"=>array("label"=>"Ontos","url"=>"http://www.ontos.com" ),
-	"AKSW"=>array("label"=>"AKSW","url"=>"http://aksw.org" ),
-//w3c
-// tools
- //  "PoolParty"=>array("PoolParty"=>"http://lod2.eu"), 
- //   "COAT", "Korean NLP2RDF"
- /*   Zemanta
-    DS2
-    THD
-    Virtuoso Sponger
-    Apache Stanbol
-    COAT
+	"SALZBURG"=>array("label"=>"salzburgresearch","url"=>"http://www.salzburgresearch.at/", "logo"=>"http://www.salzburgresearch.at/wp-content/uploads/2010/10/sr_neu_logo_rgb1.jpg"),
+	"TCD"=>array("label"=>"Trinity College Dublin","url"=>"http://www.tcd.ie", "logo"=>"http://www.i2cat.net/files/project/TCD_logo.png" ),
+	"ULEI"=>array("label"=>"University  of Leipzig","url"=>"http://uni-leipzig.de","logo"=>"http://www.leipzig-school.eva.mpg.de/fileadmin/content_files/imprs/images/2000_m.jpg" ),
+	"VistaTEC"=>array("label"=>"VistaTEC","url"=>"http://vistatec.ie" ),
+	"Zemanta"=>array("label"=>"Zemanta","url"=>"http://www.zemanta.com/", "logo"=>"http://www.seedcamp.com/main/wp-content/uploads/2011/05/zemanta.jpg" ),
+	//missing w3c
+
+// tools and open source projects
+    "Apache Stanbol"=>array("label"=>"Apache Stanbol","url"=>"http://stanbol.apache.org", "logo"=>"" ),
+    "COAT"=>array("label"=>"COAT","url"=>"http://sourceforge.net/projects/coatsemantic/" ),
+    "DBpediaSpotlight"=>array("label"=>"DBpedia Spotlight","url"=>"http://spotlight.dbpedia.org/‎", "logo"=>"https://a248.e.akamai.net/camo.github.com/392569b294c4a186d0d44bbd45410382ed7fc903/687474703a2f2f646270656469612d73706f746c696768742e6769746875622e636f6d2f64656d6f2f646270656469615f73706f746c696768745f6c6f676f2e6a7067" ),
+    "DS2"=>array("label"=>"DS2","url"=>"" ),
+    "FOX"=>array("label"=>"FOX","url"=>"http://aksw.org/Projects/FOX", "webservice"=>"http://139.18.2.164:4444/demo/index.html#/" ),
+    "KoreanNLP2RDF"=>array("label"=>"Korean NLP2RDF","url"=>"" ),
+    "MontyLingua"=>array("label"=>"MontyLingua","url"=>"" ),
+    "NERD"=>array("label"=>"NERD","url"=>"http://nerd.eurecom.fr" ),
+    "OLIA"=>array("label"=>"OLiA","url"=>"http://purl.org/olia" ),
+    "OpenNLP"=>array("label"=>"OpenNLP","url"=>"http://opennlp.apache.org/" ),
+    "PoolParty"=>array("label"=>"PoolParty","url"=>"" ),
+    "RDFaCE"=>array("label"=>"RDFaCE","url"=>"http://wiki.aksw.org/Projects/RDFaCE", "webservice"=>"http://rdface.aksw.org/" ),
+    "SemanticQuran"=>array("label"=>"SemanticQuran","url"=>"" ),
+    "StanfordCore"=>array("label"=>"Stanford Core NLP","url"=>"http://nlp.stanford.edu/software/corenlp.shtml", "code"=>"https://github.com/NLP2RDF/java-maven/tree/master/implementation/stanford-core" ),
+    "THD"=>array("label"=>"THD","url"=>"https://ner.vse.cz/thd/" , "webservice"=>"https://ner.vse.cz/thd/docs/",  "code"=>""),
+    "VirtuosoSponger"=>array("label"=>"Virtuoso Sponger","url"=>"http://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VirtSponger" ),
+    //missing
+     /*   Zemanta
+
     SemanticQuran
     "DBpedia Spotlight", "MontyLingua"*/
 // people	
-	"Christian Chiarcos"=>array("label"=>"Christian Chiarcos", "url"=>"", "logo"=>""),
-	"Harald Beck"=>array("label"=>"Harald Beck", "url"=>"", "logo"=>""),
-	"Key-Sun Choi"=>array("label"=>"Key-Sun Choi", "url"=>"", "logo"=>""),
-	"Mateja Verlic"=>array("label"=>"Harald Beck", "url"=>"", "logo"=>""),
-	"Mladen Stanojevic"=>array("label"=>"Harald Beck", "url"=>"", "logo"=>""),
-	"Uros Milosevic"=>array("label"=>"", "url"=>"", "logo"=>""),
-	"Mitko Illiev"=>array("label"=>"", "url"=>"", "logo"=>""),
-	"Ali Khalili"=>array("label"=>"Ali Khalili", "url"=>"", "logo"=>""),
-	"Daniel Hladky"=>array("label"=>"Daniel Hladky", "url"=>"", "logo"=>""),
-	"Phil Ritchie"=>array("label"=>"Phil Ritchie", "url"=>"", "logo"=>""),
-	"Leroy Finn"=>array("label"=>"Leroy Finn", "url"=>"", "logo"=>""),
-	"Felix Sasaki"=>array("label"=>"Felix Sasaki", "url"=>"", "logo"=>""),
-	"Tomas Kliegr"=>array("label"=>"Tomas Kliegr", "url"=>"", "logo"=>""),
-	"Rupert Westenthaler"=>array("label"=>"", "url"=>"", "logo"=>""),
-	"Chris Röder"=>array("label"=>"Chris Röder", "url"=>"", "logo"=>""),
-	"Artjom Klein"=>array("label"=>"Artjom Klein", "url"=>"", "logo"=>""),
-	"Tadej Stainer"=>array("label"=>"Tadej Stainer", "url"=>"", "logo"=>""),
-	"Marcus Nitzschke"=>array("label"=>"Marcus Nitzschke", "url"=>"", "logo"=>""),
-	"Mohamed Sherif"=>array("label"=>"Mohamed Sherif", "url"=>"", "logo"=>""),
-	"Sebastian Lippert"=>array("label"=>"Sebastian Lippert", "url"=>"", "logo"=>""),
-	"Daniel Gerber"=>array("label"=>"Daniel Gerber", "url"=>"", "logo"=>""),
-	"Markus Ackermann"=>array("label"=>"Markus Ackermann", "url"=>"", "logo"=>""),
-	"Martin Brümmer"=>array("label"=>"Martin Brümmer", "url"=>"", "logo"=>""),
-	""=>array("label"=>"", "url"=>"", "logo"=>""),
-	""=>array("label"=>"", "url"=>"", "logo"=>""),
-	""=>array("label"=>"", "url"=>"", "logo"=>"")
+	"MarkusAckermann"=>array("label"=>"Markus Ackermann", "url"=>"http://asv.informatik.uni-leipzig.de/en/staff/Markus_Ackermann"),
+	"MarcusNitzschke"=>array("label"=>"Marcus Nitzschke", "url"=>"http://www.kendix.org/"),
+	"SebastianLippert"=>array("label"=>"Sebastian Lippert", "url"=>""),
+	"DidierCherix"=>array("label"=>"Didier Cherix", "url"=>"https://github.com/dcherix"),
+	"RobertSchulze"=>array("label"=>"Robert Schulze", "url"=>"http://robbl.org/"),
+
+	"SebastianHellmann"=>array("label"=>"Sebastian Hellmann", "url"=>"http://bis.informatik.uni-leipzig.de/SebastianHellmann"),
+	"MartinBrümmer"=>array("label"=>"Martin Brümmer", "url"=>"http://aksw.org/MartinBruemmer"),
+	"MohamedSherif"=>array("label"=>"Mohamed Sherif", "url"=>"http://aksw.org/MohamedSherif"),
+	"DanielGerber"=>array("label"=>"Daniel Gerber", "url"=>""),
+
+	"ChristianChiarcos"=>array("label"=>"Christian Chiarcos", "url"=>"http://www.acoli.informatik.uni-frankfurt.de/"),
+
+	"MatejaVerlic"=>array("label"=>"Mateja Verlic", "url"=>"http://www.zemanta.com/blog/meet-the-team-casual-fridays-mateja-verlic/"),
+
+	"GiuseppeRizzo"=>array("label"=>"Giuseppe Rizzo", "url"=>"http://www.eurecom.fr/~rizzo/"),
+	"RaphaelTroncy"=>array("label"=>"Raphaël Troncy", "url"=>"http://www.eurecom.fr/~troncy/"),
+
+	"Key-SunChoi"=>array("label"=>"Key-Sun Choi", "url"=>"http://kschoi.kaist.ac.kr/"),
+
+	"HaraldBeck"=>array("label"=>"Harald Beck", "url"=>""),
+	
+	//TODO Mirko
+	"MladenStanojevic"=>array("label"=>"Mladen Stanojević", "url"=>"http://www.pupin.rs/en/imp-organization/fraunhofer-pupin-jpo/jpo-team/#mladenstojanovic"),
+	"UrosMilosevic"=>array("label"=>"Uroš Milošević", "url"=>"http://www.pupin.rs/en/imp-organization/fraunhofer-pupin-jpo/jpo-team/#markoribaric"),
+	"VukMijovic"=>array("label"=>"Vuk Mijović", "url"=>"http://www.pupin.rs/en/imp-organization/fraunhofer-pupin-jpo/jpo-team/#vukmijovic"),
+	
+	"MitkoIlliev"=>array("label"=>"", "url"=>""),
+
+	"DanielHladky"=>array("label"=>"Daniel Hladky", "url"=>""),
+	"AliKhalili"=>array("label"=>"Ali Khalili", "url"=>""),
+
+	"PhilRitchie"=>array("label"=>"Phil Ritchie", "url"=>""),
+
+	"DaveLewis"=>array("label"=>"Dave Lewis", "url"=>""),
+	"LeroyFinn"=>array("label"=>"Leroy Finn", "url"=>""),
+
+	"FelixSasaki"=>array("label"=>"Felix Sasaki", "url"=>""),
+	
+
+	"TomasKliegr"=>array("label"=>"Tomas Kliegr", "url"=>"http://keg.vse.cz/person/tomas-kliegr"),
+	"MilanDojchinovski"=>array("label"=>"Milan Dojchinovski", "url"=>"http://www.linkedin.com/in/milandojchinovski"),
+
+	"RupertWestenthaler"=>array("label"=>"Rupert Westenthaler", "url"=>"http://www.salzburgresearch.at/person/westenthaler-rupert/"),
+
+	"ChrisRöder"=>array("label"=>"Chris Röder", "url"=>""),
+
+	"ArtjomKlein"=>array("label"=>"Artjom Klein", "url"=>""),
+
+	"TadejStainer"=>array("label"=>"Tadej Stainer", "url"=>""),
+
+	""=>array("label"=>"", "url"=>""),
+	""=>array("label"=>"", "url"=>""),
+	""=>array("label"=>"", "url"=>"")
 	//V UK + MIRKO
 	);
 
 //http://ubo.openphacts.org/index.php?id=4684
 //LINGPIPE
 
+//displays the image as a link
+function i($id){
+	$entity = check ($id);
+	if(!isset($entity ['url'] ) || empty($entity ['url']) ){
+		die ("\n\nno url for: ".$id);
+	}
+	if(!isset($entity ['logo'] ) || empty($entity ['logo']) ){
+		die ("\n\nno logo for: ".$id);
+	}
+	$anchor = "<img style=\"max-height:50px;\" src=\"".$entity['logo']."\" title=\"".$entity['label']."\" />";
+	echo '<a href="'.$entity ['url'].'" target="_blank">'.$anchor.'</a>';
+	}
 
-
-
-
+// just the link
 function r($id, $logo=true){
-	global $entities;
-	if(!isset($entities[$id]) || empty($entities[$id])  ){
-		die ("$id not found: ".$entities[$id]);
-		}
-	$entity = $entities[$id];
-	if(isset($entity ['url'] ) && !empty($entity ['url']) ){
-		if ($logo && isset($entity ['logo']) && ! empty($entity ['logo'])){
-			$anchor = "<img src=\"".$entity['logo']."\" title=\"".$entity['label']."\" />";
-		}else if(isset($entity ['label']) && !empty($entity ['label'])) {
-			$anchor = $entity['label'];
-			$label = $entity['label'];
-		}else{
-			$anchor = $id;
-			$label = $id;
-		}
-		echo '<a href="'.$entity ['url'].'" target="_blank">'.$anchor.'</a>, ';
-		}
-	else {
-		echo $entity['label'];
-	}	
-	
+	$entity = check ($id);
+	if(!isset($entity ['url'] ) || empty($entity ['url']) ){
+		die ("\n\nno url for: ".$id);
+	}
+	if(!isset($entity ['label'] ) ||  empty($entity ['label']) ){
+		die ("\n\nno label for: ".$id);
+	}
+	echo '<a href="'.$entity ['url'].'" target="_blank">'.$entity['label'].'</a>';
+}
 
+//plain
+function p($id){
+	$entity = check ($id);
+	if(!isset($entity ['label'] ) || empty($entity ['label']) ){
+		die ("\n\nno label for: ".$id);
+	}
+	echo $entity['label'];
+}
+
+function t($id){
+	$entity = check ($id);
+	r($id);
+	
+	if(isset($entity ['webservice'] ) && !empty($entity ['webservice']) ){
+			echo ', <a href="'.$entity ['webservice'].'" target="_blank">webservice/demo</a>';
+	}
+	if(isset($entity ['code'] ) && !empty($entity ['code']) ){
+			echo ', <a href="'.$entity ['code'].'" target="_blank">code</a>';
+	}
 	
 }
 
+function check($id){
+	global $entities;
+	if(!isset($entities[$id]) || empty($entities[$id])  ){
+		die ("\n\nERROR: $id not found: ".$entities[$id]);
+		}
+	return $entity = $entities[$id];
+	}
 
 ?>
+
+<h2>Origins and Contact</h2>
+
+<table>
+<tr>
+	<td><?i("LOD2");?> </td>
+	<td><?i("AKSW");?>  </td>
+	<td><?i("ULEI");?> </td>
+</tr>
+</table>
+<p>
+NIF was originally created by a small team from <?=r("AKSW")?> at <?=r("ULEI")?> during the <?=r("LOD2")?>, which is still ongoing until 2014.  
+If you have any questions please contact the mailing list (see above) or write an email to <?=r("SebastianHellmann")?>. 
+Please also email Sebastian, if you wish to be added as a maintainer/supporter below. 
+ </p>
+
+<h2>Maintainers and supporters</h2>
+<p>Below we are listing the projects and institutions that support NIF and are part of the NLP2RDF project. </p>
+</br>
+
+<table>
+<tr>
+	<td><?i("ACoLi");?> </td>
+	<td><?i("AKSW");?>  </td>
+	<td><?i("CNGL");?> </td>
+</tr>
+<tr>
+	<td><?i("DFKI");?>  </td>
+	<td><?r("LIDER");?>  </td>
+	<td><?i("MLW-LT");?> </td>
+</tr>
+<tr>
+	<td><?i("Ontos");?>  </td>
+	<td><?i("SALZBURG");?>  </td>
+	<td><?i("TCD");?> </td>
+</tr>
+<tr>
+	<td><?i("KAIST");?>  </td>
+	<td><?i("DBpediaSpotlight");?> </td>
+</tr>
+</table>
+<h2>Tools and Projects using or implementing NIF</h2>
+
+<h3>Software (open source and industrial) </h3>
+<p>The code is in the main repo, default trunk; NIF is implemented and the tools are shipped with it. 
+
+Most of the tools are being updated to NIF 2.0.
+Complete attribution is important for us. If your tool is missing on the list, please email <?=r("SebastianHellmann")?> or send a pull request <a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/blob/master/generate_attribution">here</a>
+</p>
 <ul>
-<li><?=r("Christian Chiarcos")?></li>
+<li>(work in progress)<?=r("DBpediaSpotlight")?></li>
+<li>(work in progress) <?=r("THD")?> </li>
+<li>(work in progress) <?=r("OpenNLP")?> </li>
+<li>(work in progress) <?=r("NERD")?> </li>
+<li>(work in progress) <?=t("FOX")?> </li>
+<li>(work in progress) <?=t("RDFaCE")?> </li>
+<li>(work in progress) <?=t("COAT")?> </li>
+<li>(work in progress) <?=t("Apache Stanbol")?> </li>
 </ul>
+
+<h3>Third-Party wrappers</h3>
+<p>Wrapper have been implemented by third parties.</p>
+<ul>
+<li><?=r("StanfordCore")?></li>
+</ul>
+
+<h3>Clients</h3>
+<p>Tools that parse and use NIF.</p>
+<ul>
+<li><?=r("VirtuosoSponger")?></li>
+</ul>
+
+<h2>Developers</h2>
+<p>Below is a list of developers who have actively contributed to NIF. 
+Complete attribution is important for us. 
+If your name is missing on the list, please email <?=r("SebastianHellmann")?> or send a pull request <a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/blob/master/generate_attribution">here</a>
+</p>
+<ul>
+<li></li>
+	
+
+<li><?=r("ChristianChiarcos")?> who maintains <?=r("OLIA")?>. </li>
+<li><?=p("SebastianLippert")?> wrote his Bachelor's thesis about integrating NIF output in <?=r("COAT")?>. </li>
+<li><?=r("GiuseppeRizzo")?> and <?=r("RaphaelTroncy")?>  who maintain the <?=r("NERD")?> project. </li>
+<li><?=r("Zemanta")?> <?=r("MatejaVerlic")?> implements the wrapper for <?=r("Zemanta")?>. The code is available here: <a href="https://github.com/sparkica/zem-api-wrapper">https://github.com/sparkica/zem-api-wrapper</a></li>
+<li><?=r("MladenStanojevic")?> and <?=r("UrosMilosevic")?> are implementing a NIF wrapper in <?=p("DS2")?>.</li>
+<li><?=r("TomasKliegr")?> and <?=r("MilanDojchinovski")?> using it in <?=r("THD")?> and the <?=r("LinkedTV")?>.</li>
+<li><?=r("RupertWestenthaler")?></li>
+<li><?=p("ArtjomKlein")?></li>
+<li><?=p("RupertWestenthaler")?></li>
+<li><?=r("MohamedSherif")?> used NIF for his Semantic Quran conversion</li>
+<li><?=r("MartinBrümmer")?> created the Wikilink Corpus conversion and is currently writing his Master Thesis about the <?=r("OpenNLP")?> NIF integration.</li>
+
+<li><?=r("MartinBrümmer")?>, Alexander Lust, <?=r("RobertSchulze")?>, <?=r("MarcusNitzschke")?>, <?=r("MarkusAckermann")?>, <?=r("DidierCherix")?> implemented wrappers for NIF 1.0 during an internship at University Leipzig in 2009. </li>
+<li><?=r("RupertWestenthaler")?></li>
+
+</ul>
+
+
+
