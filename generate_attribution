@@ -207,10 +207,11 @@ Please also email Sebastian, if you wish to be added as a maintainer/supporter b
 <h2>Tools and Projects using or implementing NIF</h2>
 
 <h4>Software (open source and industrial) </h4>
-<p>The code is in the main repo, default trunk; NIF is implemented and the tools are shipped with it. 
-
-Most of the tools are being updated to NIF 2.0.
+<!--p>The code is in the main repo, default trunk; NIF is implemented and the tools are shipped with it. </p-->
+<p>
 Complete attribution is important for us. If your tool is missing on the list, please email <?=r("SebastianHellmann")?> or send a pull request <a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/blob/master/generate_attribution">here</a>
+Most of the tools are being updated to NIF 2.0, currently.
+Some only implement NIF within the soon-to-be<a href="http://www.w3.org/TR/its20/#its-conformance-2-4" target="_blank">ITS 2.0 W3C Recommendation</a>.
 </p>
 <ul>
 <li>(work in progress)<?=r("DBpediaSpotlight")?></li>
@@ -221,6 +222,7 @@ Complete attribution is important for us. If your tool is missing on the list, p
 <li>(work in progress) <?=t("RDFaCE")?> </li>
 <li>(work in progress) <?=t("COAT")?> </li>
 <li>(work in progress) <?=t("Apache Stanbol")?> </li>
+<li>(work in progress) <?=p("VistaTEC")?> </li>
 </ul>
 
 <h4>Third-Party wrappers</h4>
