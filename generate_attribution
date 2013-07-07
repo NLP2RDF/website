@@ -164,7 +164,7 @@ function check($id){
 
 ?>
 
-<h2>Origins and Contact</h2>
+<h3>Origins and Contact</h3>
 
 <table>
 <tr>
@@ -179,7 +179,7 @@ If you have any questions please contact the mailing list (see above) or write a
 Please also email Sebastian, if you wish to be added as a maintainer/supporter below. 
  </p>
 
-<h2>Maintainers and supporters</h2>
+<h3>Maintainers and supporters</h3>
 <p>Below we are listing the projects and institutions that support NIF and are part of the NLP2RDF project. </p>
 </br>
 
@@ -206,7 +206,7 @@ Please also email Sebastian, if you wish to be added as a maintainer/supporter b
 </table>
 <h2>Tools and Projects using or implementing NIF</h2>
 
-<h3>Software (open source and industrial) </h3>
+<h4>Software (open source and industrial) </h4>
 <p>The code is in the main repo, default trunk; NIF is implemented and the tools are shipped with it. 
 
 Most of the tools are being updated to NIF 2.0.
@@ -223,19 +223,19 @@ Complete attribution is important for us. If your tool is missing on the list, p
 <li>(work in progress) <?=t("Apache Stanbol")?> </li>
 </ul>
 
-<h3>Third-Party wrappers</h3>
+<h4>Third-Party wrappers</h4>
 <p>Wrapper have been implemented by third parties.</p>
 <ul>
 <li><?=r("StanfordCore")?></li>
 </ul>
 
-<h3>Clients</h3>
+<h4>Clients</h4>
 <p>Tools that parse and use NIF.</p>
 <ul>
 <li><?=r("VirtuosoSponger")?></li>
 </ul>
 
-<h2>Developers</h2>
+<h3>Developers</h3>
 <p>Below is a list of developers who have actively contributed to NIF. 
 Complete attribution is important for us. 
 If your name is missing on the list, please email <?=r("SebastianHellmann")?> or send a pull request <a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/blob/master/generate_attribution">here</a>
