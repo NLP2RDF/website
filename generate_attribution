@@ -20,17 +20,17 @@ $entities = array(
 	"SALZBURG"=>array("label"=>"salzburgresearch","url"=>"http://www.salzburgresearch.at/", "logo"=>"http://www.salzburgresearch.at/wp-content/uploads/2010/10/sr_neu_logo_rgb1.jpg"),
 	"TCD"=>array("label"=>"Trinity College Dublin","url"=>"http://www.tcd.ie", "logo"=>"http://www.i2cat.net/files/project/TCD_logo.png" ),
 	"ULEI"=>array("label"=>"University  of Leipzig","url"=>"http://uni-leipzig.de","logo"=>"http://www.leipzig-school.eva.mpg.de/fileadmin/content_files/imprs/images/2000_m.jpg" ),
-	"VistaTEC"=>array("label"=>"VistaTEC","url"=>"http://vistatec.ie" ),
+	"VistaTEC"=>array("label"=>"VistaTEC","url"=>"http://vistatec.ie", "logo"=>"http://vistatec.ie/images/l_logo.jpg" ),
 	"Zemanta"=>array("label"=>"Zemanta","url"=>"http://www.zemanta.com/", "logo"=>"http://www.seedcamp.com/main/wp-content/uploads/2011/05/zemanta.jpg" ),
 	//missing w3c
 
 // tools and open source projects
-    "Apache Stanbol"=>array("label"=>"Apache Stanbol","url"=>"http://stanbol.apache.org", "logo"=>"" ),
+    "ApacheStanbol"=>array("label"=>"Apache Stanbol","url"=>"http://stanbol.apache.org", "webservice"=>"http://dev.iks-project.eu:8081/enhancer/chain/NIF-demo" ),
     "COAT"=>array("label"=>"COAT","url"=>"http://sourceforge.net/projects/coatsemantic/" ),
     "DBpediaSpotlight"=>array("label"=>"DBpedia Spotlight","url"=>"http://spotlight.dbpedia.org/‎", "logo"=>"https://a248.e.akamai.net/camo.github.com/392569b294c4a186d0d44bbd45410382ed7fc903/687474703a2f2f646270656469612d73706f746c696768742e6769746875622e636f6d2f64656d6f2f646270656469615f73706f746c696768745f6c6f676f2e6a7067" ),
     "DS2"=>array("label"=>"DS2","url"=>"" ),
     "FOX"=>array("label"=>"FOX","url"=>"http://aksw.org/Projects/FOX", "webservice"=>"http://139.18.2.164:4444/demo/index.html#/" ),
-    "KoreanNLP2RDF"=>array("label"=>"Korean NLP2RDF","url"=>"" ),
+    "KoreanNLP2RDF"=>array("label"=>"Korean NLP2RDF","url"=>"http://semanticweb.kaist.ac.kr/nlp2rdf/", "webservice"=>"http://semanticweb.kaist.ac.kr/nlp2rdf/" ),
     "MontyLingua"=>array("label"=>"MontyLingua","url"=>"" ),
     "NERD"=>array("label"=>"NERD","url"=>"http://nerd.eurecom.fr" ),
     "OLIA"=>array("label"=>"OLiA","url"=>"http://purl.org/olia" ),
@@ -66,6 +66,8 @@ $entities = array(
 	"RaphaelTroncy"=>array("label"=>"Raphaël Troncy", "url"=>"http://www.eurecom.fr/~troncy/"),
 
 	"Key-SunChoi"=>array("label"=>"Key-Sun Choi", "url"=>"http://kschoi.kaist.ac.kr/"),
+	"YoungGyunHahm"=>array("label"=>"YoungGyun Hahm", "url"=>"http://younggyunhahm.com/"),
+	"KyungTaeLim"=>array("label"=>"KyungTae Lim", "url"=>"http://semanticweb.kaist.ac.kr/home/index.php/KyungTae_Lim"),
 
 	"HaraldBeck"=>array("label"=>"Harald Beck", "url"=>""),
 	
@@ -74,17 +76,18 @@ $entities = array(
 	"UrosMilosevic"=>array("label"=>"Uroš Milošević", "url"=>"http://www.pupin.rs/en/imp-organization/fraunhofer-pupin-jpo/jpo-team/#markoribaric"),
 	"VukMijovic"=>array("label"=>"Vuk Mijović", "url"=>"http://www.pupin.rs/en/imp-organization/fraunhofer-pupin-jpo/jpo-team/#vukmijovic"),
 	
-	"MitkoIlliev"=>array("label"=>"", "url"=>""),
+	"MitkoIlliev"=>array("label"=>"Mitko Iliev", "url"=>"http://bg.linkedin.com/in/imitko"),
 
-	"DanielHladky"=>array("label"=>"Daniel Hladky", "url"=>""),
-	"AliKhalili"=>array("label"=>"Ali Khalili", "url"=>""),
+	"DanielHladky"=>array("label"=>"Daniel Hladky", "url"=>"http://www.linkedin.com/pub/dir/Daniel/Hladky‎"),
+	"AliKhalili"=>array("label"=>"Ali Khalili", "url"=>"http://aksw.org/AliKhalili"),
 
-	"PhilRitchie"=>array("label"=>"Phil Ritchie", "url"=>""),
+	"PhilRitchie"=>array("label"=>"Phil Ritchie", "url"=>"http://www.vistatec.com/en/Our-Staff.htm"),
 
-	"DaveLewis"=>array("label"=>"Dave Lewis", "url"=>""),
-	"LeroyFinn"=>array("label"=>"Leroy Finn", "url"=>""),
+	"DaveLewis"=>array("label"=>"Dave Lewis", "url"=>"https://www.scss.tcd.ie/dave.lewis/"),
+	"LeroyFinn"=>array("label"=>"Leroy Finn", "url"=>"https://github.com/finnle"),
+	"DominicJones"=>array("label"=>"Dominic Jones", "url"=>"https://www.scss.tcd.ie/dominic.jones/"),
 
-	"FelixSasaki"=>array("label"=>"Felix Sasaki", "url"=>""),
+	"FelixSasaki"=>array("label"=>"Felix Sasaki", "url"=>"http://www.w3.org/People/fsasaki/"),
 	
 
 	"TomasKliegr"=>array("label"=>"Tomas Kliegr", "url"=>"http://keg.vse.cz/person/tomas-kliegr"),
@@ -92,11 +95,11 @@ $entities = array(
 
 	"RupertWestenthaler"=>array("label"=>"Rupert Westenthaler", "url"=>"http://www.salzburgresearch.at/person/westenthaler-rupert/"),
 
-	"ChrisRöder"=>array("label"=>"Chris Röder", "url"=>""),
+	"ChrisRöder"=>array("label"=>"Chris Röder", "url"=>"https://github.com/croeder"),
 
-	"ArtjomKlein"=>array("label"=>"Artjom Klein", "url"=>""),
+	"ArtjomKlein"=>array("label"=>"Artjom Klein", "url"=>"http://www.unbsj.ca/sase/csas/facultyPage.php?member=Artjom%20Klein"),
 
-	"TadejStainer"=>array("label"=>"Tadej Stainer", "url"=>""),
+	"TadejStajner"=>array("label"=>"Tadej Štajner", "url"=>"http://ijs.academia.edu/tadej"),
 
 	""=>array("label"=>"", "url"=>""),
 	""=>array("label"=>"", "url"=>""),
@@ -116,12 +119,12 @@ function i($id){
 	if(!isset($entity ['logo'] ) || empty($entity ['logo']) ){
 		die ("\n\nno logo for: ".$id);
 	}
-	$anchor = "<img style=\"max-height:50px;\" src=\"".$entity['logo']."\" title=\"".$entity['label']."\" />";
+	$anchor = "<img style=\"max-height:50px;max-width:200px;\" src=\"".$entity['logo']."\" title=\"".$entity['label']."\" />";
 	echo '<a href="'.$entity ['url'].'" target="_blank">'.$anchor.'</a>';
 	}
 
 // just the link
-function r($id, $logo=true){
+function l($id, $logo=true){
 	$entity = check ($id);
 	if(!isset($entity ['url'] ) || empty($entity ['url']) ){
 		die ("\n\nno url for: ".$id);
@@ -143,7 +146,7 @@ function p($id){
 
 function t($id){
 	$entity = check ($id);
-	r($id);
+	l($id);
 	
 	if(isset($entity ['webservice'] ) && !empty($entity ['webservice']) ){
 			echo ', <a href="'.$entity ['webservice'].'" target="_blank">webservice/demo</a>';
@@ -154,6 +157,7 @@ function t($id){
 	
 }
 
+
 function check($id){
 	global $entities;
 	if(!isset($entities[$id]) || empty($entities[$id])  ){
@@ -162,6 +166,8 @@ function check($id){
 	return $entity = $entities[$id];
 	}
 
+$fp = fopen("index_beginning.html", "r");
+fpassthru($fp);
 ?>
 
 <h3>Origins and Contact</h3>
@@ -174,8 +180,8 @@ function check($id){
 </tr>
 </table>
 <p>
-NIF was originally created by a small team from <?=r("AKSW")?> at <?=r("ULEI")?> during the <?=r("LOD2")?>, which is still ongoing until 2014.  
-If you have any questions please contact the mailing list (see above) or write an email to <?=r("SebastianHellmann")?>. 
+NIF was originally created by a small team from <?=l("AKSW")?> at <?=l("ULEI")?> during the <?=l("LOD2")?>, which is still ongoing until 2014.  
+If you have any questions please contact the mailing list (see above) or write an email to <?=l("SebastianHellmann")?>. 
 Please also email Sebastian, if you wish to be added as a maintainer/supporter below. 
  </p>
 
@@ -191,7 +197,7 @@ Please also email Sebastian, if you wish to be added as a maintainer/supporter b
 </tr>
 <tr>
 	<td><?i("DFKI");?>  </td>
-	<td><?r("LIDER");?>  </td>
+	<td><?l("LIDER");?>  </td>
 	<td><?i("MLW-LT");?> </td>
 </tr>
 <tr>
@@ -209,59 +215,70 @@ Please also email Sebastian, if you wish to be added as a maintainer/supporter b
 <h4>Software (open source and industrial) </h4>
 <!--p>The code is in the main repo, default trunk; NIF is implemented and the tools are shipped with it. </p-->
 <p>
-Complete attribution is important for us. If your tool is missing on the list, please email <?=r("SebastianHellmann")?> or send a pull request <a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/blob/master/generate_attribution">here</a>
+Complete attribution is important for us. If your tool is missing on the list, please email <?=l("SebastianHellmann")?> or send a pull request <a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/blob/master/generate_attribution">here</a>
 Most of the tools are being updated to NIF 2.0, currently.
 Some only implement NIF within the soon-to-be<a href="http://www.w3.org/TR/its20/#its-conformance-2-4" target="_blank">ITS 2.0 W3C Recommendation</a>.
 </p>
 <ul>
-<li>(work in progress)<?=r("DBpediaSpotlight")?></li>
-<li>(work in progress) <?=r("THD")?> </li>
-<li>(work in progress) <?=r("OpenNLP")?> </li>
-<li>(work in progress) <?=r("NERD")?> </li>
+<li>(work in progress)<?=l("DBpediaSpotlight")?></li>
+<li>(work in progress) <?=l("THD")?> </li>
+<li>(work in progress) <?=l("OpenNLP")?> </li>
+<li>(work in progress) <?=l("NERD")?> </li>
 <li>(work in progress) <?=t("FOX")?> </li>
 <li>(work in progress) <?=t("RDFaCE")?> </li>
+<li>(work in progress) <?=t("ApacheStanbol")?> </li>
+
 <li>(work in progress) <?=t("COAT")?> </li>
-<li>(work in progress) <?=t("Apache Stanbol")?> </li>
-<li>(work in progress) <?=p("VistaTEC")?> </li>
+<li>(work in progress) <?=t("KoreanNLP2RDF")?> </li>
 </ul>
 
-<h4>Third-Party wrappers</h4>
+<h4>Third-Party wrappers and converters</h4>
 <p>Wrapper have been implemented by third parties.</p>
 <ul>
-<li><?=r("StanfordCore")?></li>
+	<li><?=l("StanfordCore")?></li>
+	<li>ITS 2 NIF converter (XSLT) by <?=l("FelixSasaki")?></li>
+	<li>Wikipedia 2 NIF converter (XSLT) by <?=l("FelixSasaki")?></li>
 </ul>
 
 <h4>Clients</h4>
 <p>Tools that parse and use NIF.</p>
 <ul>
-<li><?=r("VirtuosoSponger")?></li>
+<li><?=l("VirtuosoSponger")?></li>
 </ul>
 
 <h3>Developers</h3>
-<p>Below is a list of developers who have actively contributed to NIF. 
+<p>Below is a list of developers who have actively contributed to NIF in terms of code or documentation. 
 Complete attribution is important for us. 
-If your name is missing on the list, please email <?=r("SebastianHellmann")?> or send a pull request <a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/blob/master/generate_attribution">here</a>
+If your name is missing on the list, please email <?=l("SebastianHellmann")?> or send a pull request <a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/blob/master/generate_attribution">here</a>
 </p>
 <ul>
-<li></li>
-	
+	<li>ITS 2.0</li>
+<ul>
+	<li><?=l("DaveLewis")?>,<?=l("FelixSasaki")?>,<?=l("DominicJones")?>,<?=l("FelixSasaki")?><?=l("TadejStajner")?> created the ITS RDF ontology</li>
+	<li><?=l("LeroyFinn")?> provided an ITS2NIF implementation</li>
+	<li><?=l("PhilRitchie")?> from <?=l("VistaTEC")?> provided an ITS2NIF implementation.</li>
+	<li><?=l("FelixSasaki")?> provided an ITS2NIF implementation</li>
+</ul>
 
-<li><?=r("ChristianChiarcos")?> who maintains <?=r("OLIA")?>. </li>
-<li><?=p("SebastianLippert")?> wrote his Bachelor's thesis about integrating NIF output in <?=r("COAT")?>. </li>
-<li><?=r("GiuseppeRizzo")?> and <?=r("RaphaelTroncy")?>  who maintain the <?=r("NERD")?> project. </li>
-<li><?=r("Zemanta")?> <?=r("MatejaVerlic")?> implements the wrapper for <?=r("Zemanta")?>. The code is available here: <a href="https://github.com/sparkica/zem-api-wrapper">https://github.com/sparkica/zem-api-wrapper</a></li>
-<li><?=r("MladenStanojevic")?> and <?=r("UrosMilosevic")?> are implementing a NIF wrapper in <?=p("DS2")?>.</li>
-<li><?=r("TomasKliegr")?> and <?=r("MilanDojchinovski")?> using it in <?=r("THD")?> and the <?=r("LinkedTV")?>.</li>
-<li><?=r("RupertWestenthaler")?></li>
-<li><?=p("ArtjomKlein")?></li>
-<li><?=p("RupertWestenthaler")?></li>
-<li><?=r("MohamedSherif")?> used NIF for his Semantic Quran conversion</li>
-<li><?=r("MartinBrümmer")?> created the Wikilink Corpus conversion and is currently writing his Master Thesis about the <?=r("OpenNLP")?> NIF integration.</li>
+<li><?=l("ChristianChiarcos")?> who maintains <?=l("OLIA")?>. </li>
+<li><?=l("Key-SunChoi")?>, <?=l("YoungGyunHahm")?>, <?=l("KyungTaeLim")?> who maintain the <?=l("KoreanNLP2RDF")?></li>
+<li><?=l("RupertWestenthaler")?> who developed the NIF wrapper for <?=t("ApacheStanbol")?></li>
+<li><?=l("GiuseppeRizzo")?> and <?=l("RaphaelTroncy")?>  who maintain the <?=l("NERD")?> project. </li>
+<li><?=p("SebastianLippert")?> wrote his Bachelor's thesis about integrating NIF output in <?=l("COAT")?>. </li>
+<li> <?=l("MatejaVerlic")?> implements the wrapper for <?=l("Zemanta")?>. The code is available here: <a href="https://github.com/sparkica/zem-api-wrapper">https://github.com/sparkica/zem-api-wrapper</a></li>
+<li><?=l("MladenStanojevic")?> and <?=l("UrosMilosevic")?> are implementing a NIF wrapper in <?=p("DS2")?>.</li>
+<li><?=l("TomasKliegr")?> and <?=l("MilanDojchinovski")?> using it in <?=l("THD")?> and the <?=l("LinkedTV")?>.</li>
+<li><?=l("ArtjomKlein")?></li>
 
-<li><?=r("MartinBrümmer")?>, Alexander Lust, <?=r("RobertSchulze")?>, <?=r("MarcusNitzschke")?>, <?=r("MarkusAckermann")?>, <?=r("DidierCherix")?> implemented wrappers for NIF 1.0 during an internship at University Leipzig in 2009. </li>
-<li><?=r("RupertWestenthaler")?></li>
+<li><?=l("MohamedSherif")?> used NIF for his Semantic Quran conversion</li>
+
+<li><?=l("MartinBrümmer")?> created the Wikilink Corpus conversion and is currently writing his Master Thesis about the <?=l("OpenNLP")?> NIF integration.</li>
+
+<li> <?=l("MarkusAckermann")?>, <?=l("MartinBrümmer")?>, <?=l("DidierCherix")?>, <?=l("MarcusNitzschke")?>, Alexander Lust, <?=l("RobertSchulze")?> implemented wrappers for NIF 1.0 during an internship at University Leipzig in 2009. </li>
 
 </ul>
 
+</body>
+</html>
 
 
