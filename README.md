@@ -3,11 +3,23 @@ persistence.uni-leipzig.de
 
 All ontologies used in NIF (nif-core + vocabulary modules )
 
+# Overview and Wiki
+You can find the specs and pointers to everything on the NLP2RDF/NIF landing page at:
+
+* http://persistence.uni-leipzig.org/nlp2rdf/
+
+Furthermore there is a project-wide wiki available at:
+
+* https://github.com/NLP2RDF/persistence.uni-leipzig.org/wiki
+
+This README file contains tecchnical details about this repository only (i.e. editing the ontologies and the specs). 
+
+
 ## Workflow for the ontologies
 
 ### '\#' vs. '/' URIs
 There has been an ongoing debate about '\#' vs. '/' . We focus on ontologies with '\#' here with URIs like:
-http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core\#String 
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String 
 Note that ontologies with '/' URIs need to published differently (partly discussed here: http://lists.w3.org/Archives/Public/semantic-web/2013Apr/0157.html). 
 
 ### Workflow for '\#' ontologies
