@@ -279,6 +279,37 @@ If your name is missing on the list, please email <?=l("SebastianHellmann")?> or
 
 </ul>
 
+<h3>TODO, below is an old list, that needs to be cleaned and merged</h3>
+
+<ul>
+	<li>Markus Ackermann created the <a href="http://nlp2rdf.lod2.eu/schema/topic/">Topic Ontology</a> for Mallet</li>
+	<li>Sören Auer, LOD2</li>
+	<li><a href="http://www.sfb632.uni-potsdam.de/%7Echiarcos/" target="_blank">Christian Chiarcos</a> maintains the <a href="http://nachhalt.sfb632.uni-potsdam.de/owl/">Ontologies of Linguistic Annotation</a></li>
+	<li>Philipp Cimiano maintains <a href="http://lemon-model.net/">lemon</a></li>
+	<li>Key-Sun Choi,  LOD2</li>
+	<li>Sebastian Hellmann coordinates the project and implementation efforts</li>
+	<li><a href="http://konradhoeffner.de" target="_blank">Konrad Höffner</a> contributed a <a href="http://nlp2rdf.org/tutorial-challenges/tutorial-challenge-semantic-yellow-pages">Tutorial Challenge: Semantic Yellow Pages</a></li>
+	<li><a href="http://aksw.org/AliKhalili">Ali Khalili </a>contributed a <a href="http://wiki.nlp2rdf.org/wiki/Use_cases_and_requirements#rdface">use case</a> and maintains <a href="http://aksw.org/Projects/RDFaCE">RDFaCE</a></li>
+	<li>Artjom Klein implemented NIF wrappers for the bio domain</li>
+	<li>Maxime Lefrançois helps to develop the <a href="http://wiki.nlp2rdf.org/wiki/ITS2NIF2ITS">ITS2NIF2ITS</a> brigde to <a href="http://www.w3.org/TR/its20/">ITS 2.0 </a></li>
+	<li>Jens Lehmann, LOD2</li>
+	<li><a href="http://www.wiwiss.fu-berlin.de/en/institute/pwo/bizer/team/MendesPablo.html">Pablo Mendes</a> maintains <a href="http://dbpedia.org/spotlight">DBpedia Spotlight</a></li>
+	<li>John McCrae maintains <a href="http://lemon-model.net/">lemon</a></li>
+	<li>Axel Ngonga maintains <a href="http://aksw.org/Projects/FOX">FOX</a> (<a href="http://139.18.2.164:4444/demo/index.html">demo</a>)</li>
+	<li>Martín Rezk</li>
+	<li>Giuseppe Rizzo maintains the <a href="www.eurecom.fr/util/publidownload.en.htm?id=3515">NERD Ontology</a></li>
+	<li>Felix Sasaki helps to develop the <a href="http://wiki.nlp2rdf.org/wiki/ITS2NIF2ITS">ITS2NIF2ITS</a> brigde to <a href="http://www.w3.org/TR/its20/">ITS 2.0 </a></li>
+	<li>Tadej Stajner maintains <a href="http://enrycher.ijs.si/">Enrycher</a> and helps to develop the <a href="http://wiki.nlp2rdf.org/wiki/ITS2NIF2ITS">ITS2NIF2ITS</a> brigde to <a href="http://www.w3.org/TR/its20/">ITS 2.0 </a></li>
+	<li>Raphael Troncy maintains the <a href="www.eurecom.fr/util/publidownload.en.htm?id=3515">NERD Ontology</a></li>
+	<li>Mateja Verlic, Zemanta</li>
+	<li>Thanh Nghia Lam maintains the <a href="http://wiki.nlp2rdf.org/wiki/WiktionaryFirstSense">WiktionaryFirstSense</a></li>
+	<li>Markus Ackermann  for <a href="https://bitbucket.org/mack/mallet2nif" target="_blank">Mallet</a></li>
+	<li>Martin Brümmer for <a href="https://bitbucket.org/gruenerkaktus/opennlpnif/overview" target="_blank">OpenNLP</a> and for <a href="https://bitbucket.org/gruenerkaktus/uimanif/overview" target="_blank"> UIMA </a></li>
+	<li>Didier Cherix for <a href="https://bitbucket.org/d_cherix/gan/overview" target="_blank"> Gate Annie </a></li>
+	<li><a href="http://www.kendix.org/" target="_blank">Marcus Nitzschke</a> for <a href="//github.com/kenda/nlp2rdf.MontyLingua\&quot;" target="_blank">MontyLingua (Python)</a></li>
+	<li><a href="http://robbl.me" target="_blank">Robert Schulze</a> for <a href="//github.com/robbl/node-dbpedia-spotlight-nif\&quot;" target="_blank">DBpedia Spotlight (node-js)</a></li>
+</ul>
+
 </body>
 </html>
 

@@ -733,7 +733,7 @@ nif:cl_uncertain
     rdfs:comment """Indicating that an Enhancement is rather speculative. Enhancements with this confidence level can be ignored by most usecases. However they might be processed by other Enhancements Engines (introduced by STANBOL-631)"""@en ;
     rdfs:label "uncertain"@en .
 
-nif:confidence-level
+nif:confidence_level
     a owl:ObjectProperty ;
     rdfs:comment "the level of confidence for this Annotation (introduced by STANBOL-631)."@en ;
     rdfs:domain nif:Annotation ;
