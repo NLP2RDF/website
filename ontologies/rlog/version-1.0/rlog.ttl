@@ -155,7 +155,7 @@ rlog:OFF
 	a rlog:Entry ;
 	rlog:level rlog:INFO ;
 	rlog:date "2013-06-08T17:00:00Z"^^xsd:datetime ;
-	rlog:class "org.nlp2rdf.core.SPARQLValidator";
+	rlog:className "org.nlp2rdf.core.SPARQLValidator";
 	rlog:resource <http://example.org/aResourceRelatedToThisLogEntry> ;
 	rlog:message "Example log message, put whatever you want." . 
  
