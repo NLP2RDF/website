@@ -24,9 +24,9 @@ This foundation is created by:
 	<a href="www.cs.vassar.edu/~ide/papers/LAF-2012.pdf" target="_blank" >LAF (ISO 24612)</a>
 	and <a href="">RFC 5147</a></li>
 <li>Furthermore, NIF will soon be a normative part of the <a href="http://www.w3.org/TR/its20/" target="_blank" >Internationalization Tag Set (ITS) Version 2.0</a></li>
-<li>All parts of NIF will be <strong>royality-free</strong> and published under an <strong><a href="#license">open license</a></strong>.</li>
-<li>NIF comprises a set of <a href="#ontologies">ontologies</a>(e.g. NIF-Core), which have <strong>stable identifiers</strong>, <strong><a href="#persistence">persistent</a> hosting</strong>, an <strong>open license</strong> and a <strong>community approved meaning</strong>.</li>
-<li>NIF publishes and maintains a set of <a href="#ontologies">specifications</a> with best practices, complementary information and examples on how to use the ontologies.</li>
+<li>All parts of NIF are <strong>royality-free</strong> and are published under an <strong>open license</strong>.</li>
+<li>NIF comprises a set of RDF vocabularies and ontologies, which have <strong>stable identifiers</strong>, <strong>persistent hosting</strong>, an <strong>open license</strong> and a <strong>community approved meaning</strong>.</li>
+<li>NIF publishes and maintains a set of <strong>specifications</strong> with best practices, complementary implementations and examples on how to use the ontologies.</li>
 <li>NIF is driven by its open and weclome-to-join community project NLP2RDF, consisting of a <a href="http://lists.informatik.uni-leipzig.de/mailman/listinfo/nlp2rdf" target="_blank">mailing list</a>, a <a href="https://github.com/NLP2RDF" target="_blank">GitHub Project</a> and a <a href="http://nlp2rdf.org" target="_blank">blog web site</a> </li>
 <li>NIF and its community project NLP2RDF serve as an umbrella project liaising with other community of practices, especially: 
 	<ul>
@@ -41,10 +41,14 @@ This foundation is created by:
 	</ul>
 </li>
 <li>NIF has received excellent uptake by industry, open-source projects and developers.  We would like to thank all contributors in the <a href="#attribution">attribution section</a> </li>
+</ul>
+</p>
 
+<h2>News</h2>
+<ul>
+<li><a href="http://svn.aksw.org/papers/2013/ISWC_NIF/public.pdf" target="_blank">Integrating NLP using Linked Data</a>. Sebastian Hellmann, Jens Lehmann, Sören Auer, and Martin Brümmer. <strong>Submitted</strong> to ISWC (2013)</li>
 </ul>
 
-</p>
 <hr />
 
 
@@ -69,13 +73,19 @@ Documentation and the ontologies are still subject to change at any time as we a
 
 <h3>Infrastructure and pointers</h3>
 <ul>
-	<li><a href="http://lists.informatik.uni-leipzig.de/mailman/listinfo/nlp2rdf" target="_blank" >Mailing list</a> remains the same</a></li>
+	<li>If you are interested in NLP2RDF, you can write emails to the <a href="http://lists.informatik.uni-leipzig.de/mailman/listinfo/nlp2rdf">nlp2rdf discussion list</a> or sign up directly below:<form method="post" action="http://lists.informatik.uni-leipzig.de/mailman/subscribe/nlp2rdf"> 
+	<table>
+	<tr><td>E-mail address:</td><td><input type="text" name="email" size="28" value=""></td></tr>
+	<tr><td>Name:</td><td><input type="text" name="fullname" size="28" value=""><input type="submit" name="email-button" value="Subscribe"></td></tr>
+	</table>
+	
+	</li>
 	<li><a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/issues" target="_blank" >Issue tracker for the ontologies</a></li>
 	<li><a href="https://github.com/NLP2RDF" target="_blank" >NLP2RDF GitHub page</a></li>
-	<li><a href="https://github.com/NLP2RDF" target="_blank" >NLP2RDF GitHub Wiki</a></li>
+	<li><a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/wiki" target="_blank" >NLP2RDF project-wide Wiki</a></li>
 </ul>
 
-<h3>Old infrastructure and specs - where did have they been moved? </h3>
+<h3>Old infrastructure and specs - where have they been moved? </h3>
 <ul>
 	<li><a href="http://nlp2rdf.org/nif-1-0" target="_blank" >NIF Version 1.0</a> remains where it is (for historical reasons)</li>
 	<li><a href="http://nlp2rdf.org/nif-2-0-draft" target="_blank" >Changelog</a> remains where it is (for historical reasons)</li>
@@ -86,14 +96,34 @@ Documentation and the ontologies are still subject to change at any time as we a
 
 
 
-<h2>Table of Contents</h2>
 
-<h2>Versioning, Roadmap, Resources and Scope</h2>
-tba
+<h2>Roadmap and Milestones</h2>
+<h4>(Reached) Release of NIF 1.0</h4>
+<p>The release of NIF 1.0 in Nov 2009 has been a great success. Overall, around 30 software artifacts exist, which implement NIF 1.0. The project has received immense feedback from developers, which has lead to the improvement of the ontologies and the speccification. </p>
+<h4>(current) Release of NIF 2.0 Draft</h4>
+<p>By releasing a draft version, we would like to encourage further adoption of the standard and feedback and further testing.</p>
+<h4>(planned) Release of NIF 2.0 Core</h4>
+<p>We will stabilize the core features of NIF and describe ways on how to extend it. From this moment on, the core will be stable and the only change will happen in the extensions of NIF.</p>
+<h4>(planned) Release of NIF 2.0 Extensions</h4>
+<p>This includes the incorporation of more ontologies in NIF. To become part of NIF, the ontologies need to be tested thoroughly. Here are some examples on potential extensions:</p>
+<ul>
+	<li>The ITS RDF Ontology</li>
+	<li>The PROV Ontology</li>
+	<li>Lemon Ontology</li>
+	<li>NERD</li>
+	<li>UIMA type system of Julielabs</li>
+	<li>UIMA type system of DKPro</li>
+	<li>MARL Opinion ontology</li>
+</ul>
 <!--p>Since NIF aims to cover the whole domain of NLP, it is obvious that this progress will require several years and a joint community effort. 
 </p-->
 
-<h2>Ontologies</h2>
+<h2>Versioning of Ontologies and Software</h2>
+Ontologies are a great way to document, how they should beused. We will try to include as much information as possible in the actual RDF files. 
+
+
+For each ontology, we provide an overview page, which will provide links to the HTML 
+
 <p>For all ontologies, turtle is the default format with additional comments in the code.  
 All other formats are generated.
 Note: We have marked the terms in the ontology as "stable", "testing", "unstable", "deprecated", "discouraged" or a link to issues in the <a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/issues" target="_blank" >Github issue tracker</a>.

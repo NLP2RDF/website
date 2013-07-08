@@ -4,13 +4,12 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-
+@prefix fise: <http://fise.iks-project.eu/ontology/> .
 
 ###################
 # Imports
 ###################  
 
-#<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>  owl:imports <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core.ttl> .
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>  owl:imports <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/version-1.0/nif-core-inf.ttl> .
 
 
@@ -37,6 +36,14 @@ nif:String
 nif:referenceContext a owl:FunctionalProperty .
 nif:anchorOf a owl:FunctionalProperty .
 nif:isString a owl:FunctionalProperty .
+nif:beginIndex a owl:FunctionalProperty .
+nif:endIndex a owl:FunctionalProperty .
+nif:before a owl:FunctionalProperty .
+nif:after a owl:FunctionalProperty .
+nif:head a owl:FunctionalProperty .
+nif:tail a owl:FunctionalProperty .
+nif:contextAsLiteral a owl:FunctionalProperty .
+nif:confidence a owl:FunctionalProperty . 
 
 nif:nextWord a owl:FunctionalProperty .
 nif:previousWord a owl:FunctionalProperty .
@@ -48,11 +55,18 @@ nif:firstWord a owl:FunctionalProperty .
 nif:previousWord a owl:FunctionalProperty .
 
 
+
+
 ###################
 # Disjointness
 ###################
 [] a owl:AllDisjointClasses ; 
-	owl:members nif:RFC5147String, nif:ContextHashBasedString , nif:OffsetBasedString ,  nif:OccuringWord .
+	owl:members nif:RFC5147String, nif:ContextHashBasedString , nif:OffsetBasedString ,  nif:ArbitraryString .
 
+	
+[] a owl:AllDisjointClasses ; 
+	owl:members nif:String, nif:EntityAnnotation, nif:TopicAnnotation .	
+	
+# experimental	
 [] a owl:AllDisjointClasses ; 
 	owl:members nif:String, nif:LabelString .
