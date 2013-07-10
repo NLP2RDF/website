@@ -109,14 +109,16 @@ nif:Structure
     rdfs:label "Structure"@en ;
     rdfs:comment """A structure is a more or less arbitrary label for a partitioning of a string. We do not follow a strict approach for what a word, phrase, sentence, title, paragraph is. These labels enable the definition processes for tool chains, e.g. tool analyses nif:Paragraph and calculates term frequency. """ ;
     rdfs:subClassOf nif:String .
-
+   
     
 # experimental
 nif:HTMLString
     a owl:Class ;
     vs:term_status "unstable" ;
+    vs:term_status "experimental" ;
     rdfs:label "HTML String"@en ;
-    rdfs:comment """experimental, a subspecialisation of String. """ .
+    rdfs:comment """experimental, a subspecialisation of String (a string with HTML markup). """@en ;
+    rdfs:subClassOf nif:String .
     
 ###################
 # Basic Properties
@@ -147,7 +149,7 @@ nif:isString
     
 nif:beginIndex
     a owl:DatatypeProperty ;
-    vs:term_status "testing" ;
+    vs:term_status "stable" ;
     rdfs:label "begin index"@en ;
     rdfs:comment """The begin index of a character range as defined in http://tools.ietf.org/html/rfc5147#section-2.2.1 and http://tools.ietf.org/html/rfc5147#section-2.2.2, measured as the gap between two characters, starting to count from 0 (the position before the first character of a text). 
     Example: Index "2" is the postion between "Mr" and "."  in "Mr. Sandman".
@@ -161,7 +163,7 @@ nif:beginIndex
 
 nif:endIndex
     a owl:DatatypeProperty ;
-    vs:term_status "testing" ;
+    vs:term_status "stable" ;
     rdfs:label "end index"@en ;
     rdfs:comment """The end index of a character range as defined in http://tools.ietf.org/html/rfc5147#section-2.2.1 and http://tools.ietf.org/html/rfc5147#section-2.2.2, measured as the gap between two characters, starting to count from 0 (the position before the first character of a text). 
     Example: Index "2" is the postion between "Mr" and "."  in "Mr. Sandman".
@@ -191,7 +193,7 @@ nif:sourceUrl
 nif:wasConvertedFrom
     a owl:ObjectProperty ;
     vs:term_status "testing" ;
-    rdfs:label "was Converted from"@en ;	
+    rdfs:label "was converted from"@en ;	
     rdfs:comment """This property should be used, when mapping one NIF String URIScheme to another.
     It mainly is used to provide provenance during a conversion process, e.g. when removing tags from XHTML and then linking XPath URIs to NIF index based URIs (e.g.  RFC 5147 with char=x,y).
     An example of the usage of this property can be found here: http://www.w3.org/TR/its20/#conversion-to-nif
@@ -306,14 +308,14 @@ nif:RFC5147String
     vs:term_status "stable" ;
     rdfs:label "RFC 5147 string"@en ;
     rdfs:comment "cf. http://tools.ietf.org/html/rfc5147 " ;
-    rdfs:subClassOf nif:URIScheme, nif:String .
+    rdfs:subClassOf nif:URIScheme .
 
 nif:ContextHashBasedString
     a owl:Class ;
     vs:term_status "stable" ;    
     rdfs:label "Context hash based string"@en ;
     rdfs:comment " cf. https://www.google.de/search?q=Linked-Data+Aware+URI+Schemes+for+Referencing+Text" ;
-    rdfs:subClassOf nif:URIScheme, nif:String .
+    rdfs:subClassOf nif:URIScheme .
     
 nif:OffsetBasedString
     a owl:Class ;
@@ -321,14 +323,14 @@ nif:OffsetBasedString
     vs:term_status "deprecated" ;
     rdfs:label "Offset based string"@en ;
     rdfs:comment "cf. https://www.google.de/search?q=Linked-Data+Aware+URI+Schemes+for+Referencing+Text" ;
-    rdfs:subClassOf nif:URIScheme, nif:String .
+    rdfs:subClassOf nif:URIScheme .
     
 nif:ArbitraryString
     a owl:Class ;
     vs:term_status "unstable" ;
     rdfs:label "Text Annotation"@en ;
     rdfs:comment """An abitrary URI (e.g. a URN) for an arbitrary string of the context. This is exactly the same as TextAnnotations are currently implemented in Stanbol."""@en ;
-    rdfs:subClassOf nif:URIScheme, nif:String .
+    rdfs:subClassOf nif:URIScheme .
     
 #experimental
 nif:OccuringWord
@@ -338,10 +340,11 @@ nif:OccuringWord
 	rdfs:comment """Instances of this class represent all occuring words with a matching string within the same context. The pattern for this scheme is 'occ_'+urlencode($anchorOf) . If the text is tokenizedd with nif:Word, instances of this class would be the same as the combination of all instances, that have the same nif:anchorOf and the same nif:referenceContext. It is a scheme to refer to all tokens with the exact same string in one text. If such a URI is used, it implies, that the word occurs at least once in the given context. Otherwise nif:LabelString should be used. """@en ;
     rdfs:subClassOf nif:String .
 
-#experimental
+
 nif:LabelString
     a owl:Class ;
     vs:term_status "unstable" ;
+    vs:term_status "experimental" ;
     rdfs:label "Label String"@en ;
 	rdfs:comment """Instances of this class represent a label independent from any context. This class is a subClassOf skosxl:Label, but disjoint with nif:String (see nif-core-val.ttl). We included this class in nif-core, because we are proposing the following scheme for it: 'label_'+urlencode($term).   """@en ;
     rdfs:subClassOf skosxl:Label .
@@ -350,9 +353,10 @@ nif:LabelString
 nif:XPathString 
     a owl:Class ;
     vs:term_status "unstable" ;
+    vs:term_status "experimental" ;
     rdfs:label "XPath string"@en ;
 #   rdfs:comment """ TODO """ ;
-    rdfs:subClassOf nif:HTMLString , nif:String .
+    rdfs:subClassOf nif:HTMLString .
   
 
 
@@ -367,36 +371,37 @@ nif:Word
     rdfs:label "word"@en ;
     rdfs:comment """
     Assigning this class to a nif:String This class has definitory 
-    A string that can be considered a word or a punctuation mark, the sentence 'He enters the room.' for example has 5 words. In general, the division into nif:Word is done by a tokenizer. Instances of this class should be a string, that is a 'meaningful' unit of characters. The class has not been named 'Token' as the NLP definition of 'Token' is more similar to our definition of nif:String in general. For NIF we assume, that the Token """ ;
-    rdfs:subClassOf nif:Structure , nif:String .
+    A string that can be considered a word or a punctuation mark, the sentence 'He enters the room.' for example has 5 words. In general, the division into nif:Word is done by a tokenizer. Instances of this class are defined as a string, that is a 'meaningful' unit of characters. The class is not descriptive, but prescriptive. All NIF tools are supposed to either honor the current assignment of nif:Word or possibly correct it, if that is intended by the developer. 
+    The class has not been named 'Token' as the NLP definition of 'Token' is more similar to our definition of nif:String in general, e.g. "can't" could be one, two or three tokens."""@en ;
+    rdfs:subClassOf nif:Structure  .
 
 nif:Phrase
     a owl:Class ;
     vs:term_status "testing" ;   
-    rdfs:label "phrase"@en ;
+    rdfs:label "a Phrase"@en ;
     rdfs:comment """A nif:Phrase can be a nif:String, that is a chunk of several words or a word itself (e.g. a NounPhrase as a Named Entity). The term is underspecified and can be compatible with many defintitions of phrase. Please subClass it to specify the meaning (e.g. for Chunking or Phrase Structure Grammar). Example: ((My dog)(also)(likes)(eating (sausage))) """ ;
-    rdfs:subClassOf nif:Structure , nif:String .
+    rdfs:subClassOf nif:Structure  .
 
 nif:Sentence
     a owl:Class ;
     vs:term_status "testing" ; 
-    rdfs:label "sentence"@en ;
+    rdfs:label "a Sentence"@en ;
     rdfs:comment "a sentence." ;
-    rdfs:subClassOf nif:Structure , nif:String .
+    rdfs:subClassOf nif:Structure  .
 
 nif:Paragraph
     a owl:Class ;
     vs:term_status "unstable" ;  
-    rdfs:label "paragraph"@en ;
-    rdfs:comment "a paragraph." ;
-    rdfs:subClassOf nif:Structure , nif:String .
+    rdfs:label "a Paragraph"@en ;
+    rdfs:comment "a Paragraph." ;
+    rdfs:subClassOf nif:Structure  .
     
 nif:Title
     a owl:Class ;
     vs:term_status "unstable" ;  
     rdfs:label "title"@en ;
     rdfs:comment "a title within a text." ;
-    rdfs:subClassOf nif:Structure , nif:String .
+    rdfs:subClassOf nif:Structure  .
     
 ###################
 # Structure properties
@@ -748,8 +753,8 @@ nif:confidence_level
 # Stable part:
 # URI for the first word
 <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,6> 
-	a nif:RFC5147String , nif:String ;
-	nif:referenceContext <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,>  ;
+	a nif:RFC5147String  ;
+	nif:referenceContext <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,1756>  ;
 	nif:beginIndex "0"^^xsd:nonNegativeInteger ;
 	nif:endIndex "6"^^xsd:nonNegativeInteger ;
 # unstable /testing part begins below	
@@ -778,10 +783,12 @@ nif:confidence_level
 	a <http://nerd.eurecom.fr/ontology#Country> .
 
 ## Context
-<http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,> 
-	a nif:RFC5147String , nif:String , nif:Context ;
+<http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,1756> 
+	a nif:RFC5147String  , nif:Context ;
+	nif:beginIndex "0"^^xsd:nonNegativeInteger ;
+	nif:endIndex "1756"^^xsd:nonNegativeInteger ;
 	dcterms:created "2013-05-08T17:00:00Z"^^xsd:datetime ;
-	nif:referenceContext <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,>  ;
+	nif:referenceContext <http://nlp2rdf.lod2.eu/usecases/plaintext.txt#char=0,1756>  ;
 	nif:sourceUrl <http://nlp2rdf.lod2.eu/usecases/plaintext.txt>  ;
 	nif:isString """Mexico expects the U.S. to accelerate the disbursement of aid to strengthen its fight against drug gangs and put back on track a $1.4 billion program that has been hamstrung by delays in recent years, Foreign Affairs Minister Patricia Espinosa said.
 Espinosa, in an interview yesterday, said both U.S. President Barack Obama and Secretary of State Hillary Clinton promised to disburse $500 million this year in equipment and aid for police training as part of the bilateral Merida Initiative. Mexico expects to receive complete financing of the multi-year program by next year, she said.
@@ -789,6 +796,5 @@ Espinosa, in an interview yesterday, said both U.S. President Barack Obama and S
 (It would boring without special characters such as äöüßéèâ&auml;) .
 U.S. anti-narcotics aid to Mexico suffered delays even as the death toll from President Felipe Calderon's crackdown on drug gangs surged to over 35,000 victims since he took office in 2006. Mexico received at least $480 million in U.S. aid under the program since it was signed in 2008 by Calderon and former President George W. Bush, with $380 million arriving between 2008 and 2010, according to data from the Foreign Ministry.
 The shortfall in U.S. assistance has delayed the delivery of equipment including polygraph machines and Black Hawk helicopters needed to combat drug traffickers. It has also delayed the training of Mexican officials, according to the GAO report.
-Until a year ago the U.S. had delivered only about 9 percent of the promised aid to Mexico and Central America because agencies involved lacked staff and funding, the U.S. Government Accountability Office said in a report in 2010. """.
-
+Until a year ago the U.S. had delivered only about 9 percent of the promised aid to Mexico and Central America because agencies involved lacked staff and funding, the U.S. Government Accountability Office said in a report in 2010.""".
 
