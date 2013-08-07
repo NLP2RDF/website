@@ -43,6 +43,7 @@ triples:
 		Coined URIs:(Number of Mentions)*5									33969925*5 = 169849625 URIs						221.01%
 
 UIMA + Clerezza
+http://uima.apache.org/sandbox.html\#rdfcas.consumers
 triples:
 	<uima:Jcas> clerezza:contains <uima:Annotation1>
 	<uima:Annotation1> clerezza:begin "begin"

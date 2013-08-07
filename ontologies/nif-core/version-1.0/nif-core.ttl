@@ -33,7 +33,7 @@
 
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> 
     a owl:Ontology ;
-    rdfs:label "NIF Core Ontology"@en ;
+    rdfs:label "NIF 2.0 Core Ontology"@en ;
     vann:preferredNamespacePrefix "nif" ;
     vann:preferredNamespaceUri "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#" ;
     vann:changes <https://github.com/NLP2RDF/persistence.uni-leipzig.org/commits/master/ontologies/nif-core> ;
@@ -76,14 +76,16 @@ At the end of this ontology we provide an example.
 
 nif:Context
     a owl:Class ;
-    vs:term_status "stable" ;
+    vs:term_status "1.0.0" ;
+    vs:changelog """1.0.0: Introduced stable version, linking to the ISWC In Use publication for documentation.""" ;
     rdfs:label "Context"@en ;
     rdfs:comment """ see http://svn.aksw.org/papers/2013/ISWC_NIF/public.pdf """ ;
     rdfs:subClassOf nif:String .
     
 nif:String
     a owl:Class ;
-    vs:term_status "stable" ;
+    vs:term_status "1.0.0" ;
+    vs:changelog """1.0.0: Introduced stable version, linking to the ISWC In Use publication for documentation.""" ;
     rdfs:label "String"@en ;
     rdfs:subClassOf nif:Annotation ;
     rdfs:comment """ see http://svn.aksw.org/papers/2013/ISWC_NIF/public.pdf This is a subclass of Annotation, because it "annotates" strings for example with begin and end index. It is also very similar to fise:TextAnnotation"""@en .
@@ -126,7 +128,8 @@ nif:HTMLString
 
 nif:referenceContext
     a owl:ObjectProperty ;
-    vs:term_status "stable" ;
+    vs:term_status "1.0.0" ;
+    vs:changelog """1.0.0: Introduced stable version.""" ;
     rdfs:label "reference context"@en ;
     rdfs:comment """The reference text (called nif:Context) a nif:String occurs in.  
     Each String instance must have exactly one reference context. 
@@ -137,7 +140,8 @@ nif:referenceContext
 
 nif:isString
     a owl:DatatypeProperty ;
-    vs:term_status "stable" ;
+    vs:term_status "1.0.0" ;
+    vs:changelog """1.0.0: Introduced stable version.""" ;
     rdfs:label "is string"@en ; 
     rdfs:comment """The reference text as rdf:Literal for this nif:Context resource.  
     NIF highly recommends to always include the reference text (i.e. the context) as an rdf:Literal.
@@ -149,7 +153,8 @@ nif:isString
     
 nif:beginIndex
     a owl:DatatypeProperty ;
-    vs:term_status "stable" ;
+    vs:term_status "1.0.0" ;
+    vs:changelog """1.0.0: Introduced stable version.""" ;
     rdfs:label "begin index"@en ;
     rdfs:comment """The begin index of a character range as defined in http://tools.ietf.org/html/rfc5147#section-2.2.1 and http://tools.ietf.org/html/rfc5147#section-2.2.2, measured as the gap between two characters, starting to count from 0 (the position before the first character of a text). 
     Example: Index "2" is the postion between "Mr" and "."  in "Mr. Sandman".
@@ -158,12 +163,13 @@ nif:beginIndex
     Requirement (2): The index of the subject string MUST be calculated relative to the nif:referenceContext of the subject. If available, this is the rdf:Literal of the nif:isString property.""" ;
     # still being discussed:
     # rdfs:subPropertyOf oa:start ;
-    rdfs:range <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+    # rdfs:range <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
     rdfs:domain nif:String .
 
 nif:endIndex
     a owl:DatatypeProperty ;
-    vs:term_status "stable" ;
+    vs:term_status "1.0.0" ;
+    vs:changelog """1.0.0: Introduced stable version.""" ;
     rdfs:label "end index"@en ;
     rdfs:comment """The end index of a character range as defined in http://tools.ietf.org/html/rfc5147#section-2.2.1 and http://tools.ietf.org/html/rfc5147#section-2.2.2, measured as the gap between two characters, starting to count from 0 (the position before the first character of a text). 
     Example: Index "2" is the postion between "Mr" and "."  in "Mr. Sandman".
@@ -172,7 +178,7 @@ nif:endIndex
     Requirement (2): The index of the subject string MUST be calculated relative to the nif:referenceContext of the subject. If available, this is the rdf:Literal of the nif:isString property.""" ;
     # still being discussed:
     # rdfs:subPropertyOf oa:end ;
-    rdfs:range <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
+    # rdfs:range <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> ;
     rdfs:domain nif:String .
     
 nif:anchorOf
@@ -305,14 +311,16 @@ nif:classAnnotation
 
 nif:RFC5147String
     a owl:Class ;
-    vs:term_status "stable" ;
+    vs:term_status "1.0.0" ;
+    vs:changelog """1.0.0: Introduced stable version.""" ;
     rdfs:label "RFC 5147 string"@en ;
     rdfs:comment "cf. http://tools.ietf.org/html/rfc5147 " ;
     rdfs:subClassOf nif:URIScheme .
 
 nif:ContextHashBasedString
     a owl:Class ;
-    vs:term_status "stable" ;    
+    vs:term_status "1.0.0" ;
+    vs:changelog """1.0.0: Introduced stable version.""" ;
     rdfs:label "Context hash based string"@en ;
     rdfs:comment " cf. https://www.google.de/search?q=Linked-Data+Aware+URI+Schemes+for+Referencing+Text" ;
     rdfs:subClassOf nif:URIScheme .
