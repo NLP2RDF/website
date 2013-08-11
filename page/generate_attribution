@@ -166,9 +166,41 @@ function check($id){
 	return $entity = $entities[$id];
 	}
 
-$fp = fopen("index_beginning.html", "r");
-fpassthru($fp);
-?>
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <!--?xml version="1.0" encoding="utf-8"?-->
+<html >
+<head>
+  <title>NLP Interchange Format (NIF) - Overview</title>
+  <link href="http://www.w3.org/StyleSheets/TR/base" rel="stylesheet" type="text/css" />
+  <link href="main.css" rel="stylesheet" type="text/css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body bgcolor="#FFFFFF">
+<ul class="nav" >
+<li><a href="../index.html">Home</a></li>
+<li><a href="../index.html#license">Persistence and License</a></li>
+<li><a href="../index.html#about">About</a></li>
+<li><a href="../index.html#ontology">Ontologies</a></li>
+<li><a href="../index.html#specification">Specifications</a></li>
+<!--li><a href="#software">Software</a></li-->
+<li><a href="attribution.html">Attribution and Contact</a></li>
+</ul>	
+	
+    <h1>NLP Interchange Format (NIF) - Attribution and Contact</h1>
+
+<h2><a name="attribution" />Attribution</h2>
+We are currently updating the list of maintainers and contributors. This process takes quite a while, since many people are involved. 
+Please check back frequently to get updates. Currently over 30 software artifacts exist, that use or implement NIF. 
+We are trying to keep track and collect everything in structured form in a <a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/blob/master/generate_attribution">script at GitHub</a> for generating the remainder of the page. 
+
+<h3><a name="Publications" />Publications</h3>
+Please add your own publications by uploading your references to bibsonomy and the tag it as <a href="http://www.bibsonomy.org/tag/nlp2rdf_pub" target="_blank">nlp2rdf_pub</a></br>
+The latest publication regarding NIF is this one:</br>
+<a href="http://svn.aksw.org/papers/2013/ISWC_NIF/public.pdf" target="_blank">Integrating NLP using Linked Data</a>. Sebastian Hellmann, Jens Lehmann, Sören Auer, and Martin Brümmer. <strong>Submitted</strong> to 12th International Semantic Web Conference, 21-25 October 2013, Sydney, Australia, (2013)
+</br></br>
+<iframe  width="1200" height="800" src="publications.html" seamless></iframe> 
+</br></br>
 
 <h3>Origins and Contact</h3>
 
@@ -217,7 +249,7 @@ Please also email Sebastian, if you wish to be added as a maintainer/supporter b
 <p>
 Complete attribution is important for us. If your tool is missing on the list, please email <?=l("SebastianHellmann")?> or send a pull request <a href="https://github.com/NLP2RDF/persistence.uni-leipzig.org/blob/master/generate_attribution">here</a>.
 Most of the tools are being updated to NIF 2.0, currently.
-Some only implement NIF within the soon-to-be <a href="http://www.w3.org/TR/its20/#its-conformance-2-4" target="_blank">ITS 2.0 W3C Recommendation</a>.
+Some only implemented NIF within the soon-to-be <a href="http://www.w3.org/TR/its20/#its-conformance-2-4" target="_blank">ITS 2.0 W3C Recommendation</a>.
 </p>
 <ul>
 <li>(work in progress) <?=l("DBpediaSpotlight")?></li>
