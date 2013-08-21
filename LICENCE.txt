@@ -1,6 +1,0 @@
-The licences can be found in the individual ontologies.
-Normally, we try to keep it to CC-BY at the maximum. Please name our Project NLP2RDF or OLiA, lemon, NERD, etc. 
-Don't hesitate, however, to use it in in your research or commercial applications.
-We can also lower the licence to Public Domain, if you think it is necessary. 
-It would be nice to drop us a line, if you use any of the ontologies (e.g. the mailing list at http://nlp2rdf.org or hellmann_at_informatik.uni-leipzig.de). 
-
