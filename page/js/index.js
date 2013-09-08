@@ -11,8 +11,9 @@ function createCategories(container,input_file,colors){
 	$(container).html('<ul class="list-group"></ul>');
 	$(container).prepend('<a href="#all" onclick="showAllCategories()">Expand all</a> | <a href="#none" onclick="hideAllCategories()">Collapse all</a>');
 	$.getJSON(input_file, function(data) {
-		sortJsonArrayByProperty(data, '@graph.http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type');
-		$.each(data['@graph'], function(key, val) {
+		var graph=data['@graph'];
+		sortJsonArrayByProperty(graph, 'http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type');
+		$.each(graph, function(key, val) {
 			rows='';
 			link=val['@id'];
 			label=val['http://www.w3.org/2000/01/rdf-schema#label']['@value'];
@@ -62,7 +63,7 @@ function sortJsonArrayByProperty(objArray, prop, direction){
     var direct = arguments.length>2 ? arguments[2] : 1; //Default to ascending
 
     if (objArray && objArray.constructor===Array){
-        var propPath = (prop.constructor===Array) ? prop : prop.split(".");
+        var propPath = (prop.constructor===Array) ? prop : prop.split("|");
         objArray.sort(function(a,b){
             for (var p in propPath){
                 if (a[propPath[p]] && b[propPath[p]]){
