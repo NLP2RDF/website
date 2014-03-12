@@ -1,6 +1,20 @@
 {
   "@graph": [
     {
+      "@id": "https://github.com/NLP2RDF/software#nif-validator",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Documentation can be found here: <a href=\"https://github.com/NLP2RDF/software#nif-validator\">https://github.com/NLP2RDF/software#nif-validator</a>",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#highlight": "true",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Mature",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "software",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "java -jar validate.jar -v",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "Versioning relies on NIF Validator TestCase Suite and the API specification",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "NIF 2.0 Validator Tool"
+      }
+    },
+    {
       "@id": "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/nif-core-inf.ttl",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": " We like to keep as much information as possible within the ontology itself, please have a look there. Additional models:<br><ol>\n\t<li><a href=\"http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#\">Terminological model</a></li>\n\t<li><a href=\"http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/nif-core-inf.ttl\">Inference model</a></li>\n\t<li><a href=\"http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/nif-core-val.ttl\">Validation model</a></li>\n</ol>",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#example": " ",
@@ -15,16 +29,16 @@
       }
     },
     {
-      "@id": "http://persistence.uni-leipzig.org/nlp2rdf/specification/stanbol.html",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Early description of the NIF Stanbol profile. ",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub, previous versions are kept on the server, persistently.",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Under development",
+      "@id": "http://www.w3.org/TR/its20/#nif-backconversion",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "The conversion from International TagSet (ITS) 2.0 to NIF is a possible basis for a natural language processing (NLP) application that creates, for example, named entity annotations. A non-normative algorithm to integrate these annotations into the original input document is given in Appendix G: Conversion NIF2ITS. Many decisions to be made in this algorithm depend on the particular NLP application being used.",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "W3C specific",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "W3C Last Call Working Draft 20 August 2013",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "specification",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "Document",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "As specified in http://semver.org/",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "W3C specific",
       "http://www.w3.org/2000/01/rdf-schema#label": {
         "@language": "en",
-        "@value": "NIF 2.0 Stanbol Profile Specification"
+        "@value": "W3C Conversion of NIF to ITS 2.0"
       }
     },
     {
@@ -41,100 +55,17 @@
       }
     },
     {
-      "@id": "https://github.com/NLP2RDF/software#nif-validator",
+      "@id": "https://github.com/dbpedia-spotlight/dbpedia-spotlight/wiki/Web-service",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Documentation can be found here: <a href=\"https://github.com/NLP2RDF/software#nif-validator\">https://github.com/NLP2RDF/software#nif-validator</a>",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#highlight": "true",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Mature",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "software",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "jar -jar validate.jar -v",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "Versioning relies on NIF Validator TestCase Suite and the API specification",
-      "http://www.w3.org/2000/01/rdf-schema#label": {
-        "@language": "en",
-        "@value": "NIF 2.0 Validator Tool"
-      }
-    },
-    {
-      "@id": "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/testcase/lib/nif-2.0-suite.ttl",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "A collection of SPARQL queries to validate NIF models.",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub, changelog in rdfs:comment",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Mature",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "ontology",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "Ontology IRI",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "As specified in http://semver.org/",
-      "http://www.w3.org/2000/01/rdf-schema#label": {
-        "@language": "en",
-        "@value": "NIF Validator TestCase Suite"
-      }
-    },
-    {
-      "@id": "http://persistence.uni-leipzig.org/nlp2rdf/specification/api.html",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "A document specifying the public API requirements of tools implementing NIF.",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#highlight": "true",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub, previous versions are kept on the server, persistently.",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Under development",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "specification",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "Document",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "As specified in http://semver.org/",
-      "http://www.w3.org/2000/01/rdf-schema#label": {
-        "@language": "en",
-        "@value": "Public API Specification"
-      }
-    },
-    {
-      "@id": "http://nlp2rdf.lod2.eu/demo.php",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#code": "https://github.com/NLP2RDF/software/blob/master/php/demo/demo.php",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "A GUI called the NIF Combinator, which allows to combine the output of the implemented NIF web services. http://svn.aksw.org/papers/2012/NIF/EKAW_DEMO/public_preprint.pdf\u200e",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "working, but outdated",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "demo",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "n/a",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "n/a",
       "http://www.w3.org/2000/01/rdf-schema#label": {
         "@language": "en",
-        "@value": "NIF Combinator Demo"
-      }
-    },
-    {
-      "@id": "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": " We prefer to keep as much information as possible within the ontology itself, please have a look there. ",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#prefix": "rlog:",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Mature",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "ontology",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "Ontology IRI",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "As specified in http://semver.org/",
-      "http://www.w3.org/2000/01/rdf-schema#label": {
-        "@language": "en",
-        "@value": "RLOG - an RDF Logging Ontology"
-      }
-    },
-    {
-      "@id": "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/stc#",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "This ontology is a helper ontology and just use for some validation of RDF tool output by tools implementing NIF. We prefer to keep as much information as possible within the ontology itself, please have a look there. ",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#prefix": "stc:",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Development finished, but not persistent",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "ontology",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "Ontology IRI",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "As specified in http://semver.org/",
-      "http://www.w3.org/2000/01/rdf-schema#label": {
-        "@language": "en",
-        "@value": "STC - Simple Test Case Ontology"
-      }
-    },
-    {
-      "@id": "http://wiki-link.nlp2rdf.org/",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#code": "http://wiki-link.nlp2rdf.org/WikilinksNifConverter.jar",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Data from the wikilinks corpus (https://code.google.com/p/wiki-link/) was converted to NIF",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "n/a",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "working, some bugs",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "corpus",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "n/a",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "n/a",
-      "http://www.w3.org/2000/01/rdf-schema#label": {
-        "@language": "en",
-        "@value": "Wiki-Link Corpus in RDF"
+        "@value": "DBpedia Spotlight implementation of NIF"
       }
     },
     {
@@ -152,8 +83,8 @@
       }
     },
     {
-      "@id": "http://www.w3.org/TR/its20/#nif-backconversion",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "The conversion from International TagSet (ITS) 2.0 to NIF is a possible basis for a natural language processing (NLP) application that creates, for example, named entity annotations. A non-normative algorithm to integrate these annotations into the original input document is given in Appendix G: Conversion NIF2ITS. Many decisions to be made in this algorithm depend on the particular NLP application being used.",
+      "@id": "http://www.w3.org/TR/its20/#conversion-to-nif",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "This section provides an informative algorithm to convert XML or HTML documents (or their DOM representations) that contain International TagSet (ITS) 2.0 metadata to the RDF format based on [NIF]. The conversion results in RDF triples.",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "W3C specific",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "W3C Last Call Working Draft 20 August 2013",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "specification",
@@ -161,13 +92,54 @@
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "W3C specific",
       "http://www.w3.org/2000/01/rdf-schema#label": {
         "@language": "en",
-        "@value": "W3C Conversion of NIF to ITS 2.0"
+        "@value": "W3C Conversion of ITS 2.0 to NIF"
       }
     },
     {
-      "@id": "http://persistence.uni-leipzig.org/nlp2rdf/specification/core.html",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": " A document specifying the core of NIF.",
+      "@id": "https://github.com/NLP2RDF/software/wiki/How-to-publish-a-txt-corpora-with-NIF-as-Linked-Data",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Wiki page",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Under development, possibly outdated",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "wikipage",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "GitHub",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "How to publish a txt corpora with NIF as Linked Data"
+      }
+    },
+    {
+      "@id": "http://nlp2rdf.lod2.eu/nif-ws.php",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#code": "https://github.com/NLP2RDF/software/blob/master/php/nif-ws.php",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Implements the new NIF 2.0 API specification, deployement of the reference implementation\u200e",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#highlight": "true",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "working, implements 2.0, not yet complete, but already usefull",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "demo",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "n/a",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "NIF Conversion Demo Service"
+      }
+    },
+    {
+      "@id": "https://raw.github.com/AKSW/n3-collection/master/RSS-500.ttl",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#code": "",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Extracting Linked Data following the Semantic Web paradigm from unstructured sources has become a key driver for scientific research as well as new business models. Named Entity Recognition and Disambiguation are two basic steps in this extraction process. One key driver to realize the vision of the Semantic Web and develop highly accurate tools is the availability of data for performance validation. In this article, we present three novel, manually curated and annotated corpora, N3. Furthermore, we based them on a free licence and stored in the NLP Interchange Format for interoperability reasons. See http://aksw.org/Projects/N3NERNEDNIF.html",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "working",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "corpus",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "n/a",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "RSS-500 NER Corpus in NIF"
+      }
+    },
+    {
+      "@id": "http://persistence.uni-leipzig.org/nlp2rdf/specification/stanbol.html",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Early description of the NIF Stanbol profile. ",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub, previous versions are kept on the server, persistently.",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Under development",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "specification",
@@ -175,7 +147,7 @@
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "As specified in http://semver.org/",
       "http://www.w3.org/2000/01/rdf-schema#label": {
         "@language": "en",
-        "@value": "NIF 2.0 Core Specification"
+        "@value": "NIF 2.0 Stanbol Profile Specification"
       }
     },
     {
@@ -195,58 +167,6 @@
       }
     },
     {
-      "@id": "https://github.com/NLP2RDF/software/wiki/How-to-publish-a-txt-corpora-with-NIF-as-Linked-Data",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Wiki page",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Under development, possibly outdated",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "wikipage",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "n/a",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "GitHub",
-      "http://www.w3.org/2000/01/rdf-schema#label": {
-        "@language": "en",
-        "@value": "How to publish a txt corpora with NIF as Linked Data"
-      }
-    },
-    {
-      "@id": "http://persistence.uni-leipzig.org/nlp2rdf/documents/2013-09-19-poster-meta-forum/nif2poster.png",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "The poster provides a good overview of NIF 2.0.",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#highlight": "true",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "A poster with images from the ISWC 2013 publication.",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "poster",
-      "http://www.w3.org/2000/01/rdf-schema#label": {
-        "@language": "en",
-        "@value": "Promotional poster for Meta Forum"
-      }
-    },
-    {
-      "@id": "http://nlp2rdf.lod2.eu/nif-ws.php",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#code": "https://github.com/NLP2RDF/software/blob/master/php/nif-ws.php",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Implements the new NIF 2.0 API specification, deployement of the reference implementation\u200e",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#highlight": "true",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "working, implements 2.0, not yet complete, but already usefull",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "demo",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "n/a",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "n/a",
-      "http://www.w3.org/2000/01/rdf-schema#label": {
-        "@language": "en",
-        "@value": "NIF Conversion Demo Service"
-      }
-    },
-    {
-      "@id": "http://www.w3.org/TR/its20/#conversion-to-nif",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "This section provides an informative algorithm to convert XML or HTML documents (or their DOM representations) that contain International TagSet (ITS) 2.0 metadata to the RDF format based on [NIF]. The conversion results in RDF triples.",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "W3C specific",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "W3C Last Call Working Draft 20 August 2013",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "specification",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "Document",
-      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "W3C specific",
-      "http://www.w3.org/2000/01/rdf-schema#label": {
-        "@language": "en",
-        "@value": "W3C Conversion of ITS 2.0 to NIF"
-      }
-    },
-    {
       "@id": "http://nlp2rdf.lod2.eu/releases/nif-2.0-stanford-core-cli-beta.jar",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#code": "https://github.com/NLP2RDF/software/tree/master/java-maven/implementation/stanford-core",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Download the jar from <href=\"http://nlp2rdf.lod2.eu/releases/nif-2.0-stanford-core-cli-beta.jar\">http://nlp2rdf.lod2.eu/releases/nif-2.0-stanford-core-cli-beta.jar</a>. \n\tCode can be found here: <a href=\"https://github.com/NLP2RDF/software/tree/master/java-maven/implementation/stanford-core\">https://github.com/NLP2RDF/software/tree/master/java-maven/implementation/stanford-core</a>\n\tClone the code and start the server with mvn jetty:run ,\n\tSee parameters with ./stanford-core-beta-with-lemma-pos-cccollapseddependencies.jar --help\n\t",
@@ -260,6 +180,184 @@
       "http://www.w3.org/2000/01/rdf-schema#label": {
         "@language": "en",
         "@value": "NIF 2.0 Stanford Core Implementation"
+      }
+    },
+    {
+      "@id": "http://brown.nlp2rdf.org/",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#code": "",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Data from the Brown corpus (http://icame.uib.no/brown/bcm.html) was converted to NIF",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "working",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "corpus",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "n/a",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "Brown Corpus in RDF"
+      }
+    },
+    {
+      "@id": "http://www.yovisto.com/labs/ner-benchmarks/data/dbpedia-spotlight-nif.ttl",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#code": "",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Conversion of evaluation datasets into NIF. See also http://ceur-ws.org/Vol-1064/Steinmetz_Statistical.pdf",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "working",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "corpus",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "n/a",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "DBpedia Spotlight evaluation datasets"
+      }
+    },
+    {
+      "@id": "http://persistence.uni-leipzig.org/nlp2rdf/specification/core.html",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": " A document specifying the core of NIF.",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#highlight": "true",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub, previous versions are kept on the server, persistently.",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Under development",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "specification",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "Document",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "As specified in http://semver.org/",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "NIF 2.0 Core Specification"
+      }
+    },
+    {
+      "@id": "https://raw.github.com/AKSW/n3-collection/master/News-100.ttl",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#code": "",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Extracting Linked Data following the Semantic Web paradigm from unstructured sources has become a key driver for scientific research as well as new business models. Named Entity Recognition and Disambiguation are two basic steps in this extraction process. One key driver to realize the vision of the Semantic Web and develop highly accurate tools is the availability of data for performance validation. In this article, we present three novel, manually curated and annotated corpora, N3. Furthermore, we based them on a free licence and stored in the NLP Interchange Format for interoperability reasons. See http://aksw.org/Projects/N3NERNEDNIF.html",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "working",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "corpus",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "n/a",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "News-100 NER Corpus in NIF"
+      }
+    },
+    {
+      "@id": "https://raw.github.com/AKSW/n3-collection/master/Reuters-128.ttl",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#code": "",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Extracting Linked Data following the Semantic Web paradigm from unstructured sources has become a key driver for scientific research as well as new business models. Named Entity Recognition and Disambiguation are two basic steps in this extraction process. One key driver to realize the vision of the Semantic Web and develop highly accurate tools is the availability of data for performance validation. In this article, we present three novel, manually curated and annotated corpora, N3. Furthermore, we based them on a free licence and stored in the NLP Interchange Format for interoperability reasons. See http://aksw.org/Projects/N3NERNEDNIF.html",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "working",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "corpus",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "n/a",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "Reuters-128 NER Corpus in NIF"
+      }
+    },
+    {
+      "@id": "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": " We prefer to keep as much information as possible within the ontology itself, please have a look there. ",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#prefix": "rlog:",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Mature",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "ontology",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "Ontology IRI",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "As specified in http://semver.org/",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "RLOG - an RDF Logging Ontology"
+      }
+    },
+    {
+      "@id": "http://wiki-link.nlp2rdf.org/",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#code": "",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Data from the wikilinks corpus (https://code.google.com/p/wiki-link/) was converted to NIF",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "working",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "corpus",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "n/a",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "Wiki-Link Corpus in RDF"
+      }
+    },
+    {
+      "@id": "http://persistence.uni-leipzig.org/nlp2rdf/specification/api.html",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "A document specifying the public API requirements of tools implementing NIF.",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#highlight": "true",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub, previous versions are kept on the server, persistently.",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Under development",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "specification",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "Document",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "As specified in http://semver.org/",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "Public API Specification"
+      }
+    },
+    {
+      "@id": "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/testcase/lib/nif-2.0-suite.ttl",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "A collection of SPARQL queries to validate NIF models.",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub, changelog in rdfs:comment",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Mature",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "ontology",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "Ontology IRI",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "As specified in http://semver.org/",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "NIF Validator TestCase Suite"
+      }
+    },
+    {
+      "@id": "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/stc#",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "This ontology is a helper ontology and just use for some validation of RDF tool output by tools implementing NIF. We prefer to keep as much information as possible within the ontology itself, please have a look there. ",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#prefix": "stc:",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "Development finished, but not persistent",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "ontology",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "Ontology IRI",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "As specified in http://semver.org/",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "STC - Simple Test Case Ontology"
+      }
+    },
+    {
+      "@id": "http://nlp2rdf.lod2.eu/demo.php",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#code": "https://github.com/NLP2RDF/software/blob/master/php/demo/demo.php",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "A GUI called the NIF Combinator, which allows to combine the output of the implemented NIF web services. http://svn.aksw.org/papers/2012/NIF/EKAW_DEMO/public_preprint.pdf\u200e",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "working, but outdated",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "demo",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "n/a",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "NIF Combinator Demo"
+      }
+    },
+    {
+      "@id": "http://www.yovisto.com/labs/ner-benchmarks/data/kore50-nif.ttl",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#code": "",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "Conversion of evaluation datasets into NIF. See also http://ceur-ws.org/Vol-1064/Steinmetz_Statistical.pdf",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "working",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "corpus",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "n/a",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "n/a",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "KORE 50 evaluation dataset in NIF"
+      }
+    },
+    {
+      "@id": "http://persistence.uni-leipzig.org/nlp2rdf/documents/2013-09-19-poster-meta-forum/nif2poster.png",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "The poster provides a good overview of NIF 2.0.",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#highlight": "true",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#status": "A poster with images from the ISWC 2013 publication.",
+      "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#type": "poster",
+      "http://www.w3.org/2000/01/rdf-schema#label": {
+        "@language": "en",
+        "@value": "Promotional poster for Meta Forum"
       }
     }
   ]
