@@ -60,7 +60,7 @@ function createCategories(container,input_file,colors){
 				
 			moreinfo='<div style="border-radius: 3px 3px 3px 3px;border: 1px solid black;margin: 10px 5px 5px 5px;background-color:#FFF;display:none;" class="item-desc"><table class="table table-striped table-hover table-condensed">'+rows+'</table></div>';
 			
-			colorbar = '<li onclick="showCategory(this)" style="margin-top:5px;border-radius: 3px 3px 3px 3px;border: 1px solid black;cursor:pointer;background-color:'+colors[type]+'" class="list-group-item">'+'<span class="badge" style="color: black;border: 1px solid #999;background-color: transparent;">'+type+'   <a href="'+link+'">URI</a></span>'+label+moreinfo+'</li>';
+			colorbar = '<li onclick="showCategory(this)" style="margin-top:5px;border-radius: 3px 3px 3px 3px;border: 1px solid black;cursor:pointer;background-color:'+colors[type]+'" class="list-group-item">'+'<span class="badge" style="color: black;border: 1px solid #999;background-color: transparent;">'+type+'   <a href="'+link+'" target="_blank">URI</a></span>'+label+moreinfo+'</li>';
 				
 			$(container+' .list-group').append(colorbar);
 		});
