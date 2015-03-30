@@ -10,7 +10,6 @@
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningLevel": "java -jar validate.jar -v",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#versioningMethod": "Versioning relies on NIF Validator TestCase Suite and the API specification",
       "http://www.w3.org/2000/01/rdf-schema#label": {
-        "@language": "en",
         "@value": "NIF 2.0 Validator Tool"
       }
     },
@@ -322,7 +321,7 @@
       }
     },
     {
-      "@id": "http://nlp2rdf.lod2.eu/demo.php",
+      "@id": "http://demo.nlp2rdf.aksw.org/",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#code": "https://github.com/NLP2RDF/software/blob/master/php/demo/demo.php",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#description": "A GUI called the NIF Combinator, which allows to combine the output of the implemented NIF web services. http://svn.aksw.org/papers/2012/NIF/EKAW_DEMO/public_preprint.pdf\u200e",
       "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/dev/misc/resources.ttl#revisions": "GitHub",
